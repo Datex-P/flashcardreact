@@ -24,13 +24,11 @@ input[type=number] {
 
 
 #createYourFirstDeckPrompt {
-  /* text-align: center; */
   top: 233px;
   position: absolute;
-  /* margin-top: 270px; */
   font-weight: bold;
   font-size: 16px;
-  /* display: none; */
+ 
 }
 
 button:focus,
@@ -1307,9 +1305,25 @@ textarea.form-control:active, textarea.form-control:focus {
     overflow: hidden;
   }
 
+  .loginContainer {
+    width: 440px; 
+    height: 720px;
+    background-color: rgb(90, 170, 149);
+    border-radius: 10px; 
+    margin: 40px auto;
+  }
+
   .flashcardBackground{
     position: relative;
     width: 161%;
+  }
+
+  .googleContainer {
+    position: absolute; 
+    top: 600px; 
+    width: 456px; 
+    display: flex; 
+    justify-content: center;
   }
 
   .studyBreakdownHeader {

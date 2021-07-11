@@ -113,7 +113,7 @@ export default function QuestAnswerTrainOverv({
 
   function discardHandler() {
     setCard(data[randomQuestion]);
-    console.log(randomQuestion, 'iuhloiuhoiuhoiuh oiuhh')
+   
   }
 
   // function addToQueue(time) {

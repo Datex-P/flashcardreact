@@ -47,7 +47,7 @@ function Stats({ history }) {
             className="resetButtonStyling"
             editButtonClicked
             resetEvent={() => {
-              //!editButtonClicked
+          
               setShow(!show);
               setShowDeleteFrame(true);
 
@@ -60,7 +60,7 @@ function Stats({ history }) {
         <div>
           <div className="studyBreakdownHeader">Today's study breakdown</div>
           <div className="dateDiagramPos">
-            {!dataBase.openedToday
+            {!dataBase?.openedToday
               ? "No cards studied today"
               :  `Data from: ${new Date().toLocaleDateString().replace(/\//g,'.')}`         
                 }
@@ -223,24 +223,22 @@ function RenderDays() {
           style={{ backgroundColor: day.cardsStudied ? "red" : "" }}
           onClick={(e) => {
             let inner= e.target.getBoundingClientRect();
-              console.log(273, inner, "inner from inner box");
-             // setTimeout(()=>{
+           
                 if((outer.right - inner.right) < 126){
                   setRight(outer.right - inner.right - 126)
-                  console.log('ggre')
+        
                 }
-              //},10)
+          
             if (day.cardsStudied) {
               setShowTodaysProg(true);
 
-            //  console.log(innerStat.current.getBoundingClientRect(), 'inner from inner stat')
             }
           }}
         >
           {showTodaysProg && day.cardsStudied ? (
             <div
               style={{
-                width: "126px",
+                width: "133px",
                 height: "86px",
                 position: "absolute",
                 top: "20px",
@@ -265,17 +263,12 @@ function RenderDays() {
               <div
                 style={{
                   position: "absolute",
-                  top: "56px",
-                  //, border: '1px solid black'
+                  top: "56px"
                 }}
               >
-                {/* {
-                    `${Reviews: ${day.cardsStudied}  ${day.cardsStudied > 1? 'cards' : 'card'} }`
-                    
-                    } */}
+                
                 Review:`${day.cardsStudied !== 1 ? "s" : ""}: $
                 {day.cardsStudied} card${day.cardsStudied !== 1 ? "s" : ""}`
-                {/* Reviews: `${day.cardsStudied}` */}
               </div>
             </div>
           ) : null}

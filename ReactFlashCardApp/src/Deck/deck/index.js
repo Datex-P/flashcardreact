@@ -132,12 +132,12 @@ export default function Deck({
 
   console.log(index, "that is the index");
 
-  // function handleActive(i) {
-  //   setActive(i);
-  //   let newDataBase = { ...dataBase };
-  //   newDataBase.active = i;
-  //   setDataBase(newDataBase);
-  // }
+  function handleActive(i) {
+    setActive(i);
+    let newDataBase = { ...dataBase };
+    newDataBase.active = i;
+    setDataBase(newDataBase);
+  }
 
   console.log(nameOfTopDeck.length, 'nameoftopd')
 

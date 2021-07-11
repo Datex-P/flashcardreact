@@ -33,11 +33,11 @@ export default function DeckContainer() {
   function scrollHandler(e) {
     let position = e.target.scrollTop;
 
-    if (position < scrollPosition) {
-      console.log("you are scrolling up");
-    } else {
-      console.log("you are scrolling down");
-    }
+    // if (position < scrollPosition) {
+    //   console.log("you are scrolling up");
+    // } else {
+    //   console.log("you are scrolling down");
+    // }
 
     setScrollPosition(position);
     setTrigger(Symbol());

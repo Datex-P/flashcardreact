@@ -38,15 +38,13 @@ onSuccess = (res) => {
        <ParticleBackground 
        >
       
-      <div style={{width: '440px', height:'720px', 
-      backgroundColor: 'rgb(90, 170, 149)',
-      borderRadius: '10px', margin: '40px auto'}}
+      <div className='loginContainer'
       >
 
             <img src = {flashcard} alt = 'flashcard' style={{position: 'relative', left: '-239px', width:'193%', top:'-36px'}}/>
-            <img src = {flash} alt = 'flashcard' className= 'flashcardBackground' style={{position: 'relative', left: '-179px', top:'-46px',width:'161%'}}/>
-            <img src = {flash} alt = 'flashcard' className= 'flashcardBackground' style={{position: 'relative', left: '-177px',top: '-56px', width:'161%'}}/>
-            <img src = {flash} alt = 'flashcard' className= 'flashcardBackground' style={{position: 'relative', left: '-179px', top:'-67px', width:'161%'}}/>
+            <img src = {flash} alt = 'flashcard' className= 'flashcardBackground' style={{ left: '-179px', top:'-46px'}}/>
+            <img src = {flash} alt = 'flashcard' className= 'flashcardBackground' style={{ left: '-177px',top: '-56px'}}/>
+            <img src = {flash} alt = 'flashcard' className= 'flashcardBackground' style={{ left: '-179px', top:'-67px'}}/>
           
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', width:'inherit',
             position: 'absolute', top:'380px'}}>
@@ -77,7 +75,8 @@ onSuccess = (res) => {
           />
         </div>
 
-        <div style={{position: 'absolute', top: '600px', width: '456px', display: 'flex', justifyContent:'center'}}>
+        <div className='googleContainer'
+        >
           <GoogleLogin
             clientId={clientId}
             buttonText='Login'

@@ -13,14 +13,9 @@ export default function App() {
  
   return (
    
-
-   
     <div 
      >
-      {
-        user ? user.name : <div></div>
-      }
-      
+     
       <Router>
 
         {user?<LandingPage /> : <Redirect to='./login'/>}

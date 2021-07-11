@@ -1,6 +1,6 @@
 import React, { useContext, useState, useRef, useEffect } from "react";
 import { Modal } from "react-bootstrap";
-import { Context } from "../../Context"; //step 4.1 import context instance
+import { Context } from "../../Context"; 
 
 export default function CreateNewDeck({
   addNewDeckWindow,
@@ -36,23 +36,7 @@ export default function CreateNewDeck({
 
     let newDataBase = { ...dataBase };
 
-    // console.log(inputRef, 'input ref console log')
-
-    // if (newDataBase.DeckNames.find((deck) => deck.name === inputField)) {
-    //   alert("Name of Deck already exists");
-    //   setInputField("");
-    // } else if (!inputField) {
-    //   alert("Input needed");
-    // } else if (document.getElementById("inputField").value.length > 12) {
-    //   alert("Deckname is too lo");
-    //   setInputField("");
-    //   document.getElementById("inputField").focus();
-    // } else if (document.getElementById("inputField").value.length < 3) {
-    //   alert("Deckname is too short");
-    //   setInputField("");
-    //   document.getElementById("inputField").focus();
-    // } else {
-    //   console.log("it works");
+   
       let index = newDataBase.DeckNames.push({
         name: inputField,
         data: [],
@@ -63,12 +47,10 @@ export default function CreateNewDeck({
         skipPausedCards: 0,
         pauseMode: false, //when active the pause switch can be clicked in question answers when cards are paused
         editModeActive: false, //when editModeActive is true, pause switch can t be clicked
-        // color: colors[(dataBase.DeckNames.length) % colors.length]
+  
       });
 
-      // console.log(dataBase.DeckNames.length, "here databse length");
       if (dataBase.DeckNames.length === 1 || dataBase.DeckNames.length === 0) {
-        // setTimeout(()=>setScrollbarVisible(false),10);
         setScrollbarVisible(false)
       } else {
         setScrollbarVisible(true)
@@ -157,7 +139,7 @@ export default function CreateNewDeck({
                   setInputField("");
 
                   if (dataBase.DeckNames.length === 0) {
-                    //when no deck in list, show arrow Down again
+                  
                     setArrowDown(true);
                     setDecksAreVisible(false);
 

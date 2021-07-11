@@ -36,7 +36,6 @@ onSuccess = (res) => {
   render() {
     return (
        <ParticleBackground 
-      //  className='au'
        >
       
       <div style={{width: '440px', height:'720px', 
@@ -78,7 +77,7 @@ onSuccess = (res) => {
           />
         </div>
 
-        <div style={{position: 'absolute', top: '600px', width: 'inherit', display: 'flex', justifyContent:'center'}}>
+        <div style={{position: 'absolute', top: '600px', width: '456px', display: 'flex', justifyContent:'center'}}>
           <GoogleLogin
             clientId={clientId}
             buttonText='Login'
@@ -86,7 +85,6 @@ onSuccess = (res) => {
             onSuccess={this.onSuccess}
             onFailure={this.onFailure}
             cookiePolicy={'single_host_origin'}
-            style={{ marginTop: '300px !important', width: '135px', height:'30px', background:'blue !important'}}
             isSignedIn = {true}
           />
         </div>

@@ -334,8 +334,14 @@ user-select: none;
   
 
   .btnGoogle {
-    padding: 3px;
-    width: 50px !important;
+   
+    width: 136px !important;
+    height: 30px;
+    border-radius: 4px;
+  }
+
+  .btnGoogle div {
+    padding: 4px !important;
   }
 
   .btnFacebook { 

@@ -69,7 +69,7 @@ export default function Deck({
   function handlePause(index) {
     console.log(index);
     let newDataBase = { ...dataBase };
-
+    console.log(index, 'index')
     newDataBase.DeckNames[index].paused = true;
     console.log(newDataBase.DeckNames);
     setDataBase(newDataBase);

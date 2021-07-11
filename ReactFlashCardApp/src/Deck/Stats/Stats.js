@@ -5,11 +5,11 @@ import React, {
   useRef
 } from "react";
 import { Context } from "../../Context";
-import BasicOrangeWindow from "../deck/BasicOrangeWindow";
+import BasicOrangeWindow from '../deck/BasicOrangeWindow';
 import ThreeDotsBtn from "../deck/ThreeDotsBtn";
-import { withRouter } from "react-router-dom";
+import { withRouter } from 'react-router-dom';
 import PieDiagramm from "./PieDiagramm";
-import TimeAndProgress from "./TimeAndProgress.js";
+import TimeAndProgress from './TimeAndProgress.js';
 import HourlyBreakdown from "./HourlyBreakdown.js";
 import DeleteCardQuestionBox from "../deck/DeleteCardQuestionBox";
 
@@ -39,7 +39,7 @@ function Stats({ history }) {
         show={true}
         setShow={setShowFunc}
         title={
-          <div style={{ fontSize: "22px", fontWeight: "bold" }}>Stats</div>
+          <div className='statsHeader'>Stats</div>
         }
         menu={
           <ThreeDotsBtn
@@ -58,10 +58,10 @@ function Stats({ history }) {
         }
       >
         <div>
-          <div className="studyBreakdownHeader">Today's study breakdown</div>
-          <div className="dateDiagramPos">
+          <div className='studyBreakdownHeader'>Today's study breakdown</div>
+          <div className='dateDiagramPos'>
             {!dataBase?.openedToday
-              ? "No cards studied today"
+              ? 'No cards studied today'
               :  `Data from: ${new Date().toLocaleDateString().replace(/\//g,'.')}`         
                 }
           </div>
@@ -126,10 +126,10 @@ function ButtonLeftAndRight() {
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
+    <div className='d-flex flex-column'
+    >
       <div
-        className="d-flex justify-content-center align-items-center"
-        style={{ marginTop: "-10px" }}
+        className="d-flex justify-content-center align-items-center innerRenderDays"
       >
         {["<", year, ">"].map((el, index) => (
           <div
@@ -162,7 +162,7 @@ function ButtonLeftAndRight() {
 function RenderDays() {
   const [year] = useState(new Date().getFullYear());
   const [days, setDays] = useState([]);
-  const { dataBase } = useContext(Context);
+  const {dataBase} = useContext(Context);
   const [showTodaysProg, setShowTodaysProg] = useState(false);
   const innerStat = useRef(null)
   const [right,setRight]=useState(0)
@@ -195,7 +195,6 @@ function RenderDays() {
           )
         ).length;
         let index = date.findIndex((day) => day.day === today);
-        //let newDays = [...days];
         console.log(index);
         date[index].cardsStudied += todaysAmount;
         setDays(date);
@@ -212,21 +211,19 @@ function RenderDays() {
      onClick={(e)=>{    
        let outer = e.currentTarget.getBoundingClientRect()
    
-      console.log(247, outer, "inner from year box")
-       setOuter(outer)
+        setOuter(outer)
        }}
      >
       {days.map((day, index) => (
         <div
-          className={`day ${day.cardsStudied ? "pointer" : ""}`}
+          className={`day ${day.cardsStudied ? 'pointer' : ''}`}
           key={index}
-          style={{ backgroundColor: day.cardsStudied ? "red" : "" }}
+          style={{ backgroundColor: day.cardsStudied ? 'red' : '' }}
           onClick={(e) => {
             let inner= e.target.getBoundingClientRect();
            
                 if((outer.right - inner.right) < 126){
-                  setRight(outer.right - inner.right - 126)
-        
+                  setRight(outer.right - inner.right - 126)    
                 }
           
             if (day.cardsStudied) {
@@ -237,34 +234,22 @@ function RenderDays() {
         >
           {showTodaysProg && day.cardsStudied ? (
             <div
+              className='todayStudiedInfo'
               style={{
-                width: "133px",
-                height: "86px",
-                position: "absolute",
-                top: "20px",
                 left: right+'px'
-              }}
-              onClick={(e)=>{
-                
- 
-
               }}
               ref={innerStat}
             >
               {day.day}
               <div
                 style={{
-                  position: "absolute",
-                  top: "30px",
+                  position: 'absolute',
+                  top: '30px'
                 }}
               >
                 Time:
               </div>
-              <div
-                style={{
-                  position: "absolute",
-                  top: "56px"
-                }}
+              <div className='reviewTextContainer'
               >
                 
                 Review:`${day.cardsStudied !== 1 ? "s" : ""}: $

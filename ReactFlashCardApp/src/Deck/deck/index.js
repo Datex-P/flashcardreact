@@ -182,10 +182,7 @@ export default function Deck({
             ) : (
               <input
                 ref={input}
-                // changeDeckNameOpen={true}
                 className="addToDeckInput"
-                //style={{top: data && data.length === 0? '-69px': 'default'}}
-                //defaultValue=''
                 value={nameOfTopDeck}
                 onChange={handleChangeName}
               />

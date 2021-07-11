@@ -1,0 +1,22 @@
+.input {
+  width:45px;
+  /* background-color: rgba(200, 168, 115, 0.95);  */
+  border: none !important;
+  outline: none !important;
+  
+}
+
+.input::-webkit-outer-spin-button ,
+.input::-webkit-inner-spin-button 
+/* :not(.divStyling) */
+{
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+
+.input:disabled {
+  /* background-color: rgba(200, 168, 115, 0.95) !important; */
+  border: none !important;
+  outline: none !important;
+  color: black
+}

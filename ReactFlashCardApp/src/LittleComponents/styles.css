@@ -1,0 +1,17 @@
+.navStyling {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  background-color: #dcc9b6;
+  border: 2px black solid;
+   cursor: pointer;
+}
+
+.iconContainer:hover{
+  background-color: #a39171
+}
+
+.iconContainer{
+  cursor: pointer;
+  background-color: #dcc9b6;
+}

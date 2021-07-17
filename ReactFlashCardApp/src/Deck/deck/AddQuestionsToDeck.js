@@ -32,7 +32,7 @@ export default function AddQuestionsToDeck({ index, name, editButtonClicked, sho
     let { name, value } = e.target;
     newCard[name] = value
     setCard(newCard)
-    //setCard({...card,[name]:value}) would be another way of writing it
+   
   }
 
   useEffect(() => {

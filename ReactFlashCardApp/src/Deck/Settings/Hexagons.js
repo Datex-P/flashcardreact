@@ -20,11 +20,7 @@ export default function Hexagons({ idx, editHex, setEditHex }) {
   return (
     
     <div 
-      className='d-flex flex-column justify-content-center align-items-center'
-      style={{
-        width: '16px', height: '21px', position: 'relative',
-        margin: '3px', padding: '3px', transform: 'rotate(90deg)'
-      }}
+      className='d-flex flex-column justify-content-center align-items-center hexagons'
     >
 
       {

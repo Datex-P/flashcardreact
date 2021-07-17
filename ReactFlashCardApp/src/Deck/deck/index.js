@@ -66,12 +66,10 @@ export default function Deck({
 
   let input = useRef(null);
 
-  function handlePause(index) {
-    console.log(index);
+  function handlePause(index) { 
     let newDataBase = { ...dataBase };
     console.log(index, 'index')
     newDataBase.DeckNames[index].paused = true;
-    console.log(newDataBase.DeckNames);
     setDataBase(newDataBase);
    
   }

@@ -278,7 +278,7 @@ cursor: pointer;
 
 .nonDraggableIcon {
  
-user-drag: none;  
+/* user-drag: none;   */
 user-select: none;
 -moz-user-select: none;
 -webkit-user-drag: none;
@@ -1200,6 +1200,19 @@ textarea.form-control:active, textarea.form-control:focus {
   margin-left: 21px;
 }
 
+.hexagons {
+  width: 16px;
+  height: 21px;
+  position: relative;
+  margin: 3px; 
+  padding: 3px; 
+  transform: rotate(90deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .hexagonContainer {
   
   border-radius: 5px; 
@@ -1311,10 +1324,9 @@ textarea.form-control:active, textarea.form-control:focus {
 
   .hoveredDeckOrCardName {
     position: relative;
-    z-index: 30000; 
     width: 146px; 
     height: 33px;
-    top: -21px;
+    
   }
 
   .resetButtonStyling {
@@ -1479,6 +1491,16 @@ textarea.form-control:active, textarea.form-control:focus {
   border-radius: 14px;
   transition: all 0.3s ease-in 0s; 
 }
+
+.settings__repetition-interval {
+
+  font-weight: bold; 
+  font-size: 17px; 
+  text-align: center; 
+  margin-bottom: 8px;
+}
+
+
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
   margin-left: 0px;

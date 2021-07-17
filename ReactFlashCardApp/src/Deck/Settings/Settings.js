@@ -2,11 +2,12 @@
 import React, { useState, useContext, useEffect} from 'react';
 import { withRouter } from 'react-router-dom'
 import { Context } from '../../Context'
+import '../styles.css'
 import Hexagons from  './Hexagons'
 import RepetitionIntervalFields from './RepetitionIntervalFields'
+import ColorBox from './ColorBox'
 
 import BasicOrangeWindow from '../deck/BasicOrangeWindow'
-import '../styles.css'
 import edit from '../../icons/edit.svg'
 import save from '../../icons/save.svg'
 
@@ -34,13 +35,11 @@ function Settings({ history }) {
     setShowProgressDiagram(true)
   }
 
-  function handleColor(e) {
-    let newDataBase = { ...dataBase }
-    newDataBase.userPreferences[e.target.name] = e.target.value
-   // this.checked = true
-   //checked={true}
-    setDataBase(newDataBase)
-  }
+  // function handleColor(e) {
+  //   let newDataBase = { ...dataBase }
+  //   newDataBase.userPreferences[e.target.name] = e.target.value
+  //   setDataBase(newDataBase)
+  // }
 
 
   function saveTimeNumberChanges() {
@@ -67,9 +66,8 @@ function Settings({ history }) {
        </div>
       } 
     >
-      <div style={{ fontWeight: 'bold', fontSize: '17px', textAlign: 'center', marginBottom: '8px' }}
+      <div className='settings__repetion-interval'
       >
-
           Change Repetition Interval
       </div>
       <div className='d-flex justify-content-center'
@@ -171,30 +169,8 @@ function Settings({ history }) {
           Colorscheme
       </div>
 
-      <div 
-          className='d-flex border border-dark justify-content-between align-items-center'
-          style={{borderRadius: '5px', padding: '5px', width: '215px', marginTop: '10px', margin: 'auto'}}
-      >
+      <ColorBox/>
 
-        {
-          ['light', 'dark', 'default'].map(comp =>
-            <>
-              <input 
-                style={{ cursor: 'pointer' }}
-                name='backgroundColor'
-                type='radio'
-                // title = `Change background color of main menu to ${comp}.`
-                value={comp}
-                checked ={dataBase.userPreferences?.backgroundColor === comp}  //how to combine checked and handleColor accurately?
-                onChange={handleColor}
-              />
-              <label className='mb-0'>
-                  {comp}
-              </label>
-            </>
-          )
-        }
-      </div>
 
     </BasicOrangeWindow>
   )

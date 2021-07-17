@@ -282,7 +282,6 @@ export default function Deck({ deck, checked, setChecked,
                     
                   </div>
                   <div 
-                  // style={{textAlign: 'center'}}
                   >
                         to unpause the Deck. Paused decks don't count to the study goal.
                   </div>

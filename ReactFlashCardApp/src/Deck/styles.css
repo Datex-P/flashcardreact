@@ -50,6 +50,21 @@ input[type=number] {
   align-items: center;
 }
 
+.flexBetweenCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuContainerOuter {
+  z-index: 100;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 440px;
+}
+
+
+
 .flexAroundCenter{
   display: flex;
   justify-content: space-around;

@@ -117,14 +117,13 @@ export default function Deck({
       setNameOfTopDeck(e.target.value);
   }
 
-  console.log(index, "that is the index");
 
-  function handleActive(i) {
-    setActive(i);
-    let newDataBase = { ...dataBase };
-    newDataBase.active = i;
-    setDataBase(newDataBase);
-  }
+  // function handleActive(i) {
+  //   setActive(i);
+  //   let newDataBase = { ...dataBase };
+  //   newDataBase.active = i;
+  //   setDataBase(newDataBase);
+  // }
 
 
 
@@ -152,7 +151,7 @@ export default function Deck({
        }  
 
           <Card.Title
-            className="d-flex align-items-center justify-content-between position-relative"
+            className="flexBetweenCenter position-relative"
             style={{ width: "151px", left: "3px", height: "0px" }}
           >
             {editButtonClicked ? (

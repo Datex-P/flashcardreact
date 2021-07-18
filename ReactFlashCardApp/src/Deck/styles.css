@@ -21,6 +21,52 @@ input[type=number] {
   position: relative;
 }
 
+.flexColumnAlignCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flexAlignCenter {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexColumnSpaceAround {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.flexCenterAlignCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexAroundCenter{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexSpaceAround {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+}
+
+
 
 
 #createYourFirstDeckPrompt {
@@ -166,28 +212,6 @@ input[type="checkbox"] {
   height: 20px;
 }
 
-.flexColumnAlignCenter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.flexAlignCenter {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.flexColumn {
-  display: flex;
-  flex-direction: column;
-}
-
-.flexColumnSpaceAround {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
 
 
 .menu {
@@ -1059,9 +1083,6 @@ border-bottom-left-radius: calc(.3rem - 1px);
 }
 
 
-
-
-
 .deckPausedContainer {
   padding: 5px;
   width: 152px; 
@@ -1132,17 +1153,7 @@ textarea.form-control:active, textarea.form-control:focus {
   outline: none !important;
 }
 
-/* .fromControlIn:focus{ //does not work, probabyl to be removed
-  outline: none !important;
-} */
 
-/* .fromControlinQuestAnswer {
-  outline: none !important;
-  width: 90% !important;
-  height: 93px !important;
-  position: relative;
-  left: 10px;
-} */
 
 .plusInfoMessage:hover {
   cursor: pointer;
@@ -1500,6 +1511,14 @@ textarea.form-control:active, textarea.form-control:focus {
   margin-bottom: 8px;
 }
 
+
+.timeandprogress__monthly-goal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 27px; 
+  font-size: 13px;
+}
 
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {

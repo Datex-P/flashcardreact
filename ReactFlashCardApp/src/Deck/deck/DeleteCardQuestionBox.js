@@ -64,7 +64,7 @@ export default function DeleteCardQuestionBox({ card, pauseOrDelete,deleteWindow
         >
             <Modal.Title>
                 <div 
-                  className='d-flex justify-content-center align-items-center'           
+                  className='flexCenterAlignCenter'           
                   style={{height:'100%', width: '100%'}}
                 >
                   <div>
@@ -72,13 +72,13 @@ export default function DeleteCardQuestionBox({ card, pauseOrDelete,deleteWindow
                         resetQuestionText? 
                           <img 
                               src={resetimg} 
-                              className='d-flex justify-content-center align-items-center flashCardsStyling' 
+                              className='flexCenterAlignCenter flashCardsStyling' 
                               alt='reset'                         
                           />
                           :
                           <img 
                               src={flashcards} 
-                              className='d-flex justify-content-center align-items-center flashCardsStyling' 
+                              className='flexCenterAlignCenter flashCardsStyling' 
                               alt='flashcards'                         
                           />
 
@@ -98,7 +98,7 @@ export default function DeleteCardQuestionBox({ card, pauseOrDelete,deleteWindow
         </Modal.Header>
 
         <Modal.Body 
-            className='d-flex align-items-center justify-content-center' 
+            className='flexCenterAlignCenter' 
         >
 
             {
@@ -111,19 +111,20 @@ export default function DeleteCardQuestionBox({ card, pauseOrDelete,deleteWindow
         <Modal.Footer>
 
             <div 
-                className='d-flex justify-content-around align-items-center' 
+                className='flexAroundCenter' 
                 style={{width: '100%', height: '14px'}}
             >
 
                 <div 
-                    style={{ display: 'flex', justifyContent: 'space-around', width: '75%' }}
+                    className='flexSpaceAround'
+                    style={{width: '75%' }}
                 >
 
                     {
                       ['No', 'Yes'].map(el =>
                           <div 
                           key={el}
-                              className='deleteContainerNoAndYes d-flex justify-content-center align-items-center'
+                              className='deleteContainerNoAndYes flexCenterAlignCenter'
                               onClick={() => {
                                 if (el === 'Yes') {
                                   trashEvent()
@@ -139,7 +140,7 @@ export default function DeleteCardQuestionBox({ card, pauseOrDelete,deleteWindow
 
                                   dataBase.DeckNames[index].data[randomQuestion].paused = true
                                   setDataBase(newDataBase)
-                                   console.log(dataBase.DeckNames)
+                                
                                  }
                                 }
                                 deleteWindow()
@@ -159,7 +160,7 @@ export default function DeleteCardQuestionBox({ card, pauseOrDelete,deleteWindow
       {!showMessageAgain?
 
       <div 
-          className='d-flex justify-content-center'
+          className='flexCenter'
           style = {{width: '300px', position: 'absolute', top: '175px'
                   }} 
       >

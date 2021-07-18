@@ -3,12 +3,11 @@ import { Card } from "react-bootstrap";
 import { Context } from "../../Context";
 import "../styles.css";
 import ThreeDotsBtn from "./ThreeDotsBtn";
-import AddQuestionsToDeck from "./AddQuestionsToDeck";
+import AddQuestionsToDeck from "./AddQuestionsToDeck/AddQuestionsToDeck";
 import QuestAnswerTrainOverv from "./QuestAnswerTrainOverv";
 import DeckOrCardName from "./DeckOrCardname";
 import DeleteCardQuestionBox from "./DeleteCardQuestionBox";
-import playimg from "../../icons/play.svg";
-import plusimg from "../../icons/plus.svg";
+import Paused from './Paused'
 
 export default function Deck({
   deck,
@@ -62,7 +61,6 @@ export default function Deck({
      // eslint-disable-next-line
   }, [editButtonClicked]);
 
-  let colors = ["#ffcdb2", "#ffb4a2", "#e5989b", "#b5838d", "#6d6875"];
 
   let input = useRef(null);
 
@@ -74,15 +72,6 @@ export default function Deck({
    
   }
 
-  function handleToStudy(e) {
-    
-    let newDataBase = { ...dataBase };
-    newDataBase.DeckNames[index].toStudyValue = e.target.value;
-    setDataBase(newDataBase);
-
-    console.log(dataBase, "database");
-    // dataBase.DeckNames[item].toStudyValue = inputToStudy.value
-  }
 
   useEffect(() => {
     setNameOfTopDeck(name);
@@ -137,7 +126,7 @@ export default function Deck({
     setDataBase(newDataBase);
   }
 
-  console.log(nameOfTopDeck.length, 'nameoftopd')
+
 
   return (
     deck && (
@@ -217,10 +206,10 @@ export default function Deck({
                 backgroundColor: paused ? "black" : "white",
               }}
               editEvent={() => {
-                console.log(threeDotsMenuOpen, 'threedotsmenuopn')
+              
                 setThreeDotsMenuOpen(false);
                 setEditButtonClicked(!editButtonClicked);
-                console.log(threeDotsMenuOpen, 'threedotsmenuopn')
+               
 
               }}
               pauseEvent={(index)=>{
@@ -257,100 +246,15 @@ export default function Deck({
             )}
           </Card.Title>
 
-          <div
-            className="d-flex flex-column justify-content-between"
-            style={{ height: "82px" }}
-          >
-            {data.length === 0 ? (
-              <div
-                className="deckEmptyContainer"
-                style={{ left: "84px", textAlign: "center" }}
-              >
-                <div
-                  className="d-flex flex-column justify-content-around"
-                  style={{ height: "90px", width: "122px" }}
-                >
-                  <div>
-                  Deck is empty.
-                  </div>
-                  <div>
-                    Press:
-                    <span
-                      className='spanPlusStyling'
-                      onClick={() => setShow(true)}
-                    >
-                      <img src={plusimg} alt="plus" />
-                    </span>
-                  </div>
-                </div>
-                <div
-                  className = 'addCardsToDeck'
-                >
-                  to add cards to the deck.
-                </div>
-              </div>
-            ) : (
-              <>
-                <div
-                  className="divStyling"
-                  style={{ opacity: paused ? "0" : "1" }}
-                >
-                  To Study:
-                  <input
-                    type="number"
-                    className="inputStyling"
-                    style={{ background: paused ? style.background : "none" }}
-                    value={dataBase.DeckNames[index].toStudyValue || 0}
-                    max={
-                      dataBase.DeckNames[index].data.length -
-                        dataBase.DeckNames[index].data.filter(
-                          (x) => x.paused === true
-                        ).length || 0
-                    }
-                    min="1"
-                    onChange={handleToStudy}
-                  />
-                </div>
-              </>
-            )}
-
-            {paused ? (
-              <div
-                className="deckPausedContainer"
-                style={{ background: colors[index % 5] }}
-              >
-                <div>This deck is paused.</div>
-
-                <div style={{ display: "flex", alignItems: "center" }}>
-                  Press:
-                  <button
-                    className="playButton"
-                    onClick={() => {
-                      handlePause();
-                    }}
-                  >
-                    <img
-                      src={playimg}
-                      alt="play"
-                      style={{ margin: "6px", cursor: "pointer" }}
-                    />
-                  </button>
-                </div>
-                <div className="countToStudyGoal">
-                  It doesn't count to the study goal.
-                </div>
-              </div>
-            ) : null}
-
-            {name && data.length !== 0 ? (
-              <div
-                className="divStyling"
-                style={{ opacity: paused ? "0" : "1" }}
-              >
-                {"Decksize:".padEnd(10, "⠀")} {data.length}
-              </div>
-            ) : null}
-          </div>
+                <Paused
+                  data={data}
+                  index={index}
+                  setShow={setShow}
+                  paused={paused}
+                  name={name}
+                  style={style}
+                />
+         
 
           <QuestAnswerTrainOverv
             editButtonClicked={editButtonClicked}

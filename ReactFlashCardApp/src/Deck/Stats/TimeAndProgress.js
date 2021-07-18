@@ -51,9 +51,6 @@ export default function TimeAndProgress() {
           item.openHistory.filter((item) => new Date(item).getHours() < 6).length
       );
 
-      // dataBase.DeckNames[deck].data.filter((item) =>
-      //   item?.openHistory?.some(
-      //     (item) => new Date(item).toDateString()
     }
 
 
@@ -64,7 +61,7 @@ export default function TimeAndProgress() {
       24: fourthVal,
     });
 
-    //Object.values(timeObj).reduce((sum, i) => sum += i, 0) / studyGoal * 100;
+   
     let widthAdjusted = Math.round(currentProgress) + 120;
     setWidthAdjusted(widthAdjusted)
   },[dataBase])
@@ -137,22 +134,7 @@ export default function TimeAndProgress() {
               />
             );
           }
-        } else {
-          // arr.push(
-          //   <Row
-          //     previousWidthVar={previousWidthVar}
-          //     widthVar={widthVar}
-          //     time={
-          //       <div  className='timesStyling' 
-          //             style={{backgroundColor:'blue'}}
-          //       // style={{ paddingLeft: "3px", height:'21px', fontSize:'14px' }}
-          //       >
-          //         {i} - {i + 4}
-          //       </div>
-          //     }
-          //   />
-          // );
-        }
+        } 
       }
     }
     return arr;
@@ -161,7 +143,7 @@ export default function TimeAndProgress() {
   return (
     <div className="diagramHourlyBreakdownContainer d-flex flex-column justify-content-around">
       <div className="d-flex">
-        <div className="studyGoalStyling d-flex justify-content-center align-items-center" style={{ height: '27px', fontSize:'13px' }}>
+        <div className='timeandprogress__monthly-goal studyGoalStyling'>
           Monthly Goal
         </div>
 

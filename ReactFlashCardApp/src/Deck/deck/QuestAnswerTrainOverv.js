@@ -325,7 +325,7 @@ export default function QuestAnswerTrainOverv({
                     <span style={{ marginLeft: "7px" }}>mode</span>
                   </div>
 
-                  <div className="d-flex justify-content-center">
+                  <div className="flexCenter">
                     <div
                       className="d-flex justify-content-around"
                       style={{ width: "300px" }}
@@ -357,7 +357,7 @@ export default function QuestAnswerTrainOverv({
               ) : null}
 
               {showRepeatBtn && (
-                <div className="d-flex justify-content-center">
+                <div className="flexCenter">
                   <div
                     className="d-flex justify-content-between px-3 showRepeatBtnInner"
                   >

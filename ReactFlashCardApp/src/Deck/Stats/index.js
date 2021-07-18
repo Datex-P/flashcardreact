@@ -114,7 +114,6 @@ export default function Deck({ deck, checked, setChecked,
         
             <input 
                   ref = {input} 
-                  // changeDeckNameOpen={true}
                   className= 'addToDeckInput'
                   style={{top: data.length === 0? '-69px': 'default'}}
                   value = {nameOfTopDeck}

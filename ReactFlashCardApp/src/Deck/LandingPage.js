@@ -8,27 +8,33 @@ import NavBar from "../NavBar";
 
 export default function DeckContainer() {
   const {
-    dataBase,
-    setDataBase,
-    styles,
-    showProgressDiagram,
-    setShowProgressDiagram,
-    scrollbarVisible,
+    dataBase, setDataBase, styles, setStyles,showProgressDiagram, setShowProgressDiagram, colors
+    ,scrollbarVisible, setScrollbarVisible
+  ,trigger, setTrigger, changeDeckNameOpen, setChangeDeckNameOpen,
+  editButtonClicked, setEditButtonClicked, pauseIsActive, setPauseIsActive,
+  decksAreVisible, setDecksAreVisible,
+  spinnerIsVisible, setSpinnerIsVisible,
+  addNewDeckWindow, setAddNewDeckWindow,
+  scrollPosition, setScrollPosition, arrowDown, setArrowDown,active, setActive, scroller
   } = useContext(Context);
-  const [trigger, setTrigger] = useState(null);
-  const scroller = useRef();
-  const [arrowDown, setArrowDown] = useState(true);
 
-  let colors = ["#ffcdb2", "#ffb4a2", "#e5989b", "#b5838d", "#6d6875"];
 
-  const [changeDeckNameOpen, setChangeDeckNameOpen] = useState(false); //input field to change deckname is open
-  const [editButtonClicked, setEditButtonClicked] = useState(true); //active when editButton next to DeckName is clicked
-  const [pauseIsActive, setPauseIsActive] = useState(true);
-  const [active, setActive] = useState(0);
-  const [decksAreVisible, setDecksAreVisible] = useState(true); //decks are shown on the deck stack if this is set to true
-  const [spinnerIsVisible, setSpinnerIsVisible] = useState(true); //spinner that is shown when application loads
-  const [addNewDeckWindow, setAddNewDeckWindow] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
+  let colorsArr = ["#ffcdb2", "#ffb4a2", "#e5989b", "#b5838d", "#6d6875"];
+  
+  
+  // const [trigger, setTrigger] = useState(null);
+  // const scroller = useRef();
+  // const [arrowDown, setArrowDown] = useState(true);
+
+
+  // const [changeDeckNameOpen, setChangeDeckNameOpen] = useState(false); //input field to change deckname is open
+  // const [editButtonClicked, setEditButtonClicked] = useState(true); //active when editButton next to DeckName is clicked
+  // const [pauseIsActive, setPauseIsActive] = useState(true);
+  // const [active, setActive] = useState(0);
+  // const [decksAreVisible, setDecksAreVisible] = useState(true); //decks are shown on the deck stack if this is set to true
+  // const [spinnerIsVisible, setSpinnerIsVisible] = useState(true); //spinner that is shown when application loads
+  // const [addNewDeckWindow, setAddNewDeckWindow] = useState(false);
+  // const [scrollPosition, setScrollPosition] = useState(0);
 
   function scrollHandler(e) {
     let position = e.target.scrollTop;
@@ -74,23 +80,23 @@ export default function DeckContainer() {
                         <Deck
                           key={index}
                           index={index}
-                          editButtonClicked={editButtonClicked}
-                          setEditButtonClicked={setEditButtonClicked}
-                          arrowDown={arrowDown}
-                          setArrowDown={setArrowDown}
+                          // editButtonClicked={editButtonClicked}
+                          // setEditButtonClicked={setEditButtonClicked}
+                          // arrowDown={arrowDown}
+                          // setArrowDown={setArrowDown}
                           deck={deck}
-                          decksAreVisible={decksAreVisible}
-                          setDecksAreVisible={setDecksAreVisible}
+                          // decksAreVisible={decksAreVisible}
+                          // setDecksAreVisible={setDecksAreVisible}
                           name={deck.name}
-                          active={active}
-                          trigger={trigger}
-                          pauseIsActive={pauseIsActive}
-                          setPauseIsActive={setPauseIsActive}
-                          setActive={setActive}
+                          //active={active}
+                          // trigger={trigger}
+                          // pauseIsActive={pauseIsActive}
+                          // setPauseIsActive={setPauseIsActive}
+                         // setActive={setActive}
                           transform={`rotate(0deg)`}
-                          setChangeDeckNameOpen={setChangeDeckNameOpen}
+                          //setChangeDeckNameOpen={setChangeDeckNameOpen}
                           zIndex={2}
-                          background={colors[active % colors.length]}
+                          background={colorsArr[active % colorsArr.length]}
                           paused={deck.paused}
                         />
                       );
@@ -102,23 +108,23 @@ export default function DeckContainer() {
                           key={index}
                           index={index}
                           active={active}
-                          changeDeckNameOpen={changeDeckNameOpen}
-                          setChangeDeckNameOpen={setChangeDeckNameOpen}
-                          editButtonClicked={editButtonClicked}
-                          setEditButtonClicked={setEditButtonClicked}
-                          arrowDown={arrowDown}
-                          setArrowDown={setArrowDown}
+                          // changeDeckNameOpen={changeDeckNameOpen}
+                          // setChangeDeckNameOpen={setChangeDeckNameOpen}
+                          // editButtonClicked={editButtonClicked}
+                          // setEditButtonClicked={setEditButtonClicked}
+                          // arrowDown={arrowDown}
+                          // setArrowDown={setArrowDown}
                           setDeck
                           paused={deck.paused}
                           deck={deck}
-                          decksAreVisible={decksAreVisible}
-                          setDecksAreVisible={setDecksAreVisible}
+                          // decksAreVisible={decksAreVisible}
+                          // setDecksAreVisible={setDecksAreVisible}
                           name={deck.name}
                           trigger={trigger}
                           transform={`rotate(${-accum.index * 2}deg)`}
-                          setActive={setActive}
+                         // setActive={setActive}
                           zIndex={0}
-                          bg={colors.map((i, k, ar) => {
+                          bg={colorsArr.map((i, k, ar) => {
                             if (active === k) {
                               return ar[ar.length % (k || 1)];
                             } else {
@@ -126,13 +132,13 @@ export default function DeckContainer() {
                             }
                           })}
                           background={
-                            colors.map((i, k, ar) => {
+                            colorsArr.map((i, k, ar) => {
                               if (active === k) {
                                 return ar[ar.length % (k || 1)];
                               } else {
                                 return i;
                               }
-                            })[index % colors.length]
+                            })[index % colorsArr.length]
                           }
                         />
                       );

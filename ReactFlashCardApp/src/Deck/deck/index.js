@@ -10,29 +10,12 @@ import DeleteCardQuestionBox from "./DeleteCardQuestionBox";
 import Paused from './Paused'
 
 export default function Deck({
-  deck,
-  checked,
-  setChecked,
-  decksAreVisible, //needed to hide all the decks in deckhandler
-  setDecksAreVisible,
-  active,
-  index,
-  setActive,
-  title,
-  bg,
-  pauseIsActive,
-  setPauseIsActive,
-  trigger,
-  changeDeckName,
-  setChangeDeckNameOpen,
-  editButtonClicked,
-  setEditButtonClicked,
-  showProgressDiagram,
-  setShowProgressDiagram,
-  arrowDown,
-  setArrowDown = () => {},
-  paused,
-  ...style
+   deck,
+  
+   index,
+   bg,
+   paused,
+   ...style
 }) {
   if (deck) {
     var { data, name } = deck;
@@ -45,7 +28,17 @@ export default function Deck({
   const [nameTooLongOrShort, setNameTooLongOrShort] = useState(false)
   const [showDeleteWindow, setShowDeleteWindow] = useState(true); //if true and triggered the delete window with yes and no button is shown
   const [trash, setTrash] = useState(false);
-  const { dataBase, setDataBase } = useContext(Context);
+
+
+
+  const {
+    dataBase, setDataBase
+  , setChangeDeckNameOpen,
+  editButtonClicked, setEditButtonClicked, pauseIsActive, setPauseIsActive,
+  setDecksAreVisible,
+  active, setActive,
+  arrowDown, setArrowDown
+  } = useContext(Context);
 
   //const [index, setIndex] = useState(0);
 

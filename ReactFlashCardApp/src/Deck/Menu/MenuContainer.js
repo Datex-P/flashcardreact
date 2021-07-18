@@ -1,14 +1,14 @@
 import React, { useState, useContext } from "react";
 import { Modal } from "react-bootstrap";
-import { Context } from "../Context";
-import "./styles.css";
+import { Context } from "../../Context";
+import "../styles.css";
 import Hamburger from './Hamburger'
 
-import Icon from "../LittleComponents/Icon";
+import Icon from "../../LittleComponents/Icon";
 
-import settingsIcon from "../icons/settings.svg";
-import statsIcon from "../icons/stats.svg";
-import logoutIcon from "../icons/logout.svg";
+import settingsIcon from "../../icons/settings.svg";
+import statsIcon from "../../icons/stats.svg";
+import logoutIcon from "../../icons/logout.svg";
 
 export default function MenuContainer({
   editButtonClicked, //set to false when editButton is not clicked gets activated when editButton is clicked
@@ -48,8 +48,7 @@ export default function MenuContainer({
             centered
           >
             <Modal.Body
-              className='p-0'
-              style={{ position: "relative", top: "42px", left: "10px" }}
+              className='p-0 menuContainer__modalbody'
             >
               <div
                 className='menuStyling nonDraggableIcon'

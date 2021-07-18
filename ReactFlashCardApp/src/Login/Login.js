@@ -1,11 +1,11 @@
-import './Deck/styles.css'
+import '../Deck/styles.css'
 import React from 'react';
 import FacebookLogin from 'react-facebook-login';
-import ParticleBackground from './Particles/ParticlesBackground.js'
-import flashcard from "./icons/flashcard.svg";
-import flash from "./icons/flash.svg";
-import usersSolid from "./icons/users.svg";
-import keysSolid from "./icons/keys.svg";
+import ParticleBackground from './ParticlesBackground.js'
+import flashcard from "../icons/flashcard.svg";
+import flash from "../icons/flash.svg";
+import usersSolid from "../icons/users.svg";
+import keysSolid from "../icons/keys.svg";
 import {GoogleLogin} from 'react-google-login';
 
 const clientId = '120219528416-sosfr3o924155s2girgnofqkrvfa4qsr.apps.googleusercontent.com'

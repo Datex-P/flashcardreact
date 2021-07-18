@@ -1,10 +1,36 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 
 export const Context = React.createContext(null)
 
 export default function ContextProvider({ children }) {
   const [showProgressDiagram, setShowProgressDiagram] = useState(true);
   const [scrollbarVisible, setScrollbarVisible] = useState(true)
+
+
+  const [trigger, setTrigger] = useState(null);
+  const scroller = useRef();
+  const [arrowDown, setArrowDown] = useState(true);
+
+
+  const [changeDeckNameOpen, setChangeDeckNameOpen] = useState(false); //input field to change deckname is open
+  const [editButtonClicked, setEditButtonClicked] = useState(true); //active when editButton next to DeckName is clicked
+  const [pauseIsActive, setPauseIsActive] = useState(true);
+  const [active, setActive] = useState(0);
+  const [decksAreVisible, setDecksAreVisible] = useState(true); //decks are shown on the deck stack if this is set to true
+  const [spinnerIsVisible, setSpinnerIsVisible] = useState(true); //spinner that is shown when application loads
+  const [addNewDeckWindow, setAddNewDeckWindow] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+
+
+
+
+
+
+
+
+
+
 
 
   const [dataBase, setDataBase] = useState(null);
@@ -121,7 +147,26 @@ export default function ContextProvider({ children }) {
   return (
 
     <Context.Provider value={{ dataBase, setDataBase, styles, setStyles,showProgressDiagram, setShowProgressDiagram, colors
-    ,scrollbarVisible, setScrollbarVisible }} >
+    ,scrollbarVisible, setScrollbarVisible,
+    arrowDown, setArrowDown,
+    active, setActive
+    
+    
+  ,trigger, setTrigger, changeDeckNameOpen, setChangeDeckNameOpen,
+  editButtonClicked, setEditButtonClicked, pauseIsActive, setPauseIsActive,
+  decksAreVisible, setDecksAreVisible,
+  spinnerIsVisible, setSpinnerIsVisible,
+  addNewDeckWindow, setAddNewDeckWindow,
+  scrollPosition, setScrollPosition, scroller
+
+    
+    
+    
+    
+    
+    
+    
+     }} >
 
       {children}
 

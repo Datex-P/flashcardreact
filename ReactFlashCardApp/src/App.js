@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route,Redirect } from 'react-router-do
 import LandingPage from './Deck/LandingPage.js'
 import Settings from './Deck/Settings/Settings'
 import Stats from './Deck/Stats/Stats'
-import Login from './Login'
+import Login from './Login/Login'
 
 
 

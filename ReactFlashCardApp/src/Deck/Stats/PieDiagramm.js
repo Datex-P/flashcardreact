@@ -32,7 +32,6 @@ export default function ChartComp() {
        borderWidth: 0,
       hoverBackgroundColor: [
       //  "#FF6384",
-        // "#36A2EB",
    
       ]
     }]

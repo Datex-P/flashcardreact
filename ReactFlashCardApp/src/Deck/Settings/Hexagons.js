@@ -20,7 +20,7 @@ export default function Hexagons({ idx, editHex, setEditHex }) {
   return (
     
     <div 
-      className='d-flex flex-column justify-content-center align-items-center hexagons'
+      className='flexCenterAlignCenter flex-column  hexagons'
     >
 
       {

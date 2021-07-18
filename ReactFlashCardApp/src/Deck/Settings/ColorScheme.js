@@ -22,7 +22,7 @@ export default function ColorScheme () {
     </div>
 
       <div 
-          className='d-flex border border-dark justify-content-between align-items-center'
+          className='flexBetweenCenter border border-dark '
           style={{borderRadius: '5px', padding: '5px', width: '215px', marginTop: '10px', margin: 'auto'}}
       >
 

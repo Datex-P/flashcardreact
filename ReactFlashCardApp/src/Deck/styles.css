@@ -55,6 +55,14 @@ input[type=number] {
   justify-content: space-between;
 }
 
+.flexBetweenCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
 .flexAround {
   display: flex;
   justify-content: space-around;
@@ -62,6 +70,12 @@ input[type=number] {
 
 .flexAlignCenter {
   display: flex;
+  align-items: center;
+}
+
+.flexBetweenCenter {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 

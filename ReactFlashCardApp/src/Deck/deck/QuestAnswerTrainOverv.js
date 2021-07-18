@@ -381,7 +381,7 @@ export default function QuestAnswerTrainOverv({
 
               {cardModified ? (
                 <div
-                  className="d-flex justify-content-center align-items-center"
+                  className="flexCenterAlignCenter"
                   style={{ height: "52px" }}
                 >
                   <Alert

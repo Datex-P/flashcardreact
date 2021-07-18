@@ -2,7 +2,7 @@ import React, {useContext} from 'react'
 import '../styles.css'
 import { Context } from '../../Context'
 
-export default function ColorBox() {
+export default function ColorScheme () {
 
   const { dataBase, setDataBase} = useContext(Context)
 
@@ -15,8 +15,11 @@ export default function ColorBox() {
 
 
   return (
-   
-      
+   <>
+    <div style={{ fontWeight: 'bold', textAlign: 'center', marginTop: '20px', marginBottom: '2px' }}
+    >
+        Colorscheme
+    </div>
 
       <div 
           className='d-flex border border-dark justify-content-between align-items-center'
@@ -42,6 +45,7 @@ export default function ColorBox() {
           )
         }
       </div>
+      </>
 
 
 

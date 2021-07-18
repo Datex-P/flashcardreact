@@ -5,7 +5,7 @@ import { Context } from '../../Context'
 import '../styles.css'
 import Hexagons from  './Hexagons'
 import RepetitionIntervalFields from './RepetitionIntervalFields'
-import ColorBox from './ColorBox'
+import ColorScheme from './ColorScheme'
 
 import BasicOrangeWindow from '../deck/BasicOrangeWindow'
 import edit from '../../icons/edit.svg'
@@ -34,12 +34,6 @@ function Settings({ history }) {
     history.push('/')
     setShowProgressDiagram(true)
   }
-
-  // function handleColor(e) {
-  //   let newDataBase = { ...dataBase }
-  //   newDataBase.userPreferences[e.target.name] = e.target.value
-  //   setDataBase(newDataBase)
-  // }
 
 
   function saveTimeNumberChanges() {
@@ -164,12 +158,9 @@ function Settings({ history }) {
         Target met: {dataBase.userPreferences.weeksInRow} weeks in a row
 
       </div>
-      <div style={{ fontWeight: 'bold', textAlign: 'center', marginTop: '20px', marginBottom: '2px' }}
-      >
-          Colorscheme
-      </div>
+     
 
-      <ColorBox/>
+      <ColorScheme/>
 
 
     </BasicOrangeWindow>

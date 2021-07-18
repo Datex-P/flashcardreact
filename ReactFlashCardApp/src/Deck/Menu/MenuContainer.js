@@ -16,9 +16,7 @@ export default function MenuContainer({
   const [show, setShow] = useState(false); //opens the Menu when set to true
   const {
     dataBase,
-    styles,
-    showProgressDiagram,
-    setShowProgressDiagram,
+    styles
   } = useContext(Context);
   const handleClose = () => setShow(false); // closes the Menu when handleclos is triggered
 
@@ -34,8 +32,7 @@ export default function MenuContainer({
     >
   
       <Hamburger editButtonClicked={editButtonClicked} show={show}
-      setShow={setShow} setShowProgressDiagram={setShowProgressDiagram}
-      showProgressDiagram={showProgressDiagram}
+      setShow={setShow} 
        />
 
       {show && editButtonClicked ? (

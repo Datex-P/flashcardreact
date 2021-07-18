@@ -8,7 +8,6 @@ export default function InputCheckbox({ index, setShowAnswerBtn, generateRandom 
 
 
   function cardsPaused() {
-    // console.log('function cardsPaused was fired')
 
     return dataBase.DeckNames[index].data.filter(x => x.paused === true).length || 0
   }
@@ -36,12 +35,8 @@ export default function InputCheckbox({ index, setShowAnswerBtn, generateRandom 
           setDataBase(newDataBase)
           setShowAnswerBtn(false)
           generateRandom()
-      }
-     
-    }
- 
-  }
-
+      }  
+    } }
   }
 
 

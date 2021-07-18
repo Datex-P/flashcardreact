@@ -3,11 +3,9 @@ import { Modal } from "react-bootstrap";
 import { Context } from "../../Context"; 
 
 export default function CreateNewDeck({
-
   close,
  
 }) {
-
 
   const {
     dataBase, setDataBase, setShowProgressDiagram, colors,
@@ -28,9 +26,7 @@ export default function CreateNewDeck({
     if (addNewDeckWindow) {
       inputRef.current.focus();
       setShowProgressDiagram(false);
-    } else {
-      //  setShowProgressDiagram(true);
-    }
+    } 
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [addNewDeckWindow]);
@@ -81,7 +77,7 @@ export default function CreateNewDeck({
 
       </Modal.Header>
 
-      <Modal.Body className="d-flex flex-column align-items-center">
+      <Modal.Body className="flexAlignCenter flex-column">
         <input
           id="inputField"
           className="createNewDeckInputField"
@@ -131,7 +127,7 @@ export default function CreateNewDeck({
         </select>
       </Modal.Body>
 
-      <div className="d-flex justify-content-between cancelOkContainer">
+      <div className="flexBetween cancelOkContainer">
         {["Cancel", "Ok"].map((el) => (
           <button
             className="okCancelButtonColor okCancelButton"

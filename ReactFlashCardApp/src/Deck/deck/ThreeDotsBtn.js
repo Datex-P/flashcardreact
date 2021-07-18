@@ -30,15 +30,9 @@ function ThreeDotsBtn({
                       }) 
 
 {
-
-
   const {
-    dataBase, setDataBase
-  , setChangeDeckNameOpen,
-  editButtonClicked, setEditButtonClicked, 
-  setDecksAreVisible,
-  active, setActive,
- setArrowDown
+    dataBase, setDataBase,
+  editButtonClicked,
   } = useContext(Context);
 
   const [blinkingSaveIcon, setBlinkingSaveIcon] = useState(false)
@@ -100,7 +94,6 @@ function ThreeDotsBtn({
   function handlePause () {
   
     //pauseEvent(index)
-
     let newDataBase = {...dataBase}
     let savePausedState = !pauseIsActive
     setPauseIsActive(savePausedState)
@@ -228,8 +221,8 @@ function ThreeDotsBtn({
 
                 <img 
                     src={resetimg} 
-                    alt='reset' 
-                    style={{ marginRight: '3px', width: '23px', height: '23px' }}  
+                    alt='reset'
+                    className='three-dots__reset-img' 
                 />
 
                 {text}

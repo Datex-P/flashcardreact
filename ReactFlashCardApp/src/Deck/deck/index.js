@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 import "../styles.css";
 import ThreeDotsBtn from "./ThreeDotsBtn";
 import AddQuestionsToDeck from "./AddQuestionsToDeck/AddQuestionsToDeck";
-import QuestAnswerTrainOverv from "./QuestAnswerTrainOverv";
+import QuestAnswerTrainOverv from "./CardBodyParts/QuestAnswerTrainOverv";
 import DeckOrCardName from "./DeckOrCardname";
 import DeleteCardQuestionBox from "./DeleteCardQuestionBox";
 import Paused from './Paused'
@@ -221,7 +221,6 @@ export default function Deck({
                 card="deck"
                 threeDotsMenuOpen={threeDotsMenuOpen}
                 index={index}
-                //setIndex={setIndex}
                 deleteWindow={() => setShowDeleteWindow(false)}
                 trashEvent={() => {
                   deleteDeck();

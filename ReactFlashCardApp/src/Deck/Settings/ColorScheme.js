@@ -16,14 +16,13 @@ export default function ColorScheme () {
 
   return (
    <>
-    <div style={{ fontWeight: 'bold', textAlign: 'center', marginTop: '20px', marginBottom: '2px' }}
+    <div className='colorscheme'
     >
         Colorscheme
     </div>
 
       <div 
-          className='flexBetweenCenter border border-dark '
-          style={{borderRadius: '5px', padding: '5px', width: '215px', marginTop: '10px', margin: 'auto'}}
+          className='flexBetweenCenter border border-dark colorscheme-container'
       >
 
         {

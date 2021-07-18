@@ -50,7 +50,7 @@ function RenderDays() {
 
 
   return (
-    <div className="yearBoxContainer"
+    <div className="render-days__year-box-container"
      onClick={(e)=>{    
        let outer = e.currentTarget.getBoundingClientRect()
    
@@ -84,15 +84,10 @@ function RenderDays() {
               ref={innerStat}
             >
               {day.day}
-              <div
-                style={{
-                  position: 'absolute',
-                  top: '30px'
-                }}
-              >
+              <div className='render-days__time'>
                 Time:
               </div>
-              <div className='reviewTextContainer'
+              <div className='render-days__review-container'
               >
                 
                 Review:`${day.cardsStudied !== 1 ? "s" : ""}: $

@@ -48,7 +48,7 @@ export default function RepetitionIntervalFields(
   return (
     
     <div 
-        className='p-2 d-flex flex-column justify-content-center align-items-center' 
+        className='p-2 flex-column flexCenterAlignCenter' 
     >
       <p 
           className=' border border-dark d-flex justify-content-center' 

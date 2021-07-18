@@ -2,10 +2,12 @@ import React, {useContext} from 'react'
 import PieDiagramm from "./PieDiagrammMain";
 import { Context } from "../Context"; 
 
-function ShowProgressD({showProgressDiagram}) {
+function ShowProgressD() {
 
    const {
-     dataBase
+     dataBase,
+     showProgressDiagram,
+     
   
     
    } = useContext(Context);

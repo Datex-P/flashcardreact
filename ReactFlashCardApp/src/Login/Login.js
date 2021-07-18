@@ -46,26 +46,45 @@ onSuccess = (res) => {
             <img src = {flash} alt = 'flashcard' className= 'flashcardBackground' style={{ left: '-177px',top: '-56px'}}/>
             <img src = {flash} alt = 'flashcard' className= 'flashcardBackground' style={{ left: '-179px', top:'-67px'}}/>
           
-            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', width:'inherit',
+            <div className='flexAlignCenter'
+            style={{flexDirection: 'column',  width:'inherit',
             position: 'absolute', top:'380px'}}>
+
             <div style={{display: 'flex'}}>
-              <img src={usersSolid} alt='usersSolid' style={{width:'16px', marginRight: '9px'}}/> 
-              <input value={this.state.login} onChange={e=>this.setState({login:e.target.value})} style={{width: '140px', height: '25px', borderRadius: '5px'}}/>
+                  <img 
+                          src={usersSolid} 
+                          alt='usersSolid' 
+                          style={{width:'16px', marginRight: '9px'}}
+                  /> 
+                  <input 
+                  value={this.state.login} 
+                  onChange={e=>this.setState({login:e.target.value})} 
+                  style={{width: '140px', height: '25px', borderRadius: '5px'}}
+                  />
             </div>
             <div style={{display:'flex', marginTop:'29px'}}>
-              <img src={keysSolid} alt='usersSolid' style={{width:'16px', marginRight: '9px'}}/> 
-              <form>
+                  <img 
+                      src={keysSolid} 
+                      alt='usersSolid' 
+                      style={{width:'16px', marginRight: '9px'}}
+                      /> 
+                  <form>
 
-              <input value={this.state.password} onChange={e=>this.setState({password:e.target.value})}
-              type='password' style={{width: '140px', height: '25px', borderRadius:'5px'}}/>
+                  <input 
+                  value={this.state.password} 
+                  onChange={e=>this.setState({password:e.target.value})}
+                  type='password' 
+                  className='login__input-password'
+                  />
 
-              </form>
+                  </form>
 
             </div>
 
         </div>
 
-        <div style={{textAlign: 'center', position: 'absolute', bottom: '140px', width: 'inherit'}}>
+        <div className='login__facebook-container'
+        >
           <FacebookLogin
             appId="699586404315736"
             cssClass='btnFacebook'
@@ -75,7 +94,7 @@ onSuccess = (res) => {
           />
         </div>
 
-        <div className='googleContainer'
+        <div className='login__google-container flexCenter'
         >
           <GoogleLogin
             clientId={clientId}

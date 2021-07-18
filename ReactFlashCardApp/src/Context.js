@@ -6,11 +6,9 @@ export default function ContextProvider({ children }) {
   const [showProgressDiagram, setShowProgressDiagram] = useState(true);
   const [scrollbarVisible, setScrollbarVisible] = useState(true)
 
-
   const [trigger, setTrigger] = useState(null);
   const scroller = useRef();
   const [arrowDown, setArrowDown] = useState(true);
-
 
   const [changeDeckNameOpen, setChangeDeckNameOpen] = useState(false); //input field to change deckname is open
   const [editButtonClicked, setEditButtonClicked] = useState(true); //active when editButton next to DeckName is clicked
@@ -20,14 +18,7 @@ export default function ContextProvider({ children }) {
   const [spinnerIsVisible, setSpinnerIsVisible] = useState(true); //spinner that is shown when application loads
   const [addNewDeckWindow, setAddNewDeckWindow] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
-
-
-
-
-
-
-
-
+  const [showAnswerBtn, setShowAnswerBtn] = useState(true); //button in questionAnswerTrainOverView with that name
 
 
 
@@ -146,26 +137,26 @@ export default function ContextProvider({ children }) {
   
   return (
 
-    <Context.Provider value={{ dataBase, setDataBase, styles, setStyles,showProgressDiagram, setShowProgressDiagram, colors
-    ,scrollbarVisible, setScrollbarVisible,
+    <Context.Provider 
+    
+    value={{ dataBase, setDataBase, 
+    styles, setStyles,
+    showProgressDiagram, setShowProgressDiagram, 
+    colors
+    ,scrollbarVisible, setScrollbarVisible, 
     arrowDown, setArrowDown,
-    active, setActive
-    
-    
-  ,trigger, setTrigger, changeDeckNameOpen, setChangeDeckNameOpen,
-  editButtonClicked, setEditButtonClicked, pauseIsActive, setPauseIsActive,
+    active, setActive,
+    trigger, setTrigger, 
+    changeDeckNameOpen, setChangeDeckNameOpen,
+  editButtonClicked, setEditButtonClicked, 
+  pauseIsActive, setPauseIsActive,
   decksAreVisible, setDecksAreVisible,
   spinnerIsVisible, setSpinnerIsVisible,
   addNewDeckWindow, setAddNewDeckWindow,
-  scrollPosition, setScrollPosition, scroller
+  scrollPosition, setScrollPosition, 
+  showAnswerBtn, setShowAnswerBtn,
+  scroller
 
-    
-    
-    
-    
-    
-    
-    
      }} >
 
       {children}

@@ -6,18 +6,17 @@ export default function SaveAndDiscard({ saveEvent, generateRandom, setCardModif
  
   return (
 
-    <div className='saveAndDiscardContainer d-flex justify-content-around align-items-center flex-column'>
+    <div className='saveAndDiscardContainer flexAroundCenter flex-column'>
 
       <div>Save changes?</div>
       <div 
-          className='d-flex justify-content-between'
+          className='flexBetween'
           style={{width: '140px'}}
           >
       {
         ['Discard', 'Save'].map((el, index) =>
           <div
-            className={`saveAndDiscardButtonStyling d-flex justify-content-around align-items-center 
-            ${el}Btn`}
+            className={`saveAndDiscardButtonStyling flexAroundCenter ${el}Btn`}
           
             onClick={
                     el === 'Save'? 

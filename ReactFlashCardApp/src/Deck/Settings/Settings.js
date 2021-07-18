@@ -67,11 +67,10 @@ function Settings({ history }) {
       <div className='d-flex justify-content-center'
       >
           <div 
-              className='d-flex border border-dark justify-content-center align-items-center'
-              style={{ padding: '1px', borderRadius: '5px', position: 'relative', width: '300px', height:'88px' }}
+              className='border border-dark flexCenterAlignCenter settings_repetition-container'
           >
               <div 
-                  className='d-flex justify-content-around align-items-center' 
+                  className='flexAroundCenter' 
                   style={{width: '280px'}}
               >
                   {
@@ -94,8 +93,8 @@ function Settings({ history }) {
               
           </div>
           <div 
+              className='settings__save-or-edit-container'
               title='Click and change name buttons and repetition intervals for all decks.'
-              style={{ position: 'absolute', right: '11px', top: '77px', cursor: 'pointer' }}
           >
               <img
                   src={saveOrEdit ? save : edit}
@@ -117,13 +116,13 @@ function Settings({ history }) {
           Goal Settings
       </div>
 
-      <div style={{ fontWeight: 'bold', fontSize: '13px', textAlign: 'center', marginBottom: '2px' }}
+      <div className='settings__weekly-target'
       >
           Current Weekly Target
       </div>
 
       <div 
-        className='d-flex border border-dark justify-content-between align-items-center hexagonContainer'
+        className='flexBetweenCenter border border-dark  hexagonContainer'
       >
         {
 
@@ -152,7 +151,7 @@ function Settings({ history }) {
           }}
         />
       </div>
-      <div className='weeklyTarget'
+      <div className='settings__weekly-target flexCenter'
       >
 
         Target met: {dataBase.userPreferences.weeksInRow} weeks in a row

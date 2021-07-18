@@ -73,7 +73,7 @@ export default function Hexagons({ idx, editHex, setEditHex }) {
             >
             </div>
             
-            <span style={{ fontWeight: 'bold' }}
+            <span className='fontBold'
             >
                 {
                   idx <= dataBase.userPreferences.days ? 

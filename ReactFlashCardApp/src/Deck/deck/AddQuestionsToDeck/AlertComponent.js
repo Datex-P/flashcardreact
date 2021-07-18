@@ -39,7 +39,7 @@ function AlertComponent({card, setCard, newCardAdded}) {
         newCardAdded ?
 
           <div
-            className='d-flex justify-content-center align-items-center'
+            className='flexCenterAlignCenter'
             style={{ height: '52px' }}
           >
 

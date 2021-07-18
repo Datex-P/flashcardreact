@@ -1,6 +1,16 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { Context } from "../../Context";
 
-function Hamburger({editButtonClicked, show, setShow, setShowProgressDiagram, showProgressDiagram}) {
+function Hamburger({editButtonClicked, show, setShow}) {
+
+
+  const {
+    showProgressDiagram,
+    setShowProgressDiagram,
+  } = useContext(Context);
+
+
+
 
   function triggerDiagramAndState() {
     setShow(!show);

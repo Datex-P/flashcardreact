@@ -150,7 +150,7 @@ setScrollPosition, arrowDown, setArrowDown,active, setActive, scroller
             </div>
           ) : null}
 
-          <ShowProgressD showProgressDiagram={showProgressDiagram} setShowProgressDiagram={setShowProgressDiagram}/>
+          <ShowProgressD/>
 
          
         </Row>

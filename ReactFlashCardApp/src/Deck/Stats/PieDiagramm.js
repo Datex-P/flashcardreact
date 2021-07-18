@@ -8,8 +8,6 @@ export default function ChartComp() {
   let ctx = useRef(null)
 
 
-
-
  var config = {
   type: 'doughnut',
   data: {

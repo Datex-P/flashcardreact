@@ -35,7 +35,7 @@ function Paused({data, index, paused, name, setShow, style}) {
   >
     {data.length === 0 ? (
       <div
-        className="deckEmptyContainer"
+        className="deckEmptyAndPausedContainer flexEvenlyCenterColumn"
         style={{ left: "84px", textAlign: "center" }}
       >
         <div
@@ -88,7 +88,7 @@ function Paused({data, index, paused, name, setShow, style}) {
 
     {paused ? (
       <div
-        className="deckPausedContainer"
+        className="deckEmptyAndPausedContainer flexEvenlyCenterColumn"
         style={{ background: colors[index % 5] }}
       >
         <div>This deck is paused.</div>
@@ -96,7 +96,7 @@ function Paused({data, index, paused, name, setShow, style}) {
         <div style={{ display: "flex", alignItems: "center" }}>
           Press:
           <button
-            className="playButton"
+            className="playButton flexCenterAlignCenter"
             onClick={() => {
               handlePause();
             }}

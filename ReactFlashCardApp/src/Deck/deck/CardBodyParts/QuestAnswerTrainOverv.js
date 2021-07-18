@@ -1,14 +1,15 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
+import { Context } from "../../../Context";
 import { Button, FormControl, Alert } from "react-bootstrap";
-import { Context } from "../../Context";
-import editimg from "../../icons/edit.svg";
+import editimg from "../../../icons/edit.svg";
 
-import ThreeDotsBtn from "./ThreeDotsBtn";
-import BasicOrangeWindow from "./BasicOrangeWindow";
-import DeleteCardQuestionBox from "./DeleteCardQuestionBox";
-import SaveAndDiscard from "./CardBodyParts/SaveAndDiscard";
-import RepeatBtn from "./CardBodyParts/RepeatBtn";
-import pauseimg from "../../icons/pause.svg";
+import ThreeDotsBtn from "../ThreeDotsBtn";
+import BasicOrangeWindow from "../BasicOrangeWindow";
+import DeleteCardQuestionBox from "../DeleteCardQuestionBox";
+import SaveAndDiscard from "./SaveAndDiscard";
+import RepeatBtn from "./RepeatBtn";
+import PauseModeHandler from './PauseModeHandler'
+
 
 export default function QuestAnswerTrainOverv({
   name,
@@ -25,11 +26,8 @@ export default function QuestAnswerTrainOverv({
   const [editBtnClicked, setEditBtnClicked] = useState(false);
   const [randomQuestion, setRandomQuestion] = useState(null);
   const [cardModified, setCardModified] = useState(false);
-
   const [pauseOrDeleteText, setPauseOrDeleteText] = useState(true);
-
   const [show, setShow] = useState(false);
-  const [showAnswerBtn, setShowAnswerBtn] = useState(true);
   const [showRepeatBtn, setShowRepeatBtn] = useState(false);
 
   const [showDeleteWindow, setShowDeleteWindow] = useState(true);
@@ -41,17 +39,14 @@ export default function QuestAnswerTrainOverv({
   const {
     dataBase, setDataBase, 
   editButtonClicked, 
- setShowProgressDiagram
+ setShowProgressDiagram,
+ showAnswerBtn, setShowAnswerBtn
   } = useContext(Context);
-
-
 
 
   const [card, setCard] = useState({ answer: "", question: "" });
   const [threeDotsMenuOpen, setThreeDotsMenuOpen] = useState(false);
-
   const [mainBox] = useState(true);
-
   const inputRef = useRef(null);
 
   useEffect(() => {
@@ -211,7 +206,6 @@ export default function QuestAnswerTrainOverv({
                 newDataBase.openedToday = true;
                 setShowProgressDiagram(false); //progress diagram gets why not at this place??
                 setDataBase(newDataBase);
-                console.log(dataBase, 'database')
               }
         }
       >
@@ -228,7 +222,6 @@ export default function QuestAnswerTrainOverv({
           id="questionAnswerOverview"
           showRepeatBtn={showRepeatBtn}
           setShowRepeatBtn={setShowRepeatBtn}
-          setShowAnswerBtn={setShowAnswerBtn}
           setEditBtnClicked={setEditBtnClicked}
           createDeckButtonIsVisible={createDeckButtonIsVisible}
           setCreateDeckButtonIsVisible={setCreateDeckButtonIsVisible}
@@ -265,14 +258,6 @@ export default function QuestAnswerTrainOverv({
                 trashEvent={() => {
                   setTrash(true);
                   setPauseOrDeleteText(false);
-
-                  // dataBase.checkboxClicked ?
-
-                  //   null
-
-                  //   :
-                  //   () => {
-                  // setShowRepeatBtn(false)
                   setShowDeleteWindow(true);
                   setShowAnswerBtn(true);
                   //                    }
@@ -309,7 +294,7 @@ export default function QuestAnswerTrainOverv({
               {showAnswerBtn && (
                 <Button
                   variant="secondary"
-                  className="p-1 showAnswer my-5 d-flex justify-content-center align-items-center"
+                  className="p-1 showAnswer my-5 flexCenterAlignCenter"
                   onClick={() => {
                     setShowAnswerBtn(false);
                     setShowRepeatBtn(true);
@@ -318,45 +303,17 @@ export default function QuestAnswerTrainOverv({
                   Show answer
                 </Button>
               )}
-              {dataBase.DeckNames[index].pauseMode ? (
-                <>
-                  <div
-                    style={{ position: "absolute", left: "37px", top: "-15px" }}
-                  >
-                    <img src={pauseimg} alt={"pause"} />
-                    <span style={{ marginLeft: "7px" }}>mode</span>
-                  </div>
 
-                  <div className="flexCenter">
-                    <div
-                      className="flexAround"
-                      style={{ width: "300px" }}
-                    >
-                      <div
-                        className="unpauseAndKeepPausedButton showAnswerButton"
-                        onClick={() => {
-                          let newDataBase = { ...dataBase };
-                          newDataBase.DeckNames[index].data.filter(
-                            (item) => item.paused
-                          )[randomQuestion].paused = false;
-                          setDataBase(newDataBase);
-                          generateRandom();
-                        }}
-                      >
-                        Unpause card
-                      </div>
-                      <div
-                        className="unpauseAndKeepPausedButton showAnswerButton"
-                        onClick={() => {
-                          generateRandom();
-                        }}
-                      >
-                        Keep paused
-                      </div>
-                    </div>
-                  </div>
-                </>
-              ) : null}
+                {dataBase.DeckNames[index].pauseMode ? 
+
+              <PauseModeHandler
+
+                generateRandom={generateRandom}
+                index = {index}
+                randomQuestion={randomQuestion}
+
+              />
+              : null} 
 
               {showRepeatBtn && (
                 <div className="flexCenter">

@@ -12,9 +12,8 @@ export default function AddQuestionsToDeck({ index, name,
   const [card, setCard] = useState({ question: '', answer: '' })
   const [newCardAdded, setNewCardAdded] = useState(false);
 
-  const {
-    dataBase, setDataBase,
-  editButtonClicked, 
+  const { dataBase, setDataBase, 
+    editButtonClicked, 
   setShowProgressDiagram,
   setScrollbarVisible
  
@@ -109,8 +108,7 @@ export default function AddQuestionsToDeck({ index, name,
 
           <button
             className='redCross'
-            onClick={() => setShow(false)
-            }
+            onClick={() => setShow(false)}
           >
 
             <img
@@ -123,10 +121,10 @@ export default function AddQuestionsToDeck({ index, name,
         </Modal.Header>
         <Modal.Body >
 
-        <AlertComponent card={card}
-        setCard={setCard}
-        newCardAdded={newCardAdded} 
-
+        <AlertComponent 
+                  card={card}
+                  setCard={setCard}
+                  newCardAdded={newCardAdded} 
         />
 
           <button

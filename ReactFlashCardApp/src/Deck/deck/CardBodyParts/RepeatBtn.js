@@ -15,7 +15,7 @@ export default function RepeatBtn({ label, btn, onClick }) {
       <Button 
           variant="secondary"
           onClick={onClick}
-          style={{width:'65px', height: '27px', display:'flex', justifyContent:'center',alignItems:'center'}}
+          className='flexCenterAlignCenter repeat-btn__button'
       >
 
           {btn}

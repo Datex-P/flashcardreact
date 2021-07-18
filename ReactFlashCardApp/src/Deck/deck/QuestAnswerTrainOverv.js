@@ -18,7 +18,7 @@ export default function QuestAnswerTrainOverv({
   createDeckButtonIsVisible,
 
   setCreateDeckButtonIsVisible = () => {},
-  editButtonClicked, //activated when change deckname field is open
+  //editButtonClicked, //activated when change deckname field is open
 }) {
 
   const [checked, setChecked] = useState(false);
@@ -37,7 +37,16 @@ export default function QuestAnswerTrainOverv({
   const [trash, setTrash] = useState(false);
   const [deckLengthNotZero, setDeckLengthNotZero] = useState(true);
 
-  const { dataBase, setDataBase, setShowProgressDiagram } = useContext(Context);
+
+  const {
+    dataBase, setDataBase, 
+  editButtonClicked, 
+ setShowProgressDiagram
+  } = useContext(Context);
+
+
+
+
   const [card, setCard] = useState({ answer: "", question: "" });
   const [threeDotsMenuOpen, setThreeDotsMenuOpen] = useState(false);
 
@@ -273,14 +282,7 @@ export default function QuestAnswerTrainOverv({
           }
         >
           {editBtnClicked ? (
-            <div
-              style={{
-                top: "-18px",
-                position: "relative",
-                marginLeft: "20px",
-                display: "flex",
-                alignItems: "center",
-              }}
+            <div className='editBtnClickedStyling flexAlignCenter'
             >
               <img alt="edit" src={editimg} />
               <span style={{ marginLeft: "3px" }}>mode</span>
@@ -327,7 +329,7 @@ export default function QuestAnswerTrainOverv({
 
                   <div className="flexCenter">
                     <div
-                      className="d-flex justify-content-around"
+                      className="flexAround"
                       style={{ width: "300px" }}
                     >
                       <div
@@ -359,7 +361,7 @@ export default function QuestAnswerTrainOverv({
               {showRepeatBtn && (
                 <div className="flexCenter">
                   <div
-                    className="d-flex justify-content-between px-3 showRepeatBtnInner"
+                    className="flexBetween px-3 showRepeatBtnInner"
                   >
                     {dataBase.userTimePreferences.map((col, index) => (
                       <RepeatBtn
@@ -432,8 +434,8 @@ export default function QuestAnswerTrainOverv({
                 <DeleteCardQuestionBox
                   card="card"
                   pauseOrDelete={`${pauseOrDeleteText ? "Pause" : "Delete"}`}
-                  checked={checked}
-                  setChecked={setChecked}
+                   checked={checked}
+                   setChecked={setChecked}
                   randomQuestion={randomQuestion}
                   show={show}
                   index={index}

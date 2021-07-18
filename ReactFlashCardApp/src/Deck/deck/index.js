@@ -1,6 +1,6 @@
 import React, { useState, useContext, useRef, useEffect } from "react";
-import { Card } from "react-bootstrap";
 import { Context } from "../../Context";
+import { Card } from "react-bootstrap";
 import "../styles.css";
 import ThreeDotsBtn from "./ThreeDotsBtn";
 import AddQuestionsToDeck from "./AddQuestionsToDeck/AddQuestionsToDeck";
@@ -11,7 +11,6 @@ import Paused from './Paused'
 
 export default function Deck({
    deck,
-  
    index,
    bg,
    paused,
@@ -34,10 +33,10 @@ export default function Deck({
   const {
     dataBase, setDataBase
   , setChangeDeckNameOpen,
-  editButtonClicked, setEditButtonClicked, pauseIsActive, setPauseIsActive,
+  editButtonClicked, setEditButtonClicked, 
   setDecksAreVisible,
   active, setActive,
-  arrowDown, setArrowDown
+ setArrowDown
   } = useContext(Context);
 
   //const [index, setIndex] = useState(0);
@@ -59,7 +58,6 @@ export default function Deck({
 
   function handlePause(index) { 
     let newDataBase = { ...dataBase };
-    console.log(index, 'index')
     newDataBase.DeckNames[index].paused = true;
     setDataBase(newDataBase);
    
@@ -82,9 +80,9 @@ export default function Deck({
       setDecksAreVisible(false);
       setArrowDown(true);
     } else {
-      console.log(index, "that is the index");
+    
       setDataBase(newDataBase);
-      console.log(newDataBase);
+  
       if (index === 0) {
         setActive(1);
       } else {
@@ -154,8 +152,6 @@ export default function Deck({
                 paused={paused}
                 data={data}
                 name={name}
-                active={active}
-                setActive={setActive}
                 className="deckOrCardNameStyling"
               />
             ) : (
@@ -175,8 +171,6 @@ export default function Deck({
               text={"deck"}
               data={data}
               showFromParent={threeDotsMenuOpen}
-              editButtonClicked={editButtonClicked}
-              setEditButtonClicked={setEditButtonClicked}
               setShowFromParent={setThreeDotsMenuOpen}
               index={index}
               paused={paused}
@@ -249,19 +243,16 @@ export default function Deck({
          
 
           <QuestAnswerTrainOverv
-            editButtonClicked={editButtonClicked}
             name={name}
             index={index}
             data={data}
             paused={paused}
-            pauseIsActive={pauseIsActive}
-            setPauseIsActive={setPauseIsActive}
+           
           />
 
           {active === index && (
        
             <AddQuestionsToDeck
-              editButtonClicked={editButtonClicked}
               background={style.background}
               name={name}
               index={index}

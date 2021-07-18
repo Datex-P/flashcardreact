@@ -3,15 +3,20 @@ import { Modal } from "react-bootstrap";
 import { Context } from "../../Context"; 
 
 export default function CreateNewDeck({
-  addNewDeckWindow,
-  setDecksAreVisible,
+
   close,
-  setActive,
-  setArrowDown,
+ 
 }) {
 
 
-  const {dataBase,setDataBase,setShowProgressDiagram,setScrollbarVisible,colors} = useContext(Context);
+  const {
+    dataBase, setDataBase, setShowProgressDiagram, colors,
+   setScrollbarVisible,
+   setDecksAreVisible,
+  addNewDeckWindow, 
+ setArrowDown, setActive, 
+  } = useContext(Context);
+
   const [inputField, setInputField] = useState('');
   const [nameTooShortOrLong, setNameTooShortOrLong] = useState(false);
 

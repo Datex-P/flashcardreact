@@ -6,12 +6,23 @@ import '../../styles.css'
 import redCross from '../../../icons/redCross.svg'
 import AlertComponent from './AlertComponent'
 
-export default function AddQuestionsToDeck({ index, name, editButtonClicked, show, setShow}) {
+export default function AddQuestionsToDeck({ index, name, 
+  // editButtonClicked, 
+  show, setShow}) {
 
   const [card, setCard] = useState({ question: '', answer: '' })
   const [newCardAdded, setNewCardAdded] = useState(false);
 
-  const { dataBase, setDataBase, setShowProgressDiagram, setScrollbarVisible} = useContext(Context);
+  const {
+    dataBase, setDataBase,
+  editButtonClicked, 
+  setShowProgressDiagram,
+  setScrollbarVisible
+ 
+  } = useContext(Context);
+
+
+
 
   function addToDeck() {
 
@@ -118,8 +129,6 @@ export default function AddQuestionsToDeck({ index, name, editButtonClicked, sho
         newCardAdded={newCardAdded} 
 
         />
-
-
 
           <button
             onClick={addToDeck}

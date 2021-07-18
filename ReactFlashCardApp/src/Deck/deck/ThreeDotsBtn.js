@@ -17,7 +17,6 @@ function ThreeDotsBtn({
                         showFromParent, 
                         style, 
                         className, 
-                        editButtonClicked,  //active when editButton next to DeckName is clicked
                         nameOfTopDeck, 
                         index, input, threeDotsContainer,
                         edit=false,trash=false,pause=false,reset=false,
@@ -32,10 +31,20 @@ function ThreeDotsBtn({
 
 {
 
+
+  const {
+    dataBase, setDataBase
+  , setChangeDeckNameOpen,
+  editButtonClicked, setEditButtonClicked, 
+  setDecksAreVisible,
+  active, setActive,
+ setArrowDown
+  } = useContext(Context);
+
   const [blinkingSaveIcon, setBlinkingSaveIcon] = useState(false)
    const [pauseIsActive, setPauseIsActive] = useState(true)
   const [threeDotsOpen, setThreeDotsOpen] = useState(showFromParent);
-  const {dataBase, setDataBase} = useContext(Context);
+  //const {dataBase, setDataBase} = useContext(Context);
 
 
   const handleClick = () => {

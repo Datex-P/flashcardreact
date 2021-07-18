@@ -50,6 +50,29 @@ input[type=number] {
   align-items: center;
 }
 
+.flexBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexAround {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flexAlignCenter {
+  display: flex;
+  align-items: center;
+}
+
+.editBtnClickedStyling {
+  top: -18px;
+  position: relative;
+  margin-left: 20px;
+}
+
+
+
 .flexBetweenCenter {
   display: flex;
   justify-content: space-between;
@@ -1401,6 +1424,23 @@ textarea.form-control:active, textarea.form-control:focus {
   width: 26px; 
   height: fit-content;
   margin-right: 20px;
+  }
+
+  .deleteCardQuestionBox__question-mark {
+    width: 40px; 
+    position: absolute;
+  }
+
+  .questionMark1 {
+    top: -47px; 
+    right: -10px;
+
+  }
+
+  .questionMark2 {
+    top: -65px; 
+    right: -30px;
+
   }
 
   .studyGoalStyling {

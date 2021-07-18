@@ -7,7 +7,9 @@ import resetimg from '../../icons/reset.svg'
 import questionMark from '../../icons/questionMark.svg'
 import flashcards from '../../icons/flashcards.svg'
 
-export default function DeleteCardQuestionBox({ card, pauseOrDelete,deleteWindow, trashEvent, 
+export default function DeleteCardQuestionBox({ card, 
+  pauseOrDelete,deleteWindow, 
+  trashEvent, 
                                                 setShowAnswerBtn=()=>{},
                                                 setShowRepeatBtn=()=>{},
                                                 setEditBtnClicked=()=>{},
@@ -49,12 +51,13 @@ export default function DeleteCardQuestionBox({ card, pauseOrDelete,deleteWindow
 
             <img 
                 src={questionMark} 
-                 style={{ width: '40px', position: 'absolute', top: '-47px', right: '-10px'}}
+                className='deleteCardQuestionBox__question-mark questionMark1'
+               
                  alt='questionMark' 
             />
             <img 
               src={questionMark} 
-               style={{ width: '40px', position: 'absolute', top: '-65px', right: '-30px'}}
+              className='deleteCardQuestionBox__question-mark questionMark2'
                alt='questionMark'              
             />
 

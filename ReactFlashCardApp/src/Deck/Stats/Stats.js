@@ -2,16 +2,16 @@ import React, {
   useState,
   useEffect,
   useContext,
-  useRef
 } from "react";
 import { Context } from "../../Context";
 import BasicOrangeWindow from '../deck/BasicOrangeWindow';
 import ThreeDotsBtn from "../deck/ThreeDotsBtn";
 import { withRouter } from 'react-router-dom';
 import PieDiagramm from "./PieDiagramm";
-import TimeAndProgress from './TimeAndProgress.js';
-import HourlyBreakdown from "./HourlyBreakdown.js";
+import TimeAndProgress from './TimeAndProgress';
+import HourlyBreakdown from "./HourlyBreakdown";
 import DeleteCardQuestionBox from "../deck/DeleteCardQuestionBox";
+import RenderDays from './RenderDays'
 
 function Stats({ history }) {
   const { dataBase, setShowProgressDiagram, setDataBase } = useContext(Context);
@@ -67,7 +67,7 @@ function Stats({ history }) {
           </div>
           <div
             style={{ marginBottom: "10px", border: "1px solid black" }}
-            className="d-flex flex-direction column align-items-center"
+            className="flexAlignCenter flex-direction column "
           >
             {showDeleteFrame && (
               <DeleteCardQuestionBox
@@ -129,7 +129,7 @@ function ButtonLeftAndRight() {
     <div className='d-flex flex-column'
     >
       <div
-        className="d-flex justify-content-center align-items-center innerRenderDays"
+        className="flexCenterAlignCenter  innerRenderDays"
       >
         {["<", year, ">"].map((el, index) => (
           <div
@@ -141,8 +141,8 @@ function ButtonLeftAndRight() {
             }}
             className={
               el !== year
-                ? "d-flex justify-content-center align-items-center calendarButtons"
-                : " align-items-center flex justify-content-center"
+                ? "flexCenterAlignCenter  calendarButtons"
+                : " flexCenterAlignCenter "
             }
             onClick={
               el === "<" && el !== year ? handleDecrement : handleIncrement
@@ -159,106 +159,106 @@ function ButtonLeftAndRight() {
   );
 }
 
-function RenderDays() {
-  const [year] = useState(new Date().getFullYear());
-  const [days, setDays] = useState([]);
-  const {dataBase} = useContext(Context);
-  const [showTodaysProg, setShowTodaysProg] = useState(false);
-  const innerStat = useRef(null)
-  const [right,setRight]=useState(0)
-  const [outer,setOuter]=useState(0)
+// function RenderDays() {
+//   const [year] = useState(new Date().getFullYear());
+//   const [days, setDays] = useState([]);
+//   const {dataBase} = useContext(Context);
+//   const [showTodaysProg, setShowTodaysProg] = useState(false);
+//   const innerStat = useRef(null)
+//   const [right,setRight]=useState(0)
+//   const [outer,setOuter]=useState(0)
 
-  useEffect(() => {
-    let date = [];
-    let thisYear = new Date(`January 1, ${+year}`);
+  // useEffect(() => {
+  //   let date = [];
+  //   let thisYear = new Date(`January 1, ${+year}`);
 
-    while (
-      thisYear.getMonth() !== 0 ||
-      thisYear.getDate() !== 1 ||
-      thisYear.getFullYear() === +year
-    ) {
-      date.push({ day: thisYear.toDateString(), cardsStudied: 0 });
-      thisYear.setDate(thisYear.getDate() + 1);
-    }
-    //setDays(date);
-    let today = new Date('May 26, 2021').toDateString();
-    if (dataBase?.DeckNames) {
-      for (let deck in dataBase.DeckNames) {
-        //console.log(deckItem.data.filter((item) => item?.openHistory?.some(item => new Date(item).toDateString())).length, 'opened cards today')
+  //   while (
+  //     thisYear.getMonth() !== 0 ||
+  //     thisYear.getDate() !== 1 ||
+  //     thisYear.getFullYear() === +year
+  //   ) {
+  //     date.push({ day: thisYear.toDateString(), cardsStudied: 0 });
+  //     thisYear.setDate(thisYear.getDate() + 1);
+  //   }
+  //   //setDays(date);
+  //   let today = new Date('May 26, 2021').toDateString();
+  //   if (dataBase?.DeckNames) {
+  //     for (let deck in dataBase.DeckNames) {
+  //       //console.log(deckItem.data.filter((item) => item?.openHistory?.some(item => new Date(item).toDateString())).length, 'opened cards today')
 
-        //cardsStudiedataBase.DeckNames[deck].data.filter((item) => item?.openHistory?.some(item => new Date(item).toDateString())).length
+  //       //cardsStudiedataBase.DeckNames[deck].data.filter((item) => item?.openHistory?.some(item => new Date(item).toDateString())).length
 
-        //cardsStudied = dataBase.DeckNames[deck].data.filter((item) => item?.openHistory?.some(item => new Date(item).toDateString() === date)).length
-        let todaysAmount = dataBase.DeckNames[deck].data.filter((item) =>
-          item?.openHistory?.some(
-            (item) => new Date(item).toDateString() === today
-          )
-        ).length;
-        let index = date.findIndex((day) => day.day === today);
-        console.log(index);
-        date[index].cardsStudied += todaysAmount;
-        setDays(date);
-      }
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [year,dataBase.DeckNames]);
-
-
+  //       //cardsStudied = dataBase.DeckNames[deck].data.filter((item) => item?.openHistory?.some(item => new Date(item).toDateString() === date)).length
+  //       let todaysAmount = dataBase.DeckNames[deck].data.filter((item) =>
+  //         item?.openHistory?.some(
+  //           (item) => new Date(item).toDateString() === today
+  //         )
+  //       ).length;
+  //       let index = date.findIndex((day) => day.day === today);
+  //       console.log(index);
+  //       date[index].cardsStudied += todaysAmount;
+  //       setDays(date);
+  //     }
+  //   }
+  // // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [year,dataBase.DeckNames]);
 
 
-  return (
-    <div className="yearBoxContainer"
-     onClick={(e)=>{    
-       let outer = e.currentTarget.getBoundingClientRect()
+
+
+//   return (
+//     <div className="yearBoxContainer"
+//      onClick={(e)=>{    
+//        let outer = e.currentTarget.getBoundingClientRect()
    
-        setOuter(outer)
-       }}
-     >
-      {days.map((day, index) => (
-        <div
-          className={`day ${day.cardsStudied ? 'pointer' : ''}`}
-          key={index}
-          style={{ backgroundColor: day.cardsStudied ? 'red' : '' }}
-          onClick={(e) => {
-            let inner= e.target.getBoundingClientRect();
+//         setOuter(outer)
+//        }}
+//      >
+//       {days.map((day, index) => (
+//         <div
+//           className={`day ${day.cardsStudied ? 'pointer' : ''}`}
+//           key={index}
+//           style={{ backgroundColor: day.cardsStudied ? 'red' : '' }}
+//           onClick={(e) => {
+//             let inner= e.target.getBoundingClientRect();
            
-                if((outer.right - inner.right) < 126){
-                  setRight(outer.right - inner.right - 126)    
-                }
+//                 if((outer.right - inner.right) < 126){
+//                   setRight(outer.right - inner.right - 126)    
+//                 }
           
-            if (day.cardsStudied) {
-              setShowTodaysProg(true);
+//             if (day.cardsStudied) {
+//               setShowTodaysProg(true);
 
-            }
-          }}
-        >
-          {showTodaysProg && day.cardsStudied ? (
-            <div
-              className='todayStudiedInfo'
-              style={{
-                left: right+'px'
-              }}
-              ref={innerStat}
-            >
-              {day.day}
-              <div
-                style={{
-                  position: 'absolute',
-                  top: '30px'
-                }}
-              >
-                Time:
-              </div>
-              <div className='reviewTextContainer'
-              >
+//             }
+//           }}
+//         >
+//           {showTodaysProg && day.cardsStudied ? (
+//             <div
+//               className='todayStudiedInfo'
+//               style={{
+//                 left: right+'px'
+//               }}
+//               ref={innerStat}
+//             >
+//               {day.day}
+//               <div
+//                 style={{
+//                   position: 'absolute',
+//                   top: '30px'
+//                 }}
+//               >
+//                 Time:
+//               </div>
+//               <div className='reviewTextContainer'
+//               >
                 
-                Review:`${day.cardsStudied !== 1 ? "s" : ""}: $
-                {day.cardsStudied} card${day.cardsStudied !== 1 ? "s" : ""}`
-              </div>
-            </div>
-          ) : null}
-        </div>
-      ))}
-    </div>
-  );
-}
+//                 Review:`${day.cardsStudied !== 1 ? "s" : ""}: $
+//                 {day.cardsStudied} card${day.cardsStudied !== 1 ? "s" : ""}`
+//               </div>
+//             </div>
+//           ) : null}
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }

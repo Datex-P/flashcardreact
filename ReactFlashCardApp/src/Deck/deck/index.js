@@ -128,7 +128,7 @@ export default function Deck({
         className="newDeckContainer flexColumn position-absolute "
       >
      
-        <Card.Body className="justify-content-center align-items-center flex-column d-flex"
+        <Card.Body className="flexCenterAlignCenter flex-column"
         >
           {
         nameTooLongOrShort? 

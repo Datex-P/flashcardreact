@@ -15,7 +15,7 @@ export default function HourlyBreakdown() {
 
   return (
     
-    <div className='d-flex align-items-center flex-column'
+    <div className='flexAlignCenter flex-column'
     >
 
       <div style={{ marginTop: '20px', fontSize: 'bold', fontWeight: 'bold' }}

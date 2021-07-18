@@ -64,33 +64,12 @@ export default function InputCheckbox({ index, setShowAnswerBtn, generateRandom 
 
          switchOnOrOff()
 
-      //     if(!dataBase.DeckNames[index].editModeActive) {
-
-      //     if (dataBase.DeckNames[index].data.filter(x => x.paused === true).length === 0) {
-      //       console.log('no cards paused')
-      //     } else {
-          
-      //         if(dataBase.DeckNames[index].pauseMode) {
-      //         dataBase.DeckNames[index].pauseMode=false
-      //         setDataBase(newDataBase)
-      //         setShowAnswerBtn(true)
-        
-      //       }  else {
-      //         dataBase.DeckNames[index].pauseMode=true
-      //         setDataBase(newDataBase)
-      //         setShowAnswerBtn(false)
-      //         generateRandom()
-      //     }
-         
-      //   }
-     
-      // }
        }
        }
       
       >
         <span className="onoffswitch-inner"></span>
-        <span className="onoffswitch-switch d-flex justify-content-center align-items-center">
+        <span className="onoffswitch-switch flexCenterAlignCenter">
           {`${cardsPaused()}`}
         </span>
       </label>

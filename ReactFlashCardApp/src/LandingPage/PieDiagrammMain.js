@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useContext} from 'react'
 import {Chart} from "chart.js";
-import {Context} from '../../Context'
+import {Context} from '../Context'
 
 
 export default function ChartComp() {
@@ -35,8 +35,7 @@ export default function ChartComp() {
       borderWidth: 0,
       // hoverBackgroundColor: [
       //   "#FF6384",
-      //   "#36A2EB",
-      //   "#FFCE56"
+ 
       // ]
     }]
   },

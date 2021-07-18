@@ -7,7 +7,6 @@ import redCross from '../../../icons/redCross.svg'
 import AlertComponent from './AlertComponent'
 
 export default function AddQuestionsToDeck({ index, name, 
-  // editButtonClicked, 
   show, setShow}) {
 
   const [card, setCard] = useState({ question: '', answer: '' })

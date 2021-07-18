@@ -30,7 +30,7 @@ function Paused({data, index, paused, name, setShow, style}) {
 
   return (
     <div
-    className="d-flex flex-column justify-content-between"
+    className="flexBetween flex-column"
     style={{ height: "82px" }}
   >
     {data.length === 0 ? (
@@ -39,7 +39,7 @@ function Paused({data, index, paused, name, setShow, style}) {
         style={{ left: "84px", textAlign: "center" }}
       >
         <div
-          className="d-flex flex-column justify-content-around"
+          className="flexAround flex-column"
           style={{ height: "90px", width: "122px" }}
         >
           <div>

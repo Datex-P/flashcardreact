@@ -6,7 +6,6 @@ import AddQuestionsToDeck from './AddQuestionsToDeck'
 import QuestAnswerTrainOverv from './QuestAnswerTrainOverv'
 import DeckOrCardName from  './DeckOrCardName'
 import DeleteCardQuestionBox from  './DeleteCardQuestionBox';
-
 import playimg from '../../icons/play.svg'
 
 
@@ -88,11 +87,11 @@ export default function Deck({ deck, checked, setChecked,
         className='newDeckContainer flexColumn position-absolute '
     >
       <Card.Body 
-          className='justify-content-center align-items-center flex-column d-flex'
+          className='flexCenterAlignCenter flex-column'
       >
 
         <Card.Title 
-            className='d-flex align-items-center justify-content-between position-relative'
+            className='flexBetweenCenter position-relative'
             style={{width:'126px', left: '-5px', top: '-12px'}}
         >
 
@@ -198,7 +197,7 @@ export default function Deck({ deck, checked, setChecked,
 
         </Card.Title>
 
-        <div className='mb-3 d-flex flex-column justify-content-between'   //container for the decksize and cards thing
+        <div className='mb-3  flex-column flexBetween'   //container for the decksize and cards thing
             style= {{height: '256px', position: 'relative', top: '-17px'}}
         >
 
@@ -234,9 +233,7 @@ export default function Deck({ deck, checked, setChecked,
                 <input 
                     type='number' 
                     className='inputStyling' 
-                   // style={{background: paused? style.background: 'none'}}
                     min='10'
-                    //min='2'
                     max='30'
                     disabled
                 >   
@@ -259,7 +256,7 @@ export default function Deck({ deck, checked, setChecked,
                       {/* Deck is paused.  */}
                   </div>
 
-                  <div style={{display: 'flex', alignItems: 'center'}}
+                  <div className='flexAlignCenter'
                   > 
                         Press:
                     

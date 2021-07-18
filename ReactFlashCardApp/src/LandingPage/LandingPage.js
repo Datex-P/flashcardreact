@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useContext, useRef } from "react";
+import React, { useEffect,  useContext,} from "react";
 import { Context } from "../Context"; 
 import { Container, Row, Spinner } from "react-bootstrap";
-import PieDiagramm from "./Stats/PieDiagrammMain";
-import Deck from "./deck/";
-import CreateNewDeck from "./deck/CreateNewDeck";
+import Deck from "../Deck/deck/index";
+import CreateNewDeck from "../Deck/deck/CreateNewDeck";
 import NavBar from "../NavBar";
+import ShowProgressD from "./ShowProgressDiagram";
 
 export default function DeckContainer() {
   const {
@@ -150,30 +150,9 @@ setScrollPosition, arrowDown, setArrowDown,active, setActive, scroller
             </div>
           ) : null}
 
-          {showProgressDiagram ? (
-            <>
-              <div style={{width:'48px', height:'27px', position: 'absolute', left: '346px',top: '-31px', background: 'rgb(90, 170, 149)'}}
-              >
-                  <div style={{fontWeight:'bold'}}
-                  > 
-                      Goal
-                  </div>
-                  <div style={{fontSize:'13px', marginLeft:'5px'}}
-                  >
-                    {
-                      `${parseInt((dataBase.deckCompleted * 100) /
-                         Object.keys(dataBase.DeckNames).length)} %`
-                    }
-                  </div>
-              </div>
-            <div className='pieDiagramContainer'
-            >
-              <PieDiagramm />
-            </div>
-            </>
-          ) 
-          : 
-          null}
+          <ShowProgressD showProgressDiagram={showProgressDiagram} setShowProgressDiagram={setShowProgressDiagram}/>
+
+         
         </Row>
 
         <Row className='justify-content-center'>
@@ -212,7 +191,7 @@ setScrollPosition, arrowDown, setArrowDown,active, setActive, scroller
   ) : (
     // 'database empty'
     <div
-      className="d-flex align-items-center justify-content-center"
+      className="flexCenterAlignCenter"
       style={{ height: "50vh" }}
     >
       <Spinner animation="grow" />

@@ -15,8 +15,7 @@ export default function ChartComp() {
   data: {
     labels: [
       // "Red",
-      // "Green",
-      // "Yellow"
+
     ],
     datasets: [{
       data: [
@@ -24,19 +23,17 @@ export default function ChartComp() {
       ],
       backgroundColor: [
         //  "#FF6384",
-        // "#36A2EB",
-        // "#FFCE56"
+  
       ],
       borderColor: [
         //  'rgba(184, 156, 110, 0.95)',
-        // 'rgba(184, 156, 110, 0.95)',
-        // 'rgba(184, 156, 110, 0.95)'
+   
       ],
        borderWidth: 0,
       hoverBackgroundColor: [
       //  "#FF6384",
         // "#36A2EB",
-        // "#FFCE56"
+   
       ]
     }]
   },
@@ -86,8 +83,6 @@ export default function ChartComp() {
 
   useEffect(() => {
 
-
-
     new Chart(ctx.current, config);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -101,7 +96,6 @@ export default function ChartComp() {
     let deckItem = dataBase.DeckNames[deck]
     if (deckItem.data.find((item) => new Date(item?.openHistory?.[0]).toDateString() === new Date().toDateString())) {
       // todayCardsStudiedCounter++
-      console.log('yes a deck was opened today')
       config.data.labels.push(deckItem.name)
     }
     if (deckItem.data.find((item) => new Date(item?.openHistory?.[0]).toDateString())) {
@@ -109,12 +103,10 @@ export default function ChartComp() {
 
     //  cardsStudiedCounter += deckItem.data.filter((item) => item?.openHistory?.some(item => new Date(item).toDateString() == date)).length
 
-
-    console.log(deckItem.data.filter((item) => item?.openHistory?.some(item => new Date(item).toDateString())).length, 'opened cards today')
+    //console.log(deckItem.data.filter((item) => item?.openHistory?.some(item => new Date(item).toDateString())).length, 'opened cards today')
 
 
      config.data.labels.push(deckItem.name)
-      //arr.push(deckItem.name)
       
       //config.data.datasets[0].data.push(10)
       config.data.datasets[0].data.push(deckItem.data.filter((item) => item?.openHistory?.some(item => new Date(item).toDateString() === date)).length)

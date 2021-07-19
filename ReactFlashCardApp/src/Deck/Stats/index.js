@@ -253,7 +253,7 @@ export default function Deck({ deck, checked, setChecked,
                   style={{background: colors[index % 5]}}
               >
                   <div>
-                      {/* Deck is paused.  */}
+                      
                   </div>
 
                   <div className='align-center'

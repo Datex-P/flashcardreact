@@ -17,9 +17,9 @@ function ShowProgressD() {
     <>
          {showProgressDiagram ? (
             <>
-              <div style={{width:'48px', height:'27px', position: 'absolute', left: '346px',top: '-31px', background: 'rgb(90, 170, 149)'}}
+              <div className='showProgressDiagram'
               >
-                  <div style={{fontWeight:'bold'}}
+                  <div className='fontBold '
                   > 
                       Goal
                   </div>

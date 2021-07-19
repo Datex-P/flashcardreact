@@ -196,7 +196,7 @@ input[type="checkbox"] {
 }
 
 
-.timesStyling {
+.timesAndProgress_times {
   padding-left: 3px;
   height: 21px;
   font-size: 14px;
@@ -568,7 +568,7 @@ input::-webkit-inner-spin-button {
   cursor: pointer !important;
 }
 
-.tooShortOrLong {
+.createNewDeck__too-short-or-long {
   position: absolute;
   left: 172px;
   top: 14px;
@@ -760,6 +760,26 @@ input::-webkit-inner-spin-button {
   width: 100px;
   left: 235px;
   top: 22px;
+}
+
+.login__login-password-row {
+  margin-top: 29px;
+}
+
+                      
+                      
+.threeDotsBtn__trash-pause-img {
+  margin-right: 3px;
+}
+
+
+.showProgressDiagram {
+  width: 48px; 
+  height: 27px;
+  position: absolute;
+  left: 346px;
+  top: -31px; 
+  background: 'rgb(90, 170, 149)'
 }
 
 .settings__save-or-edit-container {
@@ -1015,7 +1035,7 @@ margin-bottom: 20px;
   top: 32px;
 }
 
-.selectStyling {
+.createNewDeck__select-options {
   width: 79%;
   height: 24px;
   border-radius: 5px;
@@ -1104,7 +1124,7 @@ margin-bottom: 20px;
   overflow: hidden;
 }
 
-.three-dots__reset-img {
+.threeDotsBtn__reset-img {
   margin-right: 3px;
   width: 23px;
   height: 23px;
@@ -1207,7 +1227,7 @@ textarea.form-control:focus {
   transform: rotate(90deg);
 }
 
-.hexagonContainer {
+.settings__container-hexagon {
   border-radius: 5px;
   position: relative;
   padding-left: 8px;
@@ -1218,7 +1238,7 @@ textarea.form-control:focus {
   height: 66px;
 }
 
-.goalSettingsContainer {
+.settings__goal-settings {
   font-weight: bold;
   font-size: 17px;
   margin-top: 25px;
@@ -1314,11 +1334,6 @@ textarea:enabled {
   font-weight: bold;
 }
 
-.hoveredDeckOrCardName {
-  position: relative;
-  width: 146px;
-  height: 33px;
-}
 
 .resetButtonStyling {
   position: absolute;
@@ -1499,7 +1514,7 @@ input::-webkit-inner-spin-button {
   margin-bottom: 8px;
 }
 
-.timeandprogress__monthly-goal {
+.timeAndProgress__monthly-goal {
   height: 27px;
   font-size: 13px;
 }

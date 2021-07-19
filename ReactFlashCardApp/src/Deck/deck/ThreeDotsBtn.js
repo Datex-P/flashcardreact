@@ -2,7 +2,7 @@ import React, { useState, useRef, useContext,useEffect } from 'react'
 import {withRouter} from 'react-router-dom'
 import {Context} from '../../Context';
 
-import useOutsideAlerter from '../../LittleComponents/useOutsideAlerter'
+import useOutsideAlerter from '../../ClickedOutsideWindow/useOutsideAlerter'
 
 import trashimg from '../../icons/trash.svg'
 import pauseimg from '../../icons/pause.svg'
@@ -181,7 +181,7 @@ function ThreeDotsBtn({
 
                   <img 
                       alt='pause' 
-                      style={{ marginRight: '3px' }} 
+                      className='threeDotsBtn__trash-pause-img'
                       src={ !dataBase.DeckNames[index]?.paused? pauseimg: playimg }  
                   />
 
@@ -201,9 +201,9 @@ function ThreeDotsBtn({
                 }}
               >
                 <img 
-                      style={{ marginRight: '3px' }} 
-                      src={ trashimg } 
+                      src={trashimg} 
                       alt='trash' 
+                      className='threeDotsBtn__trash-pause-img'
                 />
 
                 {text}
@@ -221,7 +221,7 @@ function ThreeDotsBtn({
                 <img 
                     src={resetimg} 
                     alt='reset'
-                    className='three-dots__reset-img' 
+                    className='threeDotsBtn__reset-img' 
                 />
 
                 {text}

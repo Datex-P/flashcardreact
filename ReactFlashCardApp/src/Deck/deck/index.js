@@ -148,9 +148,7 @@ export default function Deck({
             {editButtonClicked ? (
               <DeckOrCardName
                 bg={bg}
-                index={index}
-                paused={paused}
-                data={data}
+               
                 name={name}
                 className="deckOrCardNameStyling"
               />

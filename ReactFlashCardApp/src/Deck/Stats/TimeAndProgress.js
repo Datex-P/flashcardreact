@@ -80,7 +80,7 @@ export default function TimeAndProgress() {
               key='1'
               previousWidthVar={previousWidthVar}
               widthVar={widthVar}
-              time={<div className='timesStyling'>{"18 - 24"}</div>}
+              time={<div className='timesAndProgress_times'>{"18 - 24"}</div>}
             />
           );
         } else if (i === 24) {
@@ -89,7 +89,7 @@ export default function TimeAndProgress() {
               key='2'
               previousWidthVar={previousWidthVar}
               widthVar={widthVar}
-              time={<div className='timesStyling'>{"24 - 06"}</div>}
+              time={<div className='timesAndProgress_times'>{"24 - 06"}</div>}
             />
           );
         } else if (i <= 12) {
@@ -113,7 +113,7 @@ export default function TimeAndProgress() {
                 previousWidthVar={previousWidthVar}
                 widthVar={widthVar}
                 time={
-                  <div className='timesStyling'>
+                  <div className='timesAndProgress_times'>
                     {"12"} - {"18"}
                   </div>
                 }
@@ -129,7 +129,7 @@ export default function TimeAndProgress() {
   return (
     <div className='diagramHourlyBreakdownContainer justify-around flex-column'>
       <div className='d-flex'>
-        <div className='timeandprogress__monthly-goal justify-center-align-center studyGoalStyling'>
+        <div className='timeAndProgress__monthly-goal justify-center-align-center studyGoalStyling'>
           Monthly Goal
         </div>
 

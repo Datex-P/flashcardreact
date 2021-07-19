@@ -62,8 +62,8 @@ onSuccess = (res) => {
                   className='login__input-username'
                   />
             </div>
-            <div className='d-flex'
-            style={{marginTop:'29px'}}>
+            <div className='d-flex login__login-password-row'
+            >
                   <img 
                       src={keysSolid} 
                       alt='click to enter password' 

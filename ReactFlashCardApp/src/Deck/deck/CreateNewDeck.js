@@ -4,11 +4,11 @@ import { Context } from "../../Context";
 
 export default function CreateNewDeck({
   close,
- 
 }) {
 
   const {
-    dataBase, setDataBase, setShowProgressDiagram, colors,
+    dataBase, setDataBase, 
+    setShowProgressDiagram, colors,
    setScrollbarVisible,
    setDecksAreVisible,
   addNewDeckWindow, 
@@ -103,7 +103,7 @@ export default function CreateNewDeck({
         />
          
         {
-          <div className='tooShortOrLong'
+          <div className='createNewDeck__too-short-or-long'
           >
             {
             `${
@@ -117,7 +117,7 @@ export default function CreateNewDeck({
           </div>
         }
 
-        <select className="selectStyling">
+        <select className="createNewDeck__select-options">
           <option>option 1</option>
           <option>option 2</option>
           <option>option 3</option>

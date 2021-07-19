@@ -111,7 +111,7 @@ function Settings({ history }) {
       </div>
 
       <div 
-          className='goalSettingsContainer'
+          className='settings__goal-settings'
       >
           Goal Settings
       </div>
@@ -122,7 +122,7 @@ function Settings({ history }) {
       </div>
 
       <div 
-        className='justify-between-align-center border border-dark  hexagonContainer'
+        className='justify-between-align-center border border-dark  settings__container-hexagon'
       >
         {
 

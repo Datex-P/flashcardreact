@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../LittleComponents/styles.css'
+import '../ClickedOutsideWindow/styles.css'
 import MenuContainer from '../Deck/Menu/MenuContainer'
 
 

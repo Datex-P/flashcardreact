@@ -51,7 +51,7 @@ export default function RepetitionIntervalFields(
         className='p-2 flex-column justify-center-align-center' 
     >
       <p 
-          className=' border border-dark d-flex justify-content-center' 
+          className=' border border-dark justify-center' 
           style={{borderRadius: '5px', width: '72px'}}
       >
           <div style={{ marginRight: '4px' }}
@@ -80,7 +80,7 @@ export default function RepetitionIntervalFields(
           </form>
 
             {
-              <div style={{fontWeight: 'bold'}} //makes m h d values in settings fontweight bold
+              <div className='fontBold'
               >
                 
                 {unit}
@@ -97,7 +97,6 @@ export default function RepetitionIntervalFields(
             maxLength = '8'
             minLength = '3'
             style={{
-                    textAlign: 'center', 
                     cursor: editIsPossible ? 'pointer' : 'default',
                     backgroundColor: saveOrEdit? '#545863': 'grey'
                   }}

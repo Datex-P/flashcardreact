@@ -85,7 +85,7 @@ export default function BasicOrangeWindow({
 
           {menu}
           <button
-            className="redCross"
+            className="redCross justify-center-align-center"
             onClick={() => {
               setShow(false);
               setEdit(false);

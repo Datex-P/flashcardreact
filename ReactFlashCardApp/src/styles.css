@@ -89,12 +89,20 @@ input[type="number"] {
 }
 
 
-.menuContainerOuter {
+.menuContainer {
   z-index: 100;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   width: 440px;
 }
+
+
+/* .menuContainer {
+  width: 100%;
+  margin-top: 1px;
+  position: relative;
+  height: 20px;
+} */
 
 
 
@@ -210,7 +218,7 @@ input[type="checkbox"] {
 .menuIcon {
   font-weight: bold;
   border: 2px black solid;
-  width: 54%;
+  width: 32%;
   margin-bottom: 3px;
   border-radius: 12px;
   position: absolute;
@@ -218,12 +226,12 @@ input[type="checkbox"] {
   background-color: black;
 }
 
-.menuContainer {
-  width: 100%;
-  margin-top: 1px;
-  position: relative;
-  height: 20px;
+.hamburger__menu-icon-container {
+    position: absolute;
+    width: 87px;
+    top: 59px;
 }
+
 
 .menu {
   width: fit-content;
@@ -242,6 +250,7 @@ input[type="checkbox"] {
   font-size: 23px !important;
   cursor: pointer;
   margin-right: 28px;
+  height: 24px;
 }
 
 .modNew {
@@ -252,7 +261,7 @@ input[type="checkbox"] {
   width: 99% !important;
 }
 
-.addCardsToDeck {
+.paused__addCardsToDeck {
   font-size: 13px;
   position: absolute;
   top: 110px;
@@ -277,7 +286,7 @@ input[type="checkbox"] {
   color: white;
 }
 
-.spanPlusStyling {
+.paused__container_img-plus {
   margin-left: 10px;
   cursor: pointer;
 }
@@ -402,11 +411,12 @@ input::-webkit-inner-spin-button {
   top: 25px;
 }
 
+
 .innerModalContainer {
-  width: 98%;
-  height: 95%;
-  margin: auto;
-  overflow: hidden auto;
+  width: 98% !important;
+  height: 95% !important;
+  margin: auto !important;
+  overflow: hidden auto !important;
 }
 
 .settings__weekly-target {
@@ -475,14 +485,16 @@ input::-webkit-inner-spin-button {
   border-radius: 50%;
 }
 
-.buttonStyling {
+.threeDotsBtn__btn {
   background-color: white !important;
   border: none;
   color: black !important;
+  outline:none;
 }
 
-.buttonStyling:hover {
+.threeDotsBtn__btn:hover {
   background-color: #a39171 !important;
+  outline:none;
 }
 
 .deleteContainerNoAndYes:hover {
@@ -711,7 +723,7 @@ input::-webkit-inner-spin-button {
   fill: green;
 }
 
-.theWordCalendar {
+.stats__calendar {
   margin-top: 10px;
   margin-bottom: 3px;
   font-weight: bold;
@@ -904,7 +916,7 @@ color: white;
   height: 33px;
 }
 
-.playButton {
+.btn-play {
   border: 1px solid black;
   height: 26px;
   width: 29px;
@@ -914,12 +926,21 @@ color: white;
   margin-left: 8px;
 }
 
-.countToStudyGoal {
+.paused {
+  height: 82px;
+}
+
+.paused__countToStudyGoal {
   width: 191px;
   position: relative;
   top: 20px;
   font-size: 13px;
   left: 14px;
+}
+
+.paused__img-play {
+  margin: 6px; 
+  cursor: pointer;
 }
 
 .backgroundModal {
@@ -937,6 +958,20 @@ color: white;
 
 .widthFitContent {
   width: fit-content !important;
+}
+
+.hourlyBreakdown__hourly-breakdown{
+
+  margin-top: 20px; 
+  font-size: bold; 
+  font-weight: bold;
+
+}
+
+.hourlyBreakdown__input {
+cursor: pointer; 
+margin-top: 10px; 
+margin-bottom: 20px;
 }
 
 #createDeck .modal-body {
@@ -957,6 +992,7 @@ color: white;
   padding-left: 23px;
   width: 175px;
 }
+
 
 .pieDiagramContainer {
   width: 80px;
@@ -1042,7 +1078,6 @@ color: white;
 }
 
 .addToDeckInput {
-  /*the styling of the input field that appears when deckname edit is clicked*/
   width: 129px;
   border-radius: 5px;
   padding-left: 5px;
@@ -1071,7 +1106,7 @@ color: white;
   height: 23px;
 }
 
-.createNewDeckInputField {
+#inputField {
   width: 78%;
   margin-top: 3px;
   border-radius: 5px;
@@ -1131,7 +1166,7 @@ textarea.form-control:focus {
   padding: 5px !important;
 }
 
-.monthContainerBox {
+.hourlyBreakdown__month-container {
 
   width: 270px;
   height: 38px;
@@ -1196,6 +1231,7 @@ textarea.form-control:focus {
   border-radius: 5px;
   outline: none;
   border: none;
+  text-align: center;
 }
 
 @-webkit-keyframes arrow {
@@ -1257,7 +1293,7 @@ textarea:enabled {
   margin-top: -10px;
 }
 
-.todayStudiedInfo {
+.render-days__todayStudyInfo {
   width: 133px !important;
   height: 86px;
   position: absolute;
@@ -1269,7 +1305,7 @@ textarea:enabled {
   top: 56px;
 }
 
-.statsHeader {
+.stats__header {
   font-size: 22px;
   font-weight: bold;
 }
@@ -1303,7 +1339,7 @@ textarea:enabled {
   width: 161%;
 }
 
-.studyBreakdownHeader {
+.stats__study-breakdown {
   width: 179px;
   text-align: center;
   margin: auto;
@@ -1499,17 +1535,35 @@ input::-webkit-inner-spin-button {
   border-radius: 5px;
 }
 
-.btnGoogle {
+.login__btn-google {
   width: 136px !important;
   height: 30px;
   border-radius: 4px;
 }
 
-.btnGoogle div {
+.login__btn-google div {
   padding: 4px !important;
 }
 
-.btnFacebook {
+.login__login-password-container {
+  width: inherit;
+  position: absolute; 
+  top:380px;
+}
+
+.login__img-login-password {
+  width: 16px; 
+  margin-right: 9px;
+
+}
+
+.login__input-username {
+  width: 140px; 
+  height: 25px; 
+  border-radius: 5px;
+}
+
+.login__btn-facebook {
   display: inline-block;
   font-size: 13px;
   width: 136px;

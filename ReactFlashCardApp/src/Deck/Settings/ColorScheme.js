@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import '../styles.css'
+import '../../styles.css'
 import { Context } from '../../Context'
 
 export default function ColorScheme () {

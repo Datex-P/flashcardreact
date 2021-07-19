@@ -261,7 +261,7 @@ export default function Deck({ deck, checked, setChecked,
                         Press:
                     
                     <button 
-                        className='playButton'
+                        className='btn-play'
                         onClick={()=>{
                                     handlePause()
                                 

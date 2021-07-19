@@ -56,9 +56,7 @@ export default function InputCheckbox({ index, setShowAnswerBtn, generateRandom 
 
       <label className="onoffswitch-label" htmlFor="myonoffswitch"
        onClick={() => {
-
          switchOnOrOff()
-
        }
        }
       

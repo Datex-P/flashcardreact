@@ -1,4 +1,4 @@
-import '../Deck/styles.css'
+import '../styles.css'
 import React from 'react';
 import FacebookLogin from 'react-facebook-login';
 import ParticleBackground from './ParticlesBackground.js'
@@ -46,27 +46,28 @@ onSuccess = (res) => {
             <img src = {flash} alt = 'flashcard' className= 'flashcardBackground' style={{ left: '-177px',top: '-56px'}}/>
             <img src = {flash} alt = 'flashcard' className= 'flashcardBackground' style={{ left: '-179px', top:'-67px'}}/>
           
-            <div className='align-center'
-            style={{flexDirection: 'column',  width:'inherit',
-            position: 'absolute', top:'380px'}}>
+            <div className='login__login-password-container align-center flex-column'
+            >
 
-            <div style={{display: 'flex'}}>
+            <div className='d-flex'>
                   <img 
                           src={usersSolid} 
-                          alt='usersSolid' 
-                          style={{width:'16px', marginRight: '9px'}}
+                          alt='click to enter user name' 
+                          className='login__img-login-password'
+                         
                   /> 
                   <input 
                   value={this.state.login} 
                   onChange={e=>this.setState({login:e.target.value})} 
-                  style={{width: '140px', height: '25px', borderRadius: '5px'}}
+                  className='login__input-username'
                   />
             </div>
-            <div style={{display:'flex', marginTop:'29px'}}>
+            <div className='d-flex'
+            style={{marginTop:'29px'}}>
                   <img 
                       src={keysSolid} 
-                      alt='usersSolid' 
-                      style={{width:'16px', marginRight: '9px'}}
+                      alt='click to enter password' 
+                      className='login__img-login-password'
                       /> 
                   <form>
 
@@ -87,7 +88,7 @@ onSuccess = (res) => {
         >
           <FacebookLogin
             appId="699586404315736"
-            cssClass='btnFacebook'
+            cssClass='login__btn-facebook'
         //   autoLoad={true}
             fields="name,email,picture"
             callback={this.props.setUser}
@@ -99,7 +100,7 @@ onSuccess = (res) => {
           <GoogleLogin
             clientId={clientId}
             buttonText='Login'
-            className='btnGoogle'
+            className='login__btn-google'
             onSuccess={this.onSuccess}
             onFailure={this.onFailure}
             cookiePolicy={'single_host_origin'}

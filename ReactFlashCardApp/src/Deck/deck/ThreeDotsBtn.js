@@ -121,7 +121,6 @@ function ThreeDotsBtn({
       >
         <div 
             className='rotateLittleModal' 
-            style={{height: '24px'}}
             onClick={
                 editButtonClicked? 
 
@@ -148,7 +147,7 @@ function ThreeDotsBtn({
               data?.length !==0 &&
 
               <button 
-                  className='buttonStyling align-center outline-none p-1 '
+                  className='threeDotsBtn__btn align-center  p-1 '
                   onClick={handleEdit} 
               >
                       
@@ -170,7 +169,7 @@ function ThreeDotsBtn({
 
 
               <button 
-                  className='buttonStyling align-center outline-none p-1 '
+                  className='threeDotsBtn__btn align-center  p-1 '
                   onClick={()=>handlePause(index)}
                   style={{
                           borderTop: '1px solid black', borderBottom: '1px solid black' ,
@@ -195,7 +194,7 @@ function ThreeDotsBtn({
               trash && 
               
               <button 
-                className='buttonStyling align-center outline-none p-1'
+                className='threeDotsBtn__btn align-center  p-1'
                 onClick={() => {
                     trashEvent()
                     setThreeDotsOpen(false)
@@ -215,7 +214,7 @@ function ThreeDotsBtn({
               reset &&
               
               <button 
-                  className='buttonStyling align-center outline-none p-1'
+                  className='threeDotsBtn__btn align-center outline-none p-1'
                   onClick={resetEvent}
               >
 

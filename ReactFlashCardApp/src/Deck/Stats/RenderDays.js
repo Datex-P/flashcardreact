@@ -59,8 +59,8 @@ function RenderDays() {
      >
       {days.map((day, index) => (
         <div
-          className={`day ${day.cardsStudied ? 'pointer' : ''}`}
           key={index}
+          className={`day ${day.cardsStudied ? 'pointer' : ''}`}
           style={{ backgroundColor: day.cardsStudied ? 'red' : '' }}
           onClick={(e) => {
             let inner= e.target.getBoundingClientRect();
@@ -77,7 +77,7 @@ function RenderDays() {
         >
           {showTodaysProg && day.cardsStudied ? (
             <div
-              className='todayStudiedInfo'
+              className='render-days__todayStudyInfo'
               style={{
                 left: right+'px'
               }}

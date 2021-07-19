@@ -39,7 +39,7 @@ function Stats({ history }) {
         show={true}
         setShow={setShowFunc}
         title={
-          <div className='statsHeader'>Stats</div>
+          <div className='stats__header'>Stats</div>
         }
         menu={
           <ThreeDotsBtn
@@ -58,7 +58,7 @@ function Stats({ history }) {
         }
       >
         <div>
-          <div className='studyBreakdownHeader'>Today's study breakdown</div>
+          <div className='stats__study-breakdown'>Today's study breakdown</div>
           <div className='dateDiagramPos'>
             {!dataBase?.openedToday
               ? 'No cards studied today'
@@ -67,7 +67,7 @@ function Stats({ history }) {
           </div>
           <div
             style={{ marginBottom: "10px", border: "1px solid black" }}
-            className="align-center flex-direction column "
+            className="align-center flex-column"
           >
             {showDeleteFrame && (
               <DeleteCardQuestionBox
@@ -95,7 +95,7 @@ function Stats({ history }) {
             <PieDiagramm />
           </div>
 
-          <div className="theWordCalendar">Calendar</div>
+          <div className="stats__calendar">Calendar</div>
 
           <div className="justify-center-align-center">
             <ButtonLeftAndRight />
@@ -126,7 +126,7 @@ function ButtonLeftAndRight() {
   };
 
   return (
-    <div className='d-flex flex-column'
+    <div className='flex-column'
     >
       <div
         className="justify-center-align-center  innerRenderDays"
@@ -142,7 +142,7 @@ function ButtonLeftAndRight() {
             className={
               el !== year
                 ? "justify-center-align-center  calendarButtons"
-                : " justify-center-align-center "
+                : "justify-center-align-center"
             }
             onClick={
               el === "<" && el !== year ? handleDecrement : handleIncrement

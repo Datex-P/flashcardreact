@@ -1,7 +1,7 @@
 import React, { useState, useContext, useRef, useEffect } from "react";
 import { Context } from "../../Context";
 import { Card } from "react-bootstrap";
-import "../styles.css";
+import "../../styles.css";
 import ThreeDotsBtn from "./ThreeDotsBtn";
 import AddQuestionsToDeck from "./AddQuestionsToDeck/AddQuestionsToDeck";
 import QuestAnswerTrainOverv from "./CardBodyParts/QuestAnswerTrainOverv";

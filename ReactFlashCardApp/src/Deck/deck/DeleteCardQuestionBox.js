@@ -1,7 +1,7 @@
 import React, { useContext} from 'react'
 import {Context} from '../../Context'
 import { Modal } from 'react-bootstrap'
-import '../styles.css'
+import '../../styles.css'
 import resetimg from '../../icons/reset.svg'
 import questionMark from '../../icons/questionMark.svg'
 import flashcards from '../../icons/flashcards.svg'

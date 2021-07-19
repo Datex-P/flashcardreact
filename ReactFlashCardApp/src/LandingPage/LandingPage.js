@@ -3,12 +3,12 @@ import { Context } from "../Context";
 import { Container, Row, Spinner } from "react-bootstrap";
 import Deck from "../Deck/deck/index";
 import CreateNewDeck from "../Deck/deck/CreateNewDeck";
-import NavBar from "../NavBar";
+import NavBar from "./NavBar";
 import ShowProgressD from "./ShowProgressDiagram";
 
 export default function DeckContainer() {
   const {
-    dataBase, setDataBase, styles, showProgressDiagram, setShowProgressDiagram
+    dataBase, setDataBase, styles, setShowProgressDiagram
     ,scrollbarVisible
   ,trigger, setTrigger, changeDeckNameOpen, 
   editButtonClicked, 

@@ -1,7 +1,7 @@
 import React,{useContext} from 'react';
 import { Nav } from 'react-bootstrap'
 import { withRouter } from 'react-router-dom'
-import {Context} from '../Context'
+import {Context} from '../../Context'
 
  function Icon({ src, alt, href, style = null,history }) {
   const {setShowProgressDiagram} = useContext(Context)

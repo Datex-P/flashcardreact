@@ -2,7 +2,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { Modal} from 'react-bootstrap'
 import { Context } from '../../../Context';
-import '../../styles.css'
+import '../../../styles.css'
 import redCross from '../../../icons/redCross.svg'
 import AlertComponent from './AlertComponent'
 

@@ -10,8 +10,7 @@ function Paused({data, index, paused, name, setShow, style}) {
   let colors = ["#ffcdb2", "#ffb4a2", "#e5989b", "#b5838d", "#6d6875"];
 
 
-  function handleToStudy(e) {
-    
+  function handleToStudy(e) {  
     let newDataBase = { ...dataBase };
     newDataBase.DeckNames[index].toStudyValue = e.target.value;
     setDataBase(newDataBase);
@@ -21,7 +20,6 @@ function Paused({data, index, paused, name, setShow, style}) {
 
   function handlePause(index) { 
     let newDataBase = { ...dataBase };
-    console.log(index, 'index')
     newDataBase.DeckNames[index].paused = true;
     setDataBase(newDataBase);
    
@@ -30,8 +28,7 @@ function Paused({data, index, paused, name, setShow, style}) {
 
   return (
     <div
-    className="justify-between flex-column"
-    style={{ height: "82px" }}
+    className="paused justify-between flex-column"
   >
     {data.length === 0 ? (
       <div
@@ -39,7 +36,7 @@ function Paused({data, index, paused, name, setShow, style}) {
      
       >
         <div
-          className="flexAround flex-column"
+          className="justify-around flex-column"
           style={{ height: "90px", width: "122px" }}
         >
           <div>
@@ -48,7 +45,7 @@ function Paused({data, index, paused, name, setShow, style}) {
           <div>
             Press:
             <span
-              className='spanPlusStyling'
+              className='paused__container_img-plus'
               onClick={() => setShow(true)}
             >
               <img src={plusimg} alt="plus" />
@@ -56,7 +53,7 @@ function Paused({data, index, paused, name, setShow, style}) {
           </div>
         </div>
         <div
-          className = 'addCardsToDeck'
+          className = 'paused__addCardsToDeck'
         >
           to add cards to the deck.
         </div>
@@ -96,7 +93,7 @@ function Paused({data, index, paused, name, setShow, style}) {
         <div className='align-center'>
           Press:
           <button
-            className="playButton justify-center-align-center"
+            className="btn-play justify-center-align-center"
             onClick={() => {
               handlePause();
             }}
@@ -104,11 +101,11 @@ function Paused({data, index, paused, name, setShow, style}) {
             <img
               src={playimg}
               alt="play"
-              style={{ margin: "6px", cursor: "pointer" }}
+              className='paused__img-play'
             />
           </button>
         </div>
-        <div className="countToStudyGoal">
+        <div className="paused__countToStudyGoal">
           It doesn't count to the study goal.
         </div>
       </div>

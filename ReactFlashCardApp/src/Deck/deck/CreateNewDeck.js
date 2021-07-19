@@ -80,7 +80,6 @@ export default function CreateNewDeck({
       <Modal.Body className="align-center flex-column">
         <input
           id="inputField"
-          className="createNewDeckInputField"
           ref={inputRef}
           value={inputField}
           onChange={(event) => {

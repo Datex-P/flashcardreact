@@ -2,7 +2,7 @@
 import React, { useState, useContext, useEffect} from 'react';
 import { withRouter } from 'react-router-dom'
 import { Context } from '../../Context'
-import '../styles.css'
+import '../../styles.css'
 import Hexagons from  './Hexagons'
 import RepetitionIntervalFields from './RepetitionIntervalFields'
 import ColorScheme from './ColorScheme'

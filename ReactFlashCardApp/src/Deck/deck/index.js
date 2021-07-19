@@ -5,7 +5,7 @@ import "../../styles.css";
 import ThreeDotsBtn from "./ThreeDotsBtn";
 import AddQuestionsToDeck from "./AddQuestionsToDeck/AddQuestionsToDeck";
 import QuestAnswerTrainOverv from "./CardBodyParts/QuestAnswerTrainOverv";
-import DeckOrCardName from "./DeckOrCardname";
+import DeckOrCardName from "./DeckOrCardName";
 import DeleteCardQuestionBox from "./DeleteCardQuestionBox";
 import Paused from './Paused'
 

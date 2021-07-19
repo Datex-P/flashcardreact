@@ -877,6 +877,17 @@ input::-webkit-inner-spin-button {
   height: 210px;
 }
 
+.deleteCardQuestionBox__showMessageAgain {
+  width: 300px; 
+  position: absolute;
+  top: 175px;
+}
+
+.deleteCardQuestionBox__dontShowMessageAgain{
+width: 200px;
+z-index: 2; 
+color: white;
+}
 .deckEmpty {
   left: 84px; 
   text-align: center;

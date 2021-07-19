@@ -3,7 +3,6 @@ import {Context} from '../../Context'
 import { Modal } from 'react-bootstrap'
 import '../styles.css'
 import resetimg from '../../icons/reset.svg'
-
 import questionMark from '../../icons/questionMark.svg'
 import flashcards from '../../icons/flashcards.svg'
 
@@ -51,8 +50,7 @@ export default function DeleteCardQuestionBox({ card,
 
             <img 
                 src={questionMark} 
-                className='deleteCardQuestionBox__question-mark questionMark1'
-               
+               className='deleteCardQuestionBox__question-mark questionMark1'        
                  alt='questionMark' 
             />
             <img 
@@ -163,9 +161,7 @@ export default function DeleteCardQuestionBox({ card,
       {!showMessageAgain?
 
       <div 
-          className='justify-center'
-          style = {{width: '300px', position: 'absolute', top: '175px'
-                  }} 
+          className='deleteCardQuestionBox__showMessageAgain justify-center'
       >
 
           <div style={{width: '40px'}}
@@ -179,7 +175,7 @@ export default function DeleteCardQuestionBox({ card,
     
           </div>
 
-          <div style={{ width: '200px', zIndex: '2', color: 'white'}}
+          <div className='deleteCardQuestionBox__dontShowMessageAgain'
           >
 
             Don't show message again

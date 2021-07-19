@@ -93,7 +93,7 @@ function Paused({data, index, paused, name, setShow, style}) {
       >
         <div>This deck is paused.</div>
 
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <div className='align-center'>
           Press:
           <button
             className="playButton justify-center-align-center"

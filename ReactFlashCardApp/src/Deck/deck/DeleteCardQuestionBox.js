@@ -44,7 +44,7 @@ export default function DeleteCardQuestionBox({ card,
         id='deleteWindow'
         dialogClassName='backgroundModal'
         contentClassName='widthFitContent'
-        className='d-flex justify-content-center '
+        className='justify-center'
       >
         <div>
 
@@ -112,7 +112,7 @@ export default function DeleteCardQuestionBox({ card,
         <Modal.Footer>
 
             <div 
-                className='flexAroundCenter' 
+                className='justify-around-align-center' 
                 style={{width: '100%', height: '14px'}}
             >
 
@@ -168,7 +168,8 @@ export default function DeleteCardQuestionBox({ card,
           >
 
               <input 
-                  style= {{width: '45px'}} 
+                  
+                  className='deleteCardQuestionBox-input'
                   type='checkbox' 
                   onChange={handleCheckbox}
               />

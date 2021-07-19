@@ -22,7 +22,7 @@ export default function InputCheckbox({ index, setShowAnswerBtn, generateRandom 
     if(!dataBase.DeckNames[index].editModeActive) {
 
       if (dataBase.DeckNames[index].data.filter(x => x.paused === true).length === 0) {
-        // console.log('no cards paused')
+    
       } else {
       
           if(dataBase.DeckNames[index].pauseMode) {

@@ -253,6 +253,10 @@ input[type="checkbox"] {
   height: 24px;
 }
 
+.deleteCardQuestionBox-input {
+  width: 45px;
+}
+
 .modNew {
   background-color: transparent !important;
   border: none !important;

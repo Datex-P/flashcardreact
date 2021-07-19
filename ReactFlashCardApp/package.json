@@ -1,7 +1,7 @@
 {
   "name": "firstapp",
   "engines": {
-    "node": ">12.18.3" 
+    "node": ">12.18.3"
   },
   "version": "0.1.0",
   "private": true,

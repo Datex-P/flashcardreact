@@ -46,7 +46,7 @@ onSuccess = (res) => {
             <img src = {flash} alt = 'flashcard' className= 'flashcardBackground' style={{ left: '-177px',top: '-56px'}}/>
             <img src = {flash} alt = 'flashcard' className= 'flashcardBackground' style={{ left: '-179px', top:'-67px'}}/>
           
-            <div className='flexAlignCenter'
+            <div className='align-center'
             style={{flexDirection: 'column',  width:'inherit',
             position: 'absolute', top:'380px'}}>
 
@@ -94,7 +94,7 @@ onSuccess = (res) => {
           />
         </div>
 
-        <div className='login__google-container flexCenter'
+        <div className='login__google-container justify-center'
         >
           <GoogleLogin
             clientId={clientId}

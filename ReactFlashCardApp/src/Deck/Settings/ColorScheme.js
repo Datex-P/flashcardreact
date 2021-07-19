@@ -22,7 +22,7 @@ export default function ColorScheme () {
     </div>
 
       <div 
-          className='flexBetweenCenter border border-dark colorscheme-container'
+          className='justify-between-align-center border border-dark colorscheme-container'
       >
 
         {

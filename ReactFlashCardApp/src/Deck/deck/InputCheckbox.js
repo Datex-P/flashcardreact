@@ -64,7 +64,7 @@ export default function InputCheckbox({ index, setShowAnswerBtn, generateRandom 
       
       >
         <span className="onoffswitch-inner"></span>
-        <span className="onoffswitch-switch flexCenterAlignCenter">
+        <span className="onoffswitch-switch justify-center-align-center">
           {`${cardsPaused()}`}
         </span>
       </label>

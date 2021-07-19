@@ -127,9 +127,9 @@ export default function TimeAndProgress() {
   }
 
   return (
-    <div className='diagramHourlyBreakdownContainer flexColumnSpaceAround'>
+    <div className='diagramHourlyBreakdownContainer justify-around flex-column'>
       <div className='d-flex'>
-        <div className='timeandprogress__monthly-goal flexCenterAlignCenter studyGoalStyling'>
+        <div className='timeandprogress__monthly-goal justify-center-align-center studyGoalStyling'>
           Monthly Goal
         </div>
 
@@ -164,7 +164,7 @@ export default function TimeAndProgress() {
 function Row({ time, previousWidthVar, widthVar }) {
   return (
     <div className='d-flex'>
-      <div className='time flexCenter'>{time}</div>
+      <div className='time justify-center'>{time}</div>
 
       <div className='progressBar'>
         <div

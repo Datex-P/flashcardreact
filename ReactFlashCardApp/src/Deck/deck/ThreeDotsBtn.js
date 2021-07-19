@@ -148,7 +148,7 @@ function ThreeDotsBtn({
               data?.length !==0 &&
 
               <button 
-                  className='buttonStyling flexAlignCenter outline-none p-1 '
+                  className='buttonStyling align-center outline-none p-1 '
                   onClick={handleEdit} 
               >
                       
@@ -170,7 +170,7 @@ function ThreeDotsBtn({
 
 
               <button 
-                  className='buttonStyling flexAlignCenter outline-none p-1 '
+                  className='buttonStyling align-center outline-none p-1 '
                   onClick={()=>handlePause(index)}
                   style={{
                           borderTop: '1px solid black', borderBottom: '1px solid black' ,
@@ -195,7 +195,7 @@ function ThreeDotsBtn({
               trash && 
               
               <button 
-                className='buttonStyling flexAlignCenter outline-none p-1'
+                className='buttonStyling align-center outline-none p-1'
                 onClick={() => {
                     trashEvent()
                     setThreeDotsOpen(false)
@@ -215,7 +215,7 @@ function ThreeDotsBtn({
               reset &&
               
               <button 
-                  className='buttonStyling flexAlignCenter outline-none p-1'
+                  className='buttonStyling align-center outline-none p-1'
                   onClick={resetEvent}
               >
 

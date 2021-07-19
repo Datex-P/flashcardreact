@@ -67,7 +67,7 @@ export default function DeleteCardQuestionBox({ card,
         >
             <Modal.Title>
                 <div 
-                  className='flexCenterAlignCenter'           
+                  className='justify-center-align-center'           
                   style={{height:'100%', width: '100%'}}
                 >
                   <div>
@@ -75,13 +75,13 @@ export default function DeleteCardQuestionBox({ card,
                         resetQuestionText? 
                           <img 
                               src={resetimg} 
-                              className='flexCenterAlignCenter flashCardsStyling' 
+                              className='justify-center-align-center flashCardsStyling' 
                               alt='reset'                         
                           />
                           :
                           <img 
                               src={flashcards} 
-                              className='flexCenterAlignCenter flashCardsStyling' 
+                              className='justify-center-align-center flashCardsStyling' 
                               alt='flashcards'                         
                           />
 
@@ -101,7 +101,7 @@ export default function DeleteCardQuestionBox({ card,
         </Modal.Header>
 
         <Modal.Body 
-            className='flexCenterAlignCenter' 
+            className='justify-center-align-center' 
         >
 
             {
@@ -119,7 +119,7 @@ export default function DeleteCardQuestionBox({ card,
             >
 
                 <div 
-                    className='flexSpaceAround'
+                    className='justify-around'
                     style={{width: '75%' }}
                 >
 
@@ -127,7 +127,7 @@ export default function DeleteCardQuestionBox({ card,
                       ['No', 'Yes'].map(el =>
                           <div 
                           key={el}
-                              className='deleteContainerNoAndYes flexCenterAlignCenter'
+                              className='deleteContainerNoAndYes justify-center-align-center'
                               onClick={() => {
                                 if (el === 'Yes') {
                                   trashEvent()
@@ -163,7 +163,7 @@ export default function DeleteCardQuestionBox({ card,
       {!showMessageAgain?
 
       <div 
-          className='flexCenter'
+          className='justify-center'
           style = {{width: '300px', position: 'absolute', top: '175px'
                   }} 
       >

@@ -14,13 +14,13 @@ export default function PauseModeHandler({generateRandom, index, randomQuestion}
           <span style={{ marginLeft: "7px" }}>mode</span>
         </div>
 
-        <div className="flexCenter">
+        <div className="justify-center">
           <div
             className="flexAround"
             style={{ width: "300px" }}
           >
             <div
-              className="unpauseAndKeepPausedButton showAnswerButton flexCenter"
+              className="unpauseAndKeepPausedButton showAnswerButton justify-center"
               onClick={() => {
                 let newDataBase = { ...dataBase };
                 newDataBase.DeckNames[index].data.filter(
@@ -33,7 +33,7 @@ export default function PauseModeHandler({generateRandom, index, randomQuestion}
               Unpause card
             </div>
             <div
-              className="unpauseAndKeepPausedButton showAnswerButton flexCenter"
+              className="unpauseAndKeepPausedButton showAnswerButton justify-center"
               onClick={() => {
                 generateRandom();
               }}

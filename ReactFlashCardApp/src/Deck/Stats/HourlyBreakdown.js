@@ -15,7 +15,7 @@ export default function HourlyBreakdown() {
 
   return (
     
-    <div className='flexAlignCenter flex-column'
+    <div className='align-center flex-column'
     >
 
       <div style={{ marginTop: '20px', fontSize: 'bold', fontWeight: 'bold' }}
@@ -23,7 +23,7 @@ export default function HourlyBreakdown() {
           Hourly Breakdown
       </div>
 
-      <div  className='monthContainerBox'
+      <div  className='monthContainerBox justify-evenly'
       >{
           ['1 month', '3 month', '12 month'].map((comp,index) =>
             <React.Fragment key={index}>

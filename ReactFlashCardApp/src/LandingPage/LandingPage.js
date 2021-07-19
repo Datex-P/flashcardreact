@@ -191,7 +191,7 @@ setScrollPosition, arrowDown, setArrowDown,active, setActive, scroller
   ) : (
     // 'database empty'
     <div
-      className="flexCenterAlignCenter"
+      className="justify-center-align-center"
       style={{ height: "50vh" }}
     >
       <Spinner animation="grow" />

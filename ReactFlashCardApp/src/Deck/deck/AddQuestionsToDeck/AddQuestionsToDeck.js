@@ -66,7 +66,7 @@ export default function AddQuestionsToDeck({ index, name,
 
     <div>
       <button
-        className={'addNewCardsButton outline-none'}
+        className={'addNewCardsButton justify-center-align-center outline-none'}
         style={{
           cursor: dataBase.DeckNames[index]?.paused || !editButtonClicked ? 'default' : 'pointer'
         }}
@@ -107,7 +107,7 @@ export default function AddQuestionsToDeck({ index, name,
           </Modal.Title>
 
           <button
-            className='redCross'
+            className='redCross justify-center-align-center'
             onClick={() => setShow(false)}
           >
 

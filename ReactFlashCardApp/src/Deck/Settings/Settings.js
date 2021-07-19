@@ -67,7 +67,7 @@ function Settings({ history }) {
       <div className='d-flex justify-content-center'
       >
           <div 
-              className='border border-dark flexCenterAlignCenter settings_repetition-container'
+              className='border border-dark justify-center-align-center settings_repetition-container'
           >
               <div 
                   className='flexAroundCenter' 
@@ -122,7 +122,7 @@ function Settings({ history }) {
       </div>
 
       <div 
-        className='flexBetweenCenter border border-dark  hexagonContainer'
+        className='justify-between-align-center border border-dark  hexagonContainer'
       >
         {
 
@@ -151,7 +151,7 @@ function Settings({ history }) {
           }}
         />
       </div>
-      <div className='settings__weekly-target flexCenter'
+      <div className='settings__weekly-target justify-center'
       >
 
         Target met: {dataBase.userPreferences.weeksInRow} weeks in a row

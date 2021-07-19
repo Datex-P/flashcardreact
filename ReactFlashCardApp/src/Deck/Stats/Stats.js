@@ -67,7 +67,7 @@ function Stats({ history }) {
           </div>
           <div
             style={{ marginBottom: "10px", border: "1px solid black" }}
-            className="flexAlignCenter flex-direction column "
+            className="align-center flex-direction column "
           >
             {showDeleteFrame && (
               <DeleteCardQuestionBox
@@ -97,7 +97,7 @@ function Stats({ history }) {
 
           <div className="theWordCalendar">Calendar</div>
 
-          <div className="flexCenterAlignCenter">
+          <div className="justify-center-align-center">
             <ButtonLeftAndRight />
           </div>
 
@@ -129,7 +129,7 @@ function ButtonLeftAndRight() {
     <div className='d-flex flex-column'
     >
       <div
-        className="flexCenterAlignCenter  innerRenderDays"
+        className="justify-center-align-center  innerRenderDays"
       >
         {["<", year, ">"].map((el, index) => (
           <div
@@ -141,8 +141,8 @@ function ButtonLeftAndRight() {
             }}
             className={
               el !== year
-                ? "flexCenterAlignCenter  calendarButtons"
-                : " flexCenterAlignCenter "
+                ? "justify-center-align-center  calendarButtons"
+                : " justify-center-align-center "
             }
             onClick={
               el === "<" && el !== year ? handleDecrement : handleIncrement

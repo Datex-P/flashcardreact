@@ -267,7 +267,7 @@ export default function QuestAnswerTrainOverv({
           }
         >
           {editBtnClicked ? (
-            <div className='editBtnClickedStyling flexAlignCenter'
+            <div className='editBtnClickedStyling align-center'
             >
               <img alt="edit" src={editimg} />
               <span style={{ marginLeft: "3px" }}>mode</span>
@@ -294,7 +294,7 @@ export default function QuestAnswerTrainOverv({
               {showAnswerBtn && (
                 <Button
                   variant="secondary"
-                  className="p-1 showAnswer my-5 flexCenterAlignCenter"
+                  className="p-1 showAnswer my-5 justify-center-align-center"
                   onClick={() => {
                     setShowAnswerBtn(false);
                     setShowRepeatBtn(true);
@@ -316,9 +316,9 @@ export default function QuestAnswerTrainOverv({
               : null} 
 
               {showRepeatBtn && (
-                <div className="flexCenter">
+                <div className="justify-center">
                   <div
-                    className="flexBetween px-3 showRepeatBtnInner"
+                    className="justify-between px-3 showRepeatBtnInner"
                   >
                     {dataBase.userTimePreferences.map((col, index) => (
                       <RepeatBtn
@@ -338,7 +338,7 @@ export default function QuestAnswerTrainOverv({
 
               {cardModified ? (
                 <div
-                  className="flexCenterAlignCenter"
+                  className="justify-center-align-center"
                   style={{ height: "52px" }}
                 >
                   <Alert

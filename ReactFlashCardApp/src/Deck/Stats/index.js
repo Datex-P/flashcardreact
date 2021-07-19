@@ -87,11 +87,11 @@ export default function Deck({ deck, checked, setChecked,
         className='newDeckContainer flexColumn position-absolute '
     >
       <Card.Body 
-          className='flexCenterAlignCenter flex-column'
+          className='justify-center-align-center flex-column'
       >
 
         <Card.Title 
-            className='flexBetweenCenter position-relative'
+            className='justify-between-align-center position-relative'
             style={{width:'126px', left: '-5px', top: '-12px'}}
         >
 
@@ -197,7 +197,7 @@ export default function Deck({ deck, checked, setChecked,
 
         </Card.Title>
 
-        <div className='mb-3  flex-column flexBetween'   //container for the decksize and cards thing
+        <div className='mb-3  flex-column justify-between'   //container for the decksize and cards thing
             style= {{height: '256px', position: 'relative', top: '-17px'}}
         >
 
@@ -225,7 +225,7 @@ export default function Deck({ deck, checked, setChecked,
               :
               <>
           <div
-              className='divStyling' 
+              className='divStyling align-center' 
               style={{opacity: paused? '0': '1'}}
               >
                 To Study:   
@@ -256,7 +256,7 @@ export default function Deck({ deck, checked, setChecked,
                       {/* Deck is paused.  */}
                   </div>
 
-                  <div className='flexAlignCenter'
+                  <div className='align-center'
                   > 
                         Press:
                     
@@ -292,7 +292,7 @@ export default function Deck({ deck, checked, setChecked,
             name && data.length !== 0?
           
             <div 
-                className='divStyling'  
+                className='divStyling align-center'  
                 style={{opacity: paused? '0': '1'}}
             >
 

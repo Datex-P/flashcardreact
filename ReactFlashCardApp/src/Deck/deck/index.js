@@ -128,7 +128,7 @@ export default function Deck({
         className="newDeckContainer flexColumn position-absolute "
       >
      
-        <Card.Body className="flexCenterAlignCenter flex-column"
+        <Card.Body className="justify-center-align-center flex-column"
         >
           {
         nameTooLongOrShort? 
@@ -142,7 +142,7 @@ export default function Deck({
        }  
 
           <Card.Title
-            className="flexBetweenCenter position-relative"
+            className="justify-between-align-center position-relative"
             style={{ width: "151px", left: "3px", height: "0px" }}
           >
             {editButtonClicked ? (

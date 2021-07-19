@@ -10,7 +10,7 @@ export default function SaveAndDiscard({ saveEvent, generateRandom, setCardModif
 
       <div>Save changes?</div>
       <div 
-          className='flexBetween'
+          className='justify-between'
           style={{width: '140px'}}
           >
       {

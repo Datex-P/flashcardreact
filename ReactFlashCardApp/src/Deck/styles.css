@@ -1,7 +1,6 @@
-*{
-  font-family:'San Francisco'
+* {
+  font-family: "San Francisco";
 }
-
 
 /*Chrome, Safari, Edge, Opera  tried to hide the up and down number field in settings with that*/
 
@@ -13,7 +12,7 @@ input::-webkit-inner-spin-button {
 
 /* Firefox */
 
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -25,76 +24,63 @@ input[type=number] {
   font-weight: bold;
 }
 
-.flexColumnAlignCenter {
+
+.flex-column {
   display: flex;
   flex-direction: column;
+}
+
+.align-center {
+  display: flex;
   align-items: center;
 }
 
-.flexAlignCenter {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+.justify-between {
+  display: flex;
+  justify-content: space-between;
 }
 
-.flexColumn {
+.justify-around {
   display: flex;
-  flex-direction: column;
-}
-
-.flexColumnSpaceAround {
-  display: flex;
-  flex-direction: column;
   justify-content: space-around;
 }
 
-.flexCenterAlignCenter {
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.justify-center-align-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.flexBetween {
-  display: flex;
-  justify-content: space-between;
-}
-
-.flexBetweenCenter {
+.justify-between-align-center {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-
-.flexAround {
-  display: flex;
-  justify-content: space-around;
-}
-
-.flexAroundCenter {
+.justify-around-align-center {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-
-.flexEvenlyCenterColumn {
+.justify-evenly-align-center {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  flex-direction: column
-  }
-
-.flexAlignCenter {
-  display: flex;
-  align-items: center;
 }
 
-.flexBetweenCenter {
+.justify-evenly {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-evenly;
 }
+
+
+
 
 .editBtnClickedStyling {
   top: -18px;
@@ -102,39 +88,12 @@ input[type=number] {
   margin-left: 20px;
 }
 
-.flexBetweenCenter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .menuContainerOuter {
   z-index: 100;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   width: 440px;
-}
-
-.flexAroundCenter{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.flexSpaceAround {
-  display: flex;
-  justify-content: space-around;
-}
-
-.flexCenter {
-  display: flex;
-  justify-content: center;
-}
-
-.flexAroundCenter {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
 
@@ -144,7 +103,6 @@ input[type=number] {
   position: absolute;
   font-weight: bold;
   font-size: 16px;
- 
 }
 
 button:focus,
@@ -184,7 +142,7 @@ input[type="checkbox"] {
   height: 15px;
   position: absolute;
   margin: 0 auto;
-  top:150px; 
+  top: 150px;
   border-right: 4px solid black;
   border-bottom: 4px solid black;
   -webkit-transform: rotate(45deg);
@@ -194,18 +152,17 @@ input[type="checkbox"] {
   padding: 1px;
 }
 
-#arrow {
-  display: flex; 
-  justify-content: center; 
-  width: 100%;
-}
 
-.nav-link, .nav-link:visited, .nav-link:active, .nav-link:hover {
-  padding: .5rem 0.4rem !important;
+.nav-link,
+.nav-link:visited,
+.nav-link:active,
+.nav-link:hover {
+  padding: 0.5rem 0.4rem !important;
   color: black;
 }
 
-.divStyling { /*shown on the main page to study, to review etc*/
+.divStyling {
+  /*shown on the main page to study, to review etc*/
   border-radius: 5px;
   outline: none;
   border: 1px solid black;
@@ -215,8 +172,6 @@ input[type="checkbox"] {
   padding-left: 10px;
   height: 26px;
   margin-bottom: 10px;
-  display: flex;
-  align-items: center;
 }
 
 .addNewCardsButton {
@@ -224,43 +179,33 @@ input[type="checkbox"] {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  justify-content: center;
-  align-items: center;
   background-color: grey;
   position: absolute;
   left: -20px;
   top: 173px;
   z-index: 100 !important;
   border: none !important;
-  
 }
 
-
-.timeAndProgStyling {
-  padding-left: 3px;
-  height:21px;
-  font-size: 14px;
-}
 
 .timesStyling {
   padding-left: 3px;
   height: 21px;
-  font-size:14px;
+  font-size: 14px;
 }
 
 .dateDiagramPos {
   width: 90px;
-   height: 50px;
-   position: absolute;
-   top:125px;
-   left:131px;
-   text-align:center;
+  height: 50px;
+  position: absolute;
+  top: 125px;
+  left: 131px;
+  text-align: center;
 }
 
 .pointer {
   cursor: pointer;
 }
-
 
 .menuIcon {
   font-weight: bold;
@@ -280,7 +225,6 @@ input[type="checkbox"] {
   height: 20px;
 }
 
-
 .menu {
   width: fit-content;
   font-weight: bold;
@@ -289,39 +233,39 @@ input[type="checkbox"] {
 }
 
 .transPlus {
-  transform: rotate(135deg);  
+  transform: rotate(135deg);
 }
 
 .rotateLittleModal {
   transform: rotate(90deg) !important;
   font-weight: bold !important;
   font-size: 23px !important;
-  cursor:pointer;
+  cursor: pointer;
   margin-right: 28px;
 }
 
 .modNew {
-  background-color: transparent !important; 
+  background-color: transparent !important;
   border: none !important;
   margin: 0 auto;
   padding: 0px !important;
-  width:99% !important;
+  width: 99% !important;
 }
 
 .addCardsToDeck {
-    font-size: 13px;
-    position: absolute;
-    top: 110px;
+  font-size: 13px;
+  position: absolute;
+  top: 110px;
 }
 
 .SaveBtn {
   background-color: #d4edda;
-  color:#155724
+  color: #155724;
 }
 
 .DiscardBtn {
   background-color: #f8d7da;
-  color: #721c24
+  color: #721c24;
 }
 .SaveBtn:hover {
   background-color: #155724;
@@ -333,53 +277,49 @@ input[type="checkbox"] {
   color: white;
 }
 
-
-.spanPlusStyling{
-  margin-left:10px;
+.spanPlusStyling {
+  margin-left: 10px;
   cursor: pointer;
-} 
+}
 
 .customDialog {
-  left:100px;
+  left: 100px;
 }
 
 .inputStyling {
-  width: 43px; 
+  width: 43px;
   height: 33px;
   border: none;
   outline: none;
   text-align: center;
 }
 
- 
- input::-webkit-outer-spin-button,
- input::-webkit-inner-spin-button {
--webkit-appearance: auto !important;
-opacity: 1 ;
-/*!important;*/
-cursor: pointer;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: auto !important;
+  opacity: 1;
+  /*!important;*/
+  cursor: pointer;
 }
 
 .nonDraggableIcon {
- 
-/* user-drag: none;   */
-user-select: none;
--moz-user-select: none;
--webkit-user-drag: none;
--webkit-user-select: none;
--ms-user-select: none;
+  /* user-drag: none;   */
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 
--webkit-user-drag: none;
+  -webkit-user-drag: none;
 }
 
- 
 .transMinus {
-  transform: rotate(-135deg); 
-} 
+  transform: rotate(-135deg);
+}
 
 .menuStyling {
   display: flex;
-  cursor: pointer; 
+  cursor: pointer;
   background-color: #dcc9b6;
   border: 3px black solid;
   border-radius: 5px;
@@ -389,32 +329,19 @@ user-select: none;
 }
 
 .inputGro {
-  display: flex; 
-  flex-direction: column; 
-  height: 150px; 
+  display: flex;
+  flex-direction: column;
+  height: 150px;
   width: 400px;
 }
 
 .background {
-  position:absolute;  
-  display:block;    
+  position: absolute;
+  display: block;
   top: 0;
   left: 0;
   z-index: 0;
-  }
-
-
-  .bla {
-    width: '440px';
-    height: '720px';
-  }
-
-  
-
- 
-
-
-
+}
 
 .form {
   width: 70% !important;
@@ -422,21 +349,20 @@ user-select: none;
   resize: none;
 }
 
-
 .showAnswer {
-width: 30%; 
-background-color: grey; 
-outline: none;
-width: 32%; 
-height: 32px; 
-padding: 0 !important; 
-position: relative; 
-left: 22px;
-top:-24px;
+  width: 30%;
+  background-color: grey;
+  outline: none;
+  width: 32%;
+  height: 32px;
+  padding: 0 !important;
+  position: relative;
+  left: 22px;
+  top: -24px;
 }
 
 .openDeck {
-  margin-top: -20px !important; 
+  margin-top: -20px !important;
   outline: none !important;
   width: 110px;
   color: white !important;
@@ -449,8 +375,7 @@ top:-24px;
   background-color: #545863 !important;
 }
 
-
-.openDeck:focus{
+.openDeck:focus {
   outline: none !important;
   box-shadow: none !important;
   border: none !important;
@@ -465,11 +390,11 @@ top:-24px;
   justify-content: space-around !important;
 }
 
-
-.mod { /*specifies the width etc. of basic orange window*/
+.mod {
+  /*specifies the width etc. of basic orange window*/
   background-color: rgba(200, 168, 115) !important;
   border-radius: 20px !important;
-  height: 544px; 
+  height: 544px;
   width: 374px !important;
   margin-top: 90px !important;
   margin: auto;
@@ -485,11 +410,10 @@ top:-24px;
 }
 
 .settings__weekly-target {
-
-font-weight: bold;
-font-size: 13px;
-text-align: center;
-margin-bottom: 2px;
+  font-weight: bold;
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 2px;
 }
 
 .showRepeatBtnInner {
@@ -503,38 +427,36 @@ margin-bottom: 2px;
   width: 190px;
   margin-top: 5px;
   height: 20px;
-  font-size: 14px; 
+  font-size: 14px;
   font-weight: normal;
   margin: auto;
   position: relative;
   top: 1px;
-  /* display: flex; 
-  justify-content: center; */
 }
 
 .colorscheme {
   font-weight: bold;
-  text-align: center; 
-  margin-top: 20px; 
+  text-align: center;
+  margin-top: 20px;
   margin-bottom: 2px;
 }
 
 .questionAnswerStyling {
-  font-weight: bold; 
-  margin-left: 19px; 
+  font-weight: bold;
+  margin-left: 19px;
   margin-bottom: 10px;
 }
 
 .settings_repetition-container {
-  padding: 1px; 
-  border-radius: 5px; 
-  position: relative; 
-  width: 300px; 
+  padding: 1px;
+  border-radius: 5px;
+  position: relative;
+  width: 300px;
   height: 88px;
 }
 
 .redCross {
-  background-color: transparent !important; 
+  background-color: transparent !important;
   border-radius: 8px;
   color: red !important;
   font-size: 23px !important;
@@ -542,23 +464,21 @@ margin-bottom: 2px;
   background-color: rgba(200, 168, 115, 0.95);
   border: none !important;
   outline: none !important;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  padding:5px
+  padding: 5px;
 }
+
+
+
 
 .redCross:active {
   background: #b07d62;
   border-radius: 50%;
-
 }
 
 .buttonStyling {
   background-color: white !important;
-  border: none; 
+  border: none;
   color: black !important;
-  
 }
 
 .buttonStyling:hover {
@@ -568,7 +488,7 @@ margin-bottom: 2px;
 .deleteContainerNoAndYes:hover {
   background-color: grey;
   color: white;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .blinkingIcon {
@@ -584,11 +504,10 @@ margin-bottom: 2px;
   position: absolute;
   border: 1px grey solid;
   border-radius: 5px;
-
 }
 
 .form-control {
-  resize:none;
+  resize: none;
 }
 
 @keyframes blinker {
@@ -597,16 +516,9 @@ margin-bottom: 2px;
   }
 }
 
-
-
-.backgroundColor {
-  background-color: blue !important;
-}
-
 .saveAndDiscardButtonStyling {
   width: 65px;
   height: 27px;
-  /* color: white !important; */
   cursor: pointer !important;
   border-radius: 5px !important;
   outline: none !important;
@@ -615,20 +527,19 @@ margin-bottom: 2px;
 }
 
 .generalButtonStyling {
- width: 63px;
-  height: 24px; 
+  width: 63px;
+  height: 24px;
   background-color: grey;
   color: white !important;
   cursor: pointer !important;
   border-radius: 5px !important;
   outline: none !important;
   border: none !important;
-} 
-
+}
 
 .okCancelButton {
   width: 63px;
-  height: 26px; 
+  height: 26px;
   color: white !important;
   cursor: pointer !important;
   border-radius: 5px !important;
@@ -649,7 +560,6 @@ margin-bottom: 2px;
   font-size: 13px;
 }
 
-
 .deleteContainerInner {
   position: absolute;
   top: 188px;
@@ -661,48 +571,47 @@ margin-bottom: 2px;
 }
 
 .render-days__time {
-    position: absolute;
-    top: 30px;
+  position: absolute;
+  top: 30px;
 }
 
 .deleteYesAndNoContainer {
   width: 245px;
-  z-index: 2; 
-  height: 50px; 
-  position: absolute; 
+  z-index: 2;
+  height: 50px;
+  position: absolute;
   top: 115px;
 }
 
 .deleteContainerNoAndYes {
-  border: 2px solid grey; 
+  border: 2px solid grey;
   color: grey;
   width: 60px;
   height: 35px;
   border-radius: 12px;
 }
 
-
-.outline-none:focus{
-  outline:none !important;
+.outline-none:focus {
+  outline: none !important;
 }
 
 .createNewDeck {
   height: 160px;
   width: 280px;
-  background-color: rgba(200, 168, 115,0.95);
+  background-color: rgba(200, 168, 115, 0.95);
   top: 166px;
   position: absolute;
-  border-radius: 5px
+  border-radius: 5px;
 }
 
 .changeRepetitionContainer {
-width: 290px;
-height: 75px;
-border: 1px black solid;
-margin-top: 15px;
-border-radius: 5px;
-position: relative;
-margin-top: 10px
+  width: 290px;
+  height: 75px;
+  border: 1px black solid;
+  margin-top: 15px;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 10px;
 }
 
 .contUpperLower {
@@ -712,18 +621,17 @@ margin-top: 10px
 }
 
 .changeRepetitionIntervalContainerInner {
- width: 260px;
-height: 68px;
-margin-top: 3px;
-border-radius: 5px;
+  width: 260px;
+  height: 68px;
+  margin-top: 3px;
+  border-radius: 5px;
 }
 
 /* width */
- ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 10px;
   cursor: pointer;
- 
-} 
+}
 
 /* Track */
 ::-webkit-scrollbar-track {
@@ -731,7 +639,6 @@ border-radius: 5px;
   background: rgba(184, 156, 110, 0.95);
   border-radius: 5px;
   cursor: pointer;
- 
 }
 
 /* Handle */
@@ -739,21 +646,19 @@ border-radius: 5px;
   background: #888;
   border-radius: 5px;
   cursor: pointer;
- 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
   cursor: pointer;
- 
 }
 
 .themeRadiosContainer {
   border: 1px solid black;
   width: 215px;
   border-radius: 5px;
-  margin-top: 10px; 
+  margin-top: 10px;
   padding: 2px;
 }
 
@@ -764,32 +669,31 @@ border-radius: 5px;
   left: 0px;
 }
 
-
 .blackArrow {
   width: 2px;
-  height: 5px; 
+  height: 5px;
   background-color: black;
   font-size: 16px;
   font-weight: bold;
-  position: absolute; 
+  position: absolute;
   top: -2px;
   left: 26px;
 }
 
 .colorscheme-container {
   border-radius: 5px;
-  padding: 5px; 
-  width: 215px; 
+  padding: 5px;
+  width: 215px;
   margin-top: 10px;
   margin: auto;
 }
 
 .number {
   width: 100px;
-  position: absolute; 
+  position: absolute;
   top: 5px;
   left: -16px;
-  font-weight: normal; 
+  font-weight: normal;
   font-size: 14px;
 }
 
@@ -803,8 +707,7 @@ border-radius: 5px;
   padding: 10px;
 }
 
-
-.selected svg{
+.selected svg {
   fill: green;
 }
 
@@ -813,7 +716,7 @@ border-radius: 5px;
   margin-bottom: 3px;
   font-weight: bold;
   font-size: 18px;
-  margin-top: 20px; 
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -825,42 +728,43 @@ border-radius: 5px;
 }
 
 .diagramHourlyBreakdownContainer {
-  width: 280px; 
-  border: 1px solid black; 
-  height: 190px; 
-  position: relative ;
+  width: 280px;
+  border: 1px solid black;
+  height: 190px;
+  position: relative;
   margin: auto;
   padding: 4px;
   padding-top: 10px;
   border-radius: 3px;
 }
 
-.tooLongOrShort{
-position: absolute;
-z-index: 10;
-width: 100px;
-left: 235px;
-top: 22px;
+.tooLongOrShort {
+  position: absolute;
+  z-index: 10;
+  width: 100px;
+  left: 235px;
+  top: 22px;
 }
 
 .settings__save-or-edit-container {
   position: absolute;
   right: 11px;
-  top: 77px; 
+  top: 77px;
   cursor: pointer;
 }
 
 .progressBar {
-  background-color: black; 
-  padding: 3px; 
-  height: 16px; 
-  width: 146px; 
-  margin-left: 46px; 
+  background-color: black;
+  padding: 3px;
+  height: 16px;
+  width: 146px;
+  margin-left: 46px;
   border-radius: 3px;
   margin-top: 5px;
 }
 
-.time { /*used in stats for the border of the individual times*/
+.time {
+  /*used in stats for the border of the individual times*/
   margin-left: 11px;
   border: 1px solid black;
   width: 56px;
@@ -897,11 +801,10 @@ top: 22px;
 }
 
 #deleteWindow .modal-header {
-
-  background-color: rgba(200, 168, 115) !important; 
-  width: 300px !important; 
+  background-color: rgba(200, 168, 115) !important;
+  width: 300px !important;
   height: 45px;
-  font-weight: bold; 
+  font-weight: bold;
   display: flex;
   align-items: center;
   color: white;
@@ -917,7 +820,7 @@ top: 22px;
   padding: 7px;
 }
 .pointer {
-  cursor:pointer !important;
+  cursor: pointer !important;
 }
 
 .showAnswerButton {
@@ -932,7 +835,6 @@ top: 22px;
 
 .modal {
   padding: 0px !important;
-  /* width: 600px !important; */
 }
 
 .repeat-btn__button {
@@ -940,21 +842,21 @@ top: 22px;
   height: 27px;
 }
 
-
-.modal-open .modal{
+.modal-open .modal {
   overflow-y: hidden !important;
 }
 
-#deleteWindow { /*background color of reset progress in stats*/
+#deleteWindow {
+  /*background color of reset progress in stats*/
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-#deleteWindow, #createDeck .modal-footer,
+#deleteWindow,
+#createDeck .modal-footer,
 #createDeck .modal-header {
-    border-top: 0px;
-    border-bottom: 0px;
+  border-top: 0px;
+  border-bottom: 0px;
 }
-
 
 .close {
   outline: none !important;
@@ -968,8 +870,6 @@ top: 22px;
   height: 75px !important;
 }
 
-
-
 .yearBoxContainer {
   display: flex;
   flex-wrap: wrap;
@@ -977,9 +877,12 @@ top: 22px;
   height: 210px;
 }
 
+.deckEmpty {
+  left: 84px; 
+  text-align: center;
+}
 .deleteWindow #modal {
   background-color: rgba(0, 0, 0, 0.7);
-  /* overflow-y: none !important; */
 }
 
 .modal-title {
@@ -987,7 +890,7 @@ top: 22px;
 }
 
 #createDeck .modal-header {
-height: 33px;
+  height: 33px;
 }
 
 .playButton {
@@ -1008,54 +911,53 @@ height: 33px;
   left: 14px;
 }
 
-.backgroundModal { /*background styling that is shown when threedotscontainer in stats is clicked*/
-
+.backgroundModal {
+  /*background styling that is shown when threedotscontainer in stats is clicked*/
   background-color: rgba(0, 0, 0, 0.3);
   padding: 163px;
   top: -12px;
   height: 730px !important;
   max-width: 440px !important;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
 }
 
-.widthFitContent{
-  width:fit-content !important;
+.widthFitContent {
+  width: fit-content !important;
 }
 
 #createDeck .modal-body {
   padding: 10px;
 }
 
-
 #questionAnswerOverview .modal-body {
-  padding: 10px; 
-   background-color: blue !important;
+  padding: 10px;
+  background-color: blue !important;
 }
 
 #createDeck .modal-title {
   height: 30px;
   background-color: rgba(200, 168, 115) !important;
   font-size: 16px;
-  font-weight: bold; 
+  font-weight: bold;
   background-color: transparent !important;
   padding-left: 23px;
   width: 175px;
 }
 
 .pieDiagramContainer {
-  width: 80px; 
-  right: 37px; 
-  top:-76px;
-  position:absolute;
+  width: 80px;
+  right: 37px;
+  top: -76px;
+  position: absolute;
 }
 
 #createDeck .modal-content {
   width: 247px;
   height: 160px;
-  background-color: rgba(200, 168, 115) !important; 
+  background-color: rgba(200, 168, 115) !important;
   align-items: center;
   margin: auto;
   margin-bottom: 470px;
@@ -1072,8 +974,8 @@ height: 33px;
 }
 
 .cancelOkContainer {
-  width: 57%; 
-  top: -13px; 
+  width: 57%;
+  top: -13px;
   position: relative;
 }
 
@@ -1081,9 +983,8 @@ height: 33px;
   background: red !important;
 }
 
-
-.stylesNewDeck {  
-  background-color: rgba(200, 168, 115, 0.95) !important; 
+.stylesNewDeck {
+  background-color: rgba(200, 168, 115, 0.95) !important;
   position: absolute !important;
   left: 36% !important;
   width: 507px !important;
@@ -1092,23 +993,23 @@ height: 33px;
 }
 
 .modal-footer {
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-justify-content: flex-end;
-padding: .75rem;
-border-bottom-right-radius: calc(.3rem - 1px);
-border-bottom-left-radius: calc(.3rem - 1px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0.75rem;
+  border-bottom-right-radius: calc(0.3rem - 1px);
+  border-bottom-left-radius: calc(0.3rem - 1px);
 }
 
 .threeDotsBtnIndex {
-    position: absolute ;
-    top: -5px;
-    left: 10px;
-    z-index: 2000;
-    background-color: white; 
-    border: 1px solid black;
-    overflow: hidden;
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  z-index: 2000;
+  background-color: white;
+  border: 1px solid black;
+  overflow: hidden;
 }
 
 .spinner {
@@ -1116,26 +1017,26 @@ border-bottom-left-radius: calc(.3rem - 1px);
 }
 
 .save:hover {
-  background:#2D6A4F;
+  background: #2d6a4f;
 }
-
 
 .deckEmptyAndPausedContainer {
   padding: 5px;
-  width: 152px; 
-  position: absolute; 
+  width: 152px;
+  position: absolute;
   top: 45px;
   left: 75px !important;
   height: 111px;
   border-radius: 5px;
 }
 
-.addToDeckInput { /*the styling of the input field that appears when deckname edit is clicked*/
-  width: 129px; 
+.addToDeckInput {
+  /*the styling of the input field that appears when deckname edit is clicked*/
+  width: 129px;
   border-radius: 5px;
-  padding-left: 5px; 
+  padding-left: 5px;
   position: relative;
-  left: 10px; 
+  left: 10px;
   top: -23px;
   height: 26px;
   outline: none;
@@ -1143,18 +1044,18 @@ border-bottom-left-radius: calc(.3rem - 1px);
 }
 
 .threeDotsInQuestionAnswerStyling {
-  position: absolute; 
+  position: absolute;
   top: 14px;
   right: 19px;
-  height: 98px; 
-  z-index: 2000; 
+  height: 98px;
+  z-index: 2000;
   background-color: white;
   border: 1px solid black;
   overflow: hidden;
 }
 
 .three-dots__reset-img {
-  margin-right: 3px; 
+  margin-right: 3px;
   width: 23px;
   height: 23px;
 }
@@ -1170,21 +1071,21 @@ border-bottom-left-radius: calc(.3rem - 1px);
   padding-left: 5px;
 }
 
-
 .plusInfoMessage {
-  height: 24px; 
-  width: 24px; 
+  height: 24px;
+  width: 24px;
   margin-left: 9px;
   border: 1px solid black;
-  border-radius: 50%; 
+  border-radius: 50%;
   display: inline-block;
 }
 
-textarea.form-control:active, textarea.form-control:focus {
+textarea.form-control:active,
+textarea.form-control:focus {
   outline: none !important;
 }
 
-.formControlIn  {
+.formControlIn {
   width: 93% !important;
   height: 93px !important;
   position: relative;
@@ -1197,11 +1098,11 @@ textarea.form-control:active, textarea.form-control:focus {
 }
 
 .scrollerStyling {
-  height: 174px; 
-  width: 20px; 
-  overflow: scroll; 
-  overflow-x: hidden; 
-  position: absolute; 
+  height: 174px;
+  width: 20px;
+  overflow: scroll;
+  overflow-x: hidden;
+  position: absolute;
   top: 78px;
   right: 11px;
   cursor: pointer;
@@ -1211,7 +1112,7 @@ textarea.form-control:active, textarea.form-control:focus {
   border-bottom-left-radius: 10px !important;
   border-bottom-right-radius: 10px !important;
   height: 651px !important;
-  width: 440px !important; 
+  width: 440px !important;
 }
 
 .alert {
@@ -1220,31 +1121,30 @@ textarea.form-control:active, textarea.form-control:focus {
 }
 
 .monthContainerBox {
-  display: flex;
-  justify-content: space-evenly; 
+
   width: 270px;
-  height: 38px; 
-  border-radius: 5px;  
+  height: 38px;
+  border-radius: 5px;
   border: 1px solid black;
-  padding: 1px 5px; 
-  margin-top: 8px; 
+  padding: 1px 5px;
+  margin-top: 8px;
   margin-bottom: 20px;
 }
 
 .deckOrCardNameStyling {
-  width: 159px; 
-  height: 73px; 
+  width: 159px;
+  height: 73px;
   position: relative !important;
   display: flex !important;
-  justify-content: center !important; 
+  justify-content: center !important;
   left: 6px;
 }
 
 .addToDeckButton {
   width: 110px;
   margin-top: 20px;
-  padding: 5px; 
-  box-sizing: border-box; 
+  padding: 5px;
+  box-sizing: border-box;
   margin-left: 21px;
 }
 
@@ -1252,40 +1152,40 @@ textarea.form-control:active, textarea.form-control:focus {
   width: 16px;
   height: 21px;
   position: relative;
-  margin: 3px; 
-  padding: 3px; 
+  margin: 3px;
+  padding: 3px;
   transform: rotate(90deg);
 }
 
 .hexagonContainer {
-  border-radius: 5px; 
-  position: relative; 
-  padding-left: 8px; 
+  border-radius: 5px;
+  position: relative;
+  padding-left: 8px;
   margin: auto;
-  padding-right: 14px; 
-  padding-bottom: 3px; 
-  width: 211px; 
+  padding-right: 14px;
+  padding-bottom: 3px;
+  width: 211px;
   height: 66px;
-  }
+}
 
-  .goalSettingsContainer {
-    font-weight: bold; 
-    font-size: 17px; 
-    margin-top: 25px;
-    text-align: center; 
-    margin-bottom: 7px;
-  }
+.goalSettingsContainer {
+  font-weight: bold;
+  font-size: 17px;
+  margin-top: 25px;
+  text-align: center;
+  margin-bottom: 7px;
+}
 
-  .repetitionIntervalTextFields {
-    width: 72px;
-    height: 27px;
-    padding-left: 7px; 
-    background-color: grey;
-    color: white;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-  }
+.repetitionIntervalTextFields {
+  width: 72px;
+  height: 27px;
+  padding-left: 7px;
+  background-color: grey;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
 
 @-webkit-keyframes arrow {
   0%,
@@ -1306,170 +1206,161 @@ textarea.form-control:active, textarea.form-control:focus {
   }
 }
 
-  textarea:focus {
-    border: 3px solid grey;
-    box-shadow: 0px 0px 15px grey;
-    outline: none !important;
-  }
-  textarea:enabled {
-    border: 3px solid grey;
-    outline: none !important;
-  }
+textarea:focus {
+  border: 3px solid grey;
+  box-shadow: 0px 0px 15px grey;
+  outline: none !important;
+}
+textarea:enabled {
+  border: 3px solid grey;
+  outline: none !important;
+}
 
-  .createDeckButtonStyling {  /*background color of create deck button*/
-    z-index: 4; 
-    padding: 2px; 
-    position: absolute;
-    top: 630px; 
-    width: 217px; 
-    height: 30px;
-    outline: none !important;
-    background-color: #545863 !important;
-    color: white !important;
-    border-radius: 5px !important;
-    border: none !important;
-  }
+.createDeckButtonStyling {
+  /*background color of create deck button*/
+  z-index: 4;
+  padding: 2px;
+  position: absolute;
+  top: 630px;
+  width: 217px;
+  height: 30px;
+  outline: none !important;
+  background-color: #545863 !important;
+  color: white !important;
+  border-radius: 5px !important;
+  border: none !important;
+}
 
+.okCancelButtonStyling {
+  cursor: pointer;
+  width: 65px;
+  height: 28px;
+  border-radius: 5px;
+}
 
-  .okCancelButtonStyling {
-    cursor: pointer;
-    width: 65px;
-    height: 28px;
-    border-radius: 5px;
-  }
+.okCancelButtonStyling:hover {
+  background-color: #545863;
+}
 
-  .okCancelButtonStyling:hover {
-    background-color:#545863;
-  }
+.innerRenderDays {
+  margin-top: -10px;
+}
 
-  .innerRenderDays {
-    margin-top: -10px;
-  }
+.todayStudiedInfo {
+  width: 133px !important;
+  height: 86px;
+  position: absolute;
+  top: 20px;
+}
 
-  .todayStudiedInfo {
-    width: 133px !important;
-    height: 86px;
-    position: absolute;
-    top: 20px;
-  }
+.render-days__review-container {
+  position: absolute;
+  top: 56px;
+}
 
-  .render-days__review-container {
-    position: absolute;
-    top: 56px;
-  }
+.statsHeader {
+  font-size: 22px;
+  font-weight: bold;
+}
 
-  .statsHeader {
-    font-size: 22px;
-    font-weight: bold;
-  }
+.hoveredDeckOrCardName {
+  position: relative;
+  width: 146px;
+  height: 33px;
+}
 
+.resetButtonStyling {
+  position: absolute;
+  top: 17px;
+  right: 26px;
+  z-index: 2000;
+  background-color: white;
+  border: 1px solid black;
+  overflow: hidden;
+}
 
+.loginContainer {
+  width: 440px;
+  height: 720px;
+  background-color: rgb(90, 170, 149);
+  border-radius: 10px;
+  margin: 40px auto;
+}
 
-  .hoveredDeckOrCardName {
-    position: relative;
-    width: 146px; 
-    height: 33px;
-    
-  }
+.flashcardBackground {
+  position: relative;
+  width: 161%;
+}
 
-  .resetButtonStyling {
-    position: absolute;
-    top: 17px;
-    right: 26px;
-    z-index: 2000;
-    background-color: white;
-    border: 1px solid black;
-    overflow: hidden;
-  }
+.studyBreakdownHeader {
+  width: 179px;
+  text-align: center;
+  margin: auto;
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 3px;
+}
 
-  .loginContainer {
-    width: 440px; 
-    height: 720px;
-    background-color: rgb(90, 170, 149);
-    border-radius: 10px; 
-    margin: 40px auto;
-  }
-
-  .flashcardBackground{
-    position: relative;
-    width: 161%;
-  }
-
-  
-
-  .studyBreakdownHeader {
-    width: 179px; 
-    text-align: center;
-    margin: auto; 
-    font-weight: bold; 
-    font-size: 17px; 
-    margin-bottom: 3px;
-  }
-
-  
-
-  .flashCardsStyling {
-  width: 26px; 
+.flashCardsStyling {
+  width: 26px;
   height: fit-content;
   margin-right: 20px;
-  }
+}
 
-  .deleteCardQuestionBox__question-mark {
-    width: 40px; 
-    position: absolute;
-  }
+.deleteCardQuestionBox__question-mark {
+  width: 40px;
+  position: absolute;
+}
 
-  .questionMark1 {
-    top: -47px; 
-    right: -10px;
+.questionMark1 {
+  top: -47px;
+  right: -10px;
+}
 
-  }
+.questionMark2 {
+  top: -65px;
+  right: -30px;
+}
 
-  .questionMark2 {
-    top: -65px; 
-    right: -30px;
+.studyGoalStyling {
+  margin-left: 10px;
+  border: 1px solid black;
+  width: 81px;
+  padding-left: 3px;
+  height: 24px;
+  border-radius: 2px;
+}
 
-  }
+.deckOrCardNameContainer {
+  width: 127px;
+  padding-left: 7px;
+  border-radius: 5px;
+  height: 30px;
+  position: relative;
+  top: -21px;
+  left: 5px;
+}
 
-  .studyGoalStyling {
-    margin-left: 10px; 
-    border: 1px solid black; 
-    width: 81px; 
-    padding-left: 3px; 
-    height: 24px;
-    border-radius: 2px;
-  }
+.firstRowStyling {
+  /*the positioning of all the decks*/
+  position: relative;
+  padding: 50px;
+  width: 400px;
+  margin-left: 30px;
+  margin-top: 77px;
+}
 
-  .deckOrCardNameContainer {
-    width: 127px;
-    padding-left: 7px;
-    border-radius: 5px;
-    height: 30px;
-    position: relative;
-    top: -21px;
-    left: 5px;
-  }
-
-  .firstRowStyling { /*the positioning of all the decks*/
-    position: relative; 
-    padding: 50px; 
-    width: 400px;
-    margin-left: 30px; 
-    margin-top: 77px;
-  }
-  
- input::-webkit-outer-spin-button,
- input::-webkit-inner-spin-button {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
   -webkit-appearance: auto;
   opacity: 1;
 }
 
-
 .onoffswitch {
-  width: 81px;
-  -webkit-user-select:none; 
-  -moz-user-select:none; 
+  -webkit-user-select: none;
+  -moz-user-select: none;
   -ms-user-select: none;
+  width: 81px;
   right: 338px;
 }
 .onoffswitch-checkbox {
@@ -1478,11 +1369,11 @@ textarea.form-control:active, textarea.form-control:focus {
   pointer-events: none;
 }
 .onoffswitch-label {
-  display: block; 
-  overflow: hidden; 
+  display: block;
+  overflow: hidden;
   width: 81px;
   height: 25px;
-  border: 1px solid #1F1E1E; 
+  border: 1px solid #1f1e1e;
   border-radius: 14px;
   position: absolute;
   right: 110px;
@@ -1493,21 +1384,23 @@ textarea.form-control:active, textarea.form-control:focus {
 }
 
 .onoffswitch-inner {
-  display: block; 
-  width: 200%; 
+  display: block;
+  width: 200%;
   margin-left: -100%;
   transition: margin 0.3s ease-in 0s;
 }
-.onoffswitch-inner:before, .onoffswitch-inner:after {
-  display: block; 
-  float: left; 
-  width: 50%; 
-  height: 23px; 
-  padding: 0; 
+
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 23px;
+  padding: 0;
   line-height: 23px;
-  font-size: 14px; 
-  color: white; 
-  font-family: Trebuchet, Arial, sans-serif; 
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
   font-weight: bold;
   box-sizing: border-box;
 }
@@ -1515,96 +1408,87 @@ textarea.form-control:active, textarea.form-control:focus {
 .onoffswitch-inner:before {
   content: "Paused";
   padding-left: 7px;
-  background-color: #FAF8F5; 
+  background-color: #faf8f5;
   color: #999999;
 }
 
 .onoffswitch-inner:after {
   content: "Paused";
-  
   padding-right: 7px;
   padding-top: 1px;
-  background-color: rgba(200, 168, 115); color: #FFFFFF;
+  background-color: rgba(200, 168, 115);
+  color: #ffffff;
   text-align: right;
   font-size: 12px;
 }
 
 .onoffswitch-switch {
-  display: block; 
-  width: 17px; 
+  display: block;
+  width: 17px;
   height: 17px;
   margin: 4px;
   font-size: 14px;
   text-align: center;
-  background: #FFFFFF;
-  position: absolute; 
-  top: 0px; 
+  background: #ffffff;
+  position: absolute;
+  top: 0px;
   bottom: 0px;
   right: 53px;
-  border: 1px solid #1F1E1E; 
+  border: 1px solid #1f1e1e;
   border-radius: 14px;
-  transition: all 0.3s ease-in 0s; 
+  transition: all 0.3s ease-in 0s;
 }
 
 .settings__repetition-interval {
-
-  font-weight: bold; 
-  font-size: 17px; 
-  text-align: center; 
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
   margin-bottom: 8px;
 }
 
-
 .timeandprogress__monthly-goal {
-
-  height: 27px; 
+  height: 27px;
   font-size: 13px;
 }
-
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
   margin-left: 0px;
 }
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-  right: 0px; 
+  right: 0px;
 }
 
-#tsparticles{
-width:100%;
-height: 100%;
-position: absolute;
-}
+
 
 .menuContainer__modalbody {
-  position: relative; 
-  top: 42px; 
+  position: relative;
+  top: 42px;
   left: 10px;
 }
 
 /*Login.js styles following*/
 
 .login__facebook-container {
-  text-align: center; 
-  position: absolute; 
-  bottom: 140px; 
+  text-align: center;
+  position: absolute;
+  bottom: 140px;
   width: inherit;
 }
 
 .login__google-container {
-  position: absolute; 
-  top: 600px; 
-  width: 456px; 
+  position: absolute;
+  top: 600px;
+  width: 456px;
 }
 
 .login__input-password {
   width: 140px;
-  height: 25px; 
+  height: 25px;
   border-radius: 5px;
 }
 
 .btnGoogle {
-   
   width: 136px !important;
   height: 30px;
   border-radius: 4px;
@@ -1614,16 +1498,22 @@ position: absolute;
   padding: 4px !important;
 }
 
-.btnFacebook { 
+.btnFacebook {
+  display: inline-block;
+  font-size: 13px;
   width: 136px;
   height: 30px;
-  font-size: 13px;
   border-radius: 4px;
-  background: #3b5998; 
+  background: #3b5998;
   color: white;
   border: 0px transparent;
   text-align: center;
   margin: 5px;
-  margin-left:21px;
-  display: inline-block;
+  margin-left: 21px;
+}
+
+#tsparticles {
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }

@@ -77,7 +77,7 @@ export default function CreateNewDeck({
 
       </Modal.Header>
 
-      <Modal.Body className="flexAlignCenter flex-column">
+      <Modal.Body className="align-center flex-column">
         <input
           id="inputField"
           className="createNewDeckInputField"
@@ -127,7 +127,7 @@ export default function CreateNewDeck({
         </select>
       </Modal.Body>
 
-      <div className="flexBetween cancelOkContainer">
+      <div className="justify-between cancelOkContainer">
         {["Cancel", "Ok"].map((el) => (
           <button
             className="okCancelButtonColor okCancelButton"

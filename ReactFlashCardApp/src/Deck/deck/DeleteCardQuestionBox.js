@@ -10,7 +10,7 @@ export default function DeleteCardQuestionBox({ card,
   pauseOrDelete,deleteWindow, 
   trashEvent, 
                                                 setShowAnswerBtn=()=>{},
-                                                setShowRepeatBtn=()=>{},
+                                                // setShowRepeatBtn=()=>{},
                                                 setEditBtnClicked=()=>{},
                                                 showDeleteWindow,
                                                 deleteCurrentCard=()=>{},
@@ -24,7 +24,7 @@ export default function DeleteCardQuestionBox({ card,
   
 {
 
-  const { dataBase, setDataBase} = useContext(Context)
+  const { dataBase, setDataBase, setShowRepeatBtn} = useContext(Context)
 
 
   function handleCheckbox () {

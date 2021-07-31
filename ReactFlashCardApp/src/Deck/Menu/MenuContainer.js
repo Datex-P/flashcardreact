@@ -10,12 +10,10 @@ import statsIcon from "../../icons/stats.svg";
 import logoutIcon from "../../icons/logout.svg";
 
 
-export default function MenuContainer({
-  //editButtonClicked, //set to false when editButton is not clicked gets activated when editButton is clicked
-}) {
-  const [show, setShow] = useState(false); //opens the Menu when set to true
+export default function MenuContainer() {
+  const [menuOpen, setMenuOpen] = useState(false); //opens the Menu when set to true
   const { dataBase, styles, editButtonClicked } = useContext(Context);
-  const handleClose = () => setShow(false); // closes the Menu when handleclos is triggered
+  const handleClose = () => setMenuOpen(false); // closes the Menu when handleclos is triggered
 
   return (
     <div
@@ -27,15 +25,14 @@ export default function MenuContainer({
       }}
     >
       <Hamburger
-        // editButtonClicked={editButtonClicked}
-        show={show}
-        setShow={setShow}
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
       />
 
-      {show && editButtonClicked ? (
+      {menuOpen && editButtonClicked ? (
         <>
           <Modal
-            show={show}
+            menuOpen={menuOpen}
             onHide={handleClose}
             contentClassName={"modNew"}
             dialogClassName='align-items-start  pl-3'
@@ -45,7 +42,7 @@ export default function MenuContainer({
               <div
                 className='menuStyling nonDraggableIcon'
                 onClick={() => {
-                  setShow(false);
+                  setMenuOpen(false);
                 }}
               >
                 <Icons

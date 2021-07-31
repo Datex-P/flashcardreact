@@ -23,8 +23,8 @@ export default function Deck({
   const [show, setShow] = useState(false);
   const [nameOfTopDeck, setNameOfTopDeck] = useState(name);
   const [threeDotsMenuOpen, setThreeDotsMenuOpen] = useState(false);
-  const [deckNameLengthRight, setDeckNameLengthRight] = useState(true)
-  const [nameTooLongOrShort, setNameTooLongOrShort] = useState(false)
+  const [deckNameLengthRight, setDeckNameLengthRight] = useState(true) //deckname length is not too short and not too long
+  const [nameTooLongOrShort, setNameTooLongOrShort] = useState(false) //if true deckname is too long or too short
   const [showDeleteWindow, setShowDeleteWindow] = useState(true); //if true and triggered the delete window with yes and no button is shown
   const [trash, setTrash] = useState(false);
 
@@ -35,7 +35,7 @@ export default function Deck({
   , setChangeDeckNameOpen,
   editButtonClicked, setEditButtonClicked, 
   setDecksAreVisible,
-  active, setActive,
+  active, setActive, trigger,
  setArrowDown
   } = useContext(Context);
 

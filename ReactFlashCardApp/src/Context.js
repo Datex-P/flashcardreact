@@ -17,6 +17,7 @@ export default function ContextProvider({ children }) {
   const [decksAreVisible, setDecksAreVisible] = useState(true); //decks are shown on the deck stack if this is set to true
   const [spinnerIsVisible, setSpinnerIsVisible] = useState(true); //spinner that is shown when application loads
   const [addNewDeckWindow, setAddNewDeckWindow] = useState(false);
+  const [showRepeatBtn, setShowRepeatBtn] = useState(false); //repeatbtn that is shown in questionanswertrain file
 
   const [showAnswerBtn, setShowAnswerBtn] = useState(true); //button in questionAnswerTrainOverView with that name
 
@@ -155,6 +156,7 @@ export default function ContextProvider({ children }) {
    scrollPosition, setScrollPosition, 
   showAnswerBtn, setShowAnswerBtn,
   scroller,
+  showRepeatBtn, setShowRepeatBtn,
     trigger, setTrigger, 
   pauseIsActive, setPauseIsActive,
 

@@ -7,9 +7,6 @@ function ShowProgressD() {
    const {
      dataBase,
      showProgressDiagram,
-     
-  
-    
    } = useContext(Context);
 
 

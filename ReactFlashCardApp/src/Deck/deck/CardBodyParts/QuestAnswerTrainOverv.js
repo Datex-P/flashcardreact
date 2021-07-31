@@ -28,7 +28,7 @@ export default function QuestAnswerTrainOverv({
   const [cardModified, setCardModified] = useState(false);
   const [pauseOrDeleteText, setPauseOrDeleteText] = useState(true);
   const [show, setShow] = useState(false);
-  const [showRepeatBtn, setShowRepeatBtn] = useState(false);
+  // const [showRepeatBtn, setShowRepeatBtn] = useState(false);
 
   const [showDeleteWindow, setShowDeleteWindow] = useState(true);
   const [timer, setTimer] = useState(null);
@@ -40,7 +40,8 @@ export default function QuestAnswerTrainOverv({
     dataBase, setDataBase, 
   editButtonClicked, 
  setShowProgressDiagram,
- showAnswerBtn, setShowAnswerBtn
+ showAnswerBtn, setShowAnswerBtn,
+ showRepeatBtn, setShowRepeatBtn
   } = useContext(Context);
 
 
@@ -220,8 +221,8 @@ export default function QuestAnswerTrainOverv({
           mainBox={mainBox}
           index={index}
           id="questionAnswerOverview"
-          showRepeatBtn={showRepeatBtn}
-          setShowRepeatBtn={setShowRepeatBtn}
+          // showRepeatBtn={showRepeatBtn}
+          // setShowRepeatBtn={setShowRepeatBtn}
           setEditBtnClicked={setEditBtnClicked}
           createDeckButtonIsVisible={createDeckButtonIsVisible}
           setCreateDeckButtonIsVisible={setCreateDeckButtonIsVisible}
@@ -398,8 +399,8 @@ export default function QuestAnswerTrainOverv({
                   index={index}
                   editBtnClicked={editBtnClicked}
                   setEditBtnClicked={setEditBtnClicked}
-                  setShowAnswerBtn={setShowAnswerBtn}
-                  setShowRepeatBtn={setShowRepeatBtn}
+                  // setShowAnswerBtn={setShowAnswerBtn}
+                  // setShowRepeatBtn={setShowRepeatBtn}
                   trashEvent={deleteCurrentCard}
                   showDeleteWindow={showDeleteWindow}
                   deleteWindow={() => setShowDeleteWindow(false)}

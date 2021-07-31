@@ -8,9 +8,9 @@ import ShowProgressD from "./ShowProgressDiagram";
 
 export default function DeckContainer() {
   const {
-    dataBase, setDataBase, styles, setShowProgressDiagram
+    dataBase, setDataBase,  setShowProgressDiagram
     ,scrollbarVisible
-  ,trigger, changeDeckNameOpen, 
+  , changeDeckNameOpen, 
   editButtonClicked, 
   decksAreVisible, setDecksAreVisible,
   spinnerIsVisible, setSpinnerIsVisible,
@@ -88,7 +88,6 @@ export default function DeckContainer() {
                           paused={deck.paused}
                           deck={deck}
                           name={deck.name}
-                          trigger={trigger}
                           transform={`rotate(${-accum.index * 2}deg)`}
                           zIndex={0}
                           bg={colorsArr.map((i, k, ar) => {
@@ -147,7 +146,8 @@ export default function DeckContainer() {
               <div id="createYourFirstDeckPrompt">
                 Start and create your first deck
               </div>
-              <div style={{ marginTop: "150px", position: "relative" }}>
+              <div className="posRelative"
+              style={{ marginTop: "150px"}}>
                 <div className="arrowDown"></div>
               </div>
             </div>

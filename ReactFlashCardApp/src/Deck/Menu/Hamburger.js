@@ -2,12 +2,14 @@ import React, { useContext } from "react";
 import { Context } from "../../Context";
 
 function Hamburger({ 
-  show, setShow }) {
+  menuOpen, //when true menu is clicked and stats settings logout appear
+  setMenuOpen 
+}) {
 
-  const { editButtonClicked, showProgressDiagram, setShowProgressDiagram } = useContext(Context);
+  const { editButtonClicked, showProgressDiagram, setShowProgressDiagram} = useContext(Context);
 
   function triggerDiagramAndState() {
-    setShow(!show);
+    setMenuOpen(!menuOpen);
     setShowProgressDiagram(!showProgressDiagram);
   }
 
@@ -24,15 +26,15 @@ function Hamburger({
         onClick={() => (!editButtonClicked ? null : triggerDiagramAndState())}
       >
         <div
-          className={"menuIcon " + (show ? "transPlus" : " ")}
-          style={{ top: show ? "8px" : "0px" }}
+          className={"menuIcon " + (menuOpen ? "transPlus" : " ")}
+          style={{ top: menuOpen ? "8px" : "0px" }}
         ></div>
 
-        {!show && <div className={"menuIcon"} style={{ top: "8px" }}></div>}
+        {!menuOpen && <div className={"menuIcon sec"}></div>}
 
         <div
-          className={"menuIcon " + (show ? "transMinus" : " ")}
-          style={{ top: show ? "8px" : "16px" }}
+          className={"menuIcon " + (menuOpen ? "transMinus" : " ")}
+          style={{ top: menuOpen ? "8px" : "16px" }}
         ></div>
       </div>
     </div>

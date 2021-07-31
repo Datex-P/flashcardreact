@@ -13,12 +13,12 @@ export default function BasicOrangeWindow({
   mainBox,
   setShowAnswerBtn = () => {},
   setEdit = () => {},
-  setShowRepeatBtn = () => {},
+  // setShowRepeatBtn = () => {},
   setEditBtnClicked = () => {},
   generateRandom,
   index,
 }) {
-  const {dataBase, setDataBase} = useContext(Context);
+  const {dataBase, setDataBase, setShowRepeatBtn} = useContext(Context);
 
   return (
     <Modal

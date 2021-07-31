@@ -14,17 +14,13 @@ function Scrollbar() {
     
   function scrollHandler(e) {
     let position = e.target.scrollTop;
-
     setScrollPosition(position);
-
   }
-
 
   const {
     setActive,
     changeDeckNameOpen, 
-    dataBase,
-    setDataBase, 
+    dataBase,setDataBase, 
     scroller,
     setScrollPosition
 
@@ -33,7 +29,7 @@ function Scrollbar() {
   return (
     <div
     ref={scroller}
-    className="scrollerStyling"
+    className="scrollbar"
     onScroll={(event) => {
       if (!changeDeckNameOpen) {
         let step = (1000 - 220) / (dataBase.DeckNames.length - 1);
@@ -44,14 +40,7 @@ function Scrollbar() {
       }
     }}
   >
-    <div
-      style={{
-        height: "1000px",
-        position: "absolute",
-        top: "0px",
-        width: "100%",
-      }}
-    ></div>
+    <div className='scrollbar-inner'></div>
   </div>
   )
 }

@@ -22,7 +22,6 @@ import {Context} from '../../Context'
           alt={alt} 
           style={{ width: '20px' }} 
           className='nonDraggableIcon'                                              
-
       />
       
       <Nav.Link 

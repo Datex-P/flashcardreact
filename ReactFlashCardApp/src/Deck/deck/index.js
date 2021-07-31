@@ -2,11 +2,13 @@ import React, { useState, useContext, useRef, useEffect } from "react";
 import { Context } from "../../Context";
 import { Card } from "react-bootstrap";
 import "../../styles.css";
+import NameLongOrShort from './NameLongOrShort'
+
 import ThreeDotsBtn from "./ThreeDotsBtn";
 import AddQuestionsToDeck from "./AddQuestionsToDeck/AddQuestionsToDeck";
 import QuestAnswerTrainOverv from "./CardBodyParts/QuestAnswerTrainOverv";
 import DeckOrCardName from "./DeckOrCardName";
-import DeleteCardQuestionBox from "./DeleteCardQuestionBox";
+import DeleteCardQuestionBox from "./DeleteCardQuestionBox/DeleteCardQuestionBox";
 import Paused from './Paused'
 
 export default function Deck({
@@ -29,14 +31,13 @@ export default function Deck({
   const [trash, setTrash] = useState(false);
 
 
-
   const {
-    dataBase, setDataBase
-  , setChangeDeckNameOpen,
-  editButtonClicked, setEditButtonClicked, 
-  setDecksAreVisible,
-  active, setActive, trigger,
- setArrowDown
+    active, setActive, 
+    setArrowDown,
+    dataBase, setDataBase, 
+    editButtonClicked, setEditButtonClicked, 
+    setChangeDeckNameOpen,
+    setDecksAreVisible
   } = useContext(Context);
 
   //const [index, setIndex] = useState(0);
@@ -92,27 +93,8 @@ export default function Deck({
   }
 
 
-  function handleChangeName(e){
-
-    if (e.target.value.length >3 && e.target.value.length <12) {
-     
-     setDeckNameLengthRight(true)
-     setThreeDotsMenuOpen(true)
-     setNameTooLongOrShort(false)
-     
-    } else {
-      setNameTooLongOrShort(true)
-      setDeckNameLengthRight(false)
-
-    }
-      setNameOfTopDeck(e.target.value);
-  }
-
-
   return (
-    deck && (
-
-     
+    deck && (  
       
       <Card
         style={style}
@@ -121,37 +103,29 @@ export default function Deck({
      
         <Card.Body className="justify-center-align-center flex-column"
         >
-          {
-        nameTooLongOrShort? 
-          <div className='tooLongOrShort'
-          >
-          {`${nameOfTopDeck.length>11? 'Too long' : nameOfTopDeck.length<4? 'Too short': ''}`}
-          </div>
-          :
-          null
-
-       }  
+        <NameLongOrShort 
+            nameTooLongOrShort={nameTooLongOrShort} 
+            nameOfTopDeck={nameOfTopDeck}
+        />
+        
 
           <Card.Title
             className="justify-between-align-center position-relative"
             style={{ width: "151px", left: "3px", height: "0px" }}
           >
-            {editButtonClicked ? (
               <DeckOrCardName
                 bg={bg}
-               
+                nameOfTopDeck={nameOfTopDeck}
+                editButtonClicked={editButtonClicked}
                 name={name}
+                input={input}
+                setNameOfTopDeck={setNameOfTopDeck}
+                setThreeDotsMenuOpen={setThreeDotsMenuOpen}
+                setDeckNameLengthRight={setDeckNameLengthRight}
+                setNameTooLongOrShort={setNameTooLongOrShort}
                 className="deckOrCardNameStyling"
               />
-            ) : (
-              <input
-                ref={input}
-                className="addToDeckInput"
-                value={nameOfTopDeck}
-                onChange={handleChangeName}
-              />
-        
-            )}
+         
             
             {
               deckNameLengthRight &&
@@ -229,7 +203,6 @@ export default function Deck({
                   style={style}
                 />
          
-
           <QuestAnswerTrainOverv
             name={name}
             index={index}

@@ -93,6 +93,7 @@ export default function CreateNewDeck({
               Ok.current.disabled = false;
               Ok.current.classList.add('okCancelButtonColor');           
               setNameTooShortOrLong(false)
+
             }else{ 
               setNameTooShortOrLong(true)
               Ok.current.disabled = true
@@ -128,7 +129,8 @@ export default function CreateNewDeck({
         </select>
       </Modal.Body>
 
-      <div className="justify-between cancelOkContainer">
+      <div className="justify-between cancelOkContainer"
+      >
         {["Cancel", "Ok"].map((el) => (
           <button
             className="okCancelButtonColor okCancelButton"

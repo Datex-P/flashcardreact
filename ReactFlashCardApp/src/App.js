@@ -1,9 +1,10 @@
 import React,{useState} from 'react'
 import { BrowserRouter as Router, Switch, Route,Redirect } from 'react-router-dom'
+
 import LandingPage from './LandingPage/LandingPage.js'
+import Login from './Login/Login'
 import Settings from './Deck/Settings/Settings'
 import Stats from './Deck/Stats/Stats'
-import Login from './Login/Login'
 
 
 

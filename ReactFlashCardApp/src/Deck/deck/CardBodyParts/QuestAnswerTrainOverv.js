@@ -5,7 +5,7 @@ import editimg from "../../../icons/edit.svg";
 
 import ThreeDotsBtn from "../ThreeDotsBtn";
 import BasicOrangeWindow from "../BasicOrangeWindow";
-import DeleteCardQuestionBox from "../DeleteCardQuestionBox";
+import DeleteCardQuestionBox from "../DeleteCardQuestionBox/DeleteCardQuestionBox";
 import SaveAndDiscard from "./SaveAndDiscard";
 import RepeatBtn from "./RepeatBtn";
 import PauseModeHandler from './PauseModeHandler'

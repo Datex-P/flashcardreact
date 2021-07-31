@@ -2,16 +2,15 @@ import React, { useContext} from 'react'
 import {Context} from '../../../Context'
 import { Modal } from 'react-bootstrap'
 import '../../../styles.css'
+import NoAndYes from './NoAndYes'
 import resetimg from '../../../icons/reset.svg'
 import questionMark from '../../../icons/questionMark.svg'
 import flashcards from '../../../icons/flashcards.svg'
-import YesAndNo from './YesAndNo'
 
 export default function DeleteCardQuestionBox({ card, 
   pauseOrDelete,deleteWindow, 
   trashEvent, 
                                                 setShowAnswerBtn=()=>{},
-                                                setShowRepeatBtn=()=>{},
                                                 setEditBtnClicked=()=>{},
                                                 showDeleteWindow,
                                                 deleteCurrentCard=()=>{},
@@ -66,13 +65,13 @@ export default function DeleteCardQuestionBox({ card,
         >
             <Modal.Title>
                 <div 
-                  className='deleteCardQuestionBox__container-modal-title justify-center-align-center '           
+                  className='deleteCardQuestionBox-modal-title justify-center-align-center '           
                 >
                   <div>
                       {
                         resetQuestionText? 
                           <img 
-                              src={resetimg} 
+                              src={resetQuestionText? resetimg: flashcards} 
                               className='justify-center-align-center flashCardsStyling' 
                               alt='reset'                         
                           />
@@ -86,14 +85,12 @@ export default function DeleteCardQuestionBox({ card,
                       }
                   </div>
 
-                  <div
-                  >  
+                  <div>  
                       {
                         resetQuestionText? 
-                           'Reset progress'
-                                          
-                              :
-                           `${pauseOrDelete} ${card}`
+                                          'Reset progress'
+                                            :
+                                          `${pauseOrDelete} ${card}`
                       }
                   </div>
               </div>
@@ -112,20 +109,17 @@ export default function DeleteCardQuestionBox({ card,
         </Modal.Body>
 
         <Modal.Footer>
-
-        <YesAndNo 
-          trashEvent={trashEvent}
-          deleteCurrentCard={deleteCurrentCard}
-          setShowRepeatBtn={setShowRepeatBtn}
-          setShowAnswerBtn={setShowAnswerBtn}
-          setEditBtnClicked={setEditBtnClicked}
-          pauseCardinQuestionAnswer={pauseCardinQuestionAnswer}
-          randomQuestion={randomQuestion}
-          index={index}
-          setPauseOrDeleteText={setPauseOrDeleteText}
-            />
-
-
+ 
+                     <NoAndYes
+                       trashEvent={trashEvent}
+                       deleteCurrentCard={deleteCurrentCard}
+                       deleteWindow={deleteWindow}
+                       setEditBtnClicked={setEditBtnClicked}
+                       setShowAnswerBtn={setShowAnswerBtn}
+                       pauseCardinQuestionAnswer={pauseCardinQuestionAnswer}
+                       index={index}
+                       randomQuestion={randomQuestion}
+                     />            
         </Modal.Footer>
 
       {!showMessageAgain?
@@ -138,7 +132,6 @@ export default function DeleteCardQuestionBox({ card,
           >
 
               <input 
-                  
                   className='deleteCardQuestionBox-input'
                   type='checkbox' 
                   onChange={handleCheckbox}

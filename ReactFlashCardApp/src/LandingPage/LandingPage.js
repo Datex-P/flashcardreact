@@ -3,7 +3,8 @@ import { Context } from "../Context";
 import { Container, Row, Spinner } from "react-bootstrap";
 import Deck from "../Deck/deck/index";
 import CreateNewDeck from "../Deck/deck/CreateNewDeck";
-import NavBar from "./NavBar";
+import MenuContainer from '../Deck/Menu/MenuContainer'
+
 import ShowProgressD from "./ShowProgressDiagram";
 import Scrollbar from './Scrollbar'
 import StartFirstDeck from './StartFirstDeck'
@@ -11,8 +12,8 @@ import StartFirstDeck from './StartFirstDeck'
 export default function DeckContainer() {
   
   const {
-    arrowDown, setArrowDown, //arrow that is visible when there are no decks created so far
     active, 
+    arrowDown, setArrowDown, //arrow that is visible when there are no decks created so far
     dataBase, 
     decksAreVisible, setDecksAreVisible,
     editButtonClicked, 
@@ -23,7 +24,6 @@ export default function DeckContainer() {
 
   } = useContext(Context);
 
-  // const [scrollPosition, setScrollPosition] = useState(0);
 
   let colorsArr = ["#ffcdb2", "#ffb4a2", "#e5989b", "#b5838d", "#6d6875"];
   
@@ -53,7 +53,7 @@ export default function DeckContainer() {
 
   return !spinnerIsVisible && dataBase ? (
     <>
-      <NavBar />
+      <MenuContainer />
       <Container
         className="align-items-center containerStyling"
         style={{
@@ -140,18 +140,16 @@ export default function DeckContainer() {
 
         <Row className='justify-content-center'>
           <button
-            className='createDeckButtonStyling'
+            className='row__btn-create-deck'
             style={{ cursor: !editButtonClicked ? "default" : "pointer" }}
-            onClick={
-              createDeckHandler
-              }
+            onClick={createDeckHandler}
           >
             Create Deck
           </button>
 
-          <div style={{ marginTop: "40px" }}>
-            <CreateNewDeck
-            
+          <div className='row__createNewDeck-container'
+          >
+            <CreateNewDeck         
               style={{ position: "absolute", zIndex: "40" }}
               close={() => {
                 setDecksAreVisible(true);

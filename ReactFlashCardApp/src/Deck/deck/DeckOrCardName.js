@@ -1,21 +1,56 @@
 
 
 
-export default function DeckOrCardName({ name, bg}) {
+export default function DeckOrCardName({ 
+          name, bg, 
+          editButtonClicked, 
+          input, 
+          nameOfTopDeck, setNameOfTopDeck,
+          setDeckNameLengthRight, 
+          setThreeDotsMenuOpen,
+          setNameTooLongOrShort
+        }) {
+
+  function handleChangeName(e){
+
+    if (e.target.value.length >3 && e.target.value.length <12) {
+     
+     setDeckNameLengthRight(true)
+     setThreeDotsMenuOpen(true)
+     setNameTooLongOrShort(false)
+     
+    } else {
+      setNameTooLongOrShort(true)
+      setDeckNameLengthRight(false)
+
+    }
+      setNameOfTopDeck(e.target.value);
+  }
+
+ 
 
  
 
   return (
-
-    <div        
-     
+    <>
+    {editButtonClicked?
+      (
+    <div 
         className='deckOrCardNameContainer'
-        style={{
-            background: bg
-        }}
+        style={{ background: bg}}
     >
               {name}
          
     </div>
+      ):(
+        <input
+            ref={input}
+            className="addToDeckInput"
+            value={nameOfTopDeck}
+            onChange={handleChangeName}
+        />
+      )
+    }
+    </>
   )
 }

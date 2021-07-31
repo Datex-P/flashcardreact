@@ -1,16 +1,14 @@
-import React, {
-  useState,
-  useEffect,
-  useContext,
-} from "react";
+import React, {useState, useEffect,useContext} from "react";
+import { withRouter } from 'react-router-dom';
 import { Context } from "../../Context";
+
 import BasicOrangeWindow from '../deck/BasicOrangeWindow';
 import ThreeDotsBtn from "../deck/ThreeDotsBtn";
-import { withRouter } from 'react-router-dom';
 import PieDiagramm from "./PieDiagramm";
+
 import TimeAndProgress from './TimeAndProgress';
 import HourlyBreakdown from "./HourlyBreakdown";
-import DeleteCardQuestionBox from "../deck/DeleteCardQuestionBox";
+import DeleteCardQuestionBox from "../deck/DeleteCardQuestionBox/DeleteCardQuestionBox";
 import RenderDays from './RenderDays'
 
 function Stats({ history }) {
@@ -129,7 +127,7 @@ function ButtonLeftAndRight() {
     <div className='flex-column'
     >
       <div
-        className="justify-center-align-center  innerRenderDays"
+        className="justify-center-align-center innerRenderDays"
       >
         {["<", year, ">"].map((el, index) => (
           <div

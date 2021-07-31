@@ -27,9 +27,8 @@ function Paused({data, index, paused, name, setShow, style}) {
 
 
   return (
-    <div
-    className="paused justify-between flex-column"
-  >
+    <div className="paused justify-between flex-column"
+    >
     {data.length === 0 ? (
       <div
         className="deckEmptyAndPausedContainer deckEmpty justify-evenly-align-center flex-column"
@@ -90,7 +89,8 @@ function Paused({data, index, paused, name, setShow, style}) {
       >
         <div>This deck is paused.</div>
 
-        <div className='align-center'>
+        <div className='align-center'
+        >
           Press:
           <button
             className="btn-play justify-center-align-center"

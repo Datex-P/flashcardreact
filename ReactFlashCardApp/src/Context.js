@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from 'react'
 export const Context = React.createContext(null)
 
 export default function ContextProvider({ children }) {
+
   const [showProgressDiagram, setShowProgressDiagram] = useState(true);
   const [scrollbarVisible, setScrollbarVisible] = useState(true)
 
@@ -10,15 +11,17 @@ export default function ContextProvider({ children }) {
   const scroller = useRef();
   const [arrowDown, setArrowDown] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0)
+
   const [changeDeckNameOpen, setChangeDeckNameOpen] = useState(false); //input field to change deckname is open
   const [editButtonClicked, setEditButtonClicked] = useState(true); //active when editButton next to DeckName is clicked
   const [pauseIsActive, setPauseIsActive] = useState(true);
+  
   const [active, setActive] = useState(0);
   const [decksAreVisible, setDecksAreVisible] = useState(true); //decks are shown on the deck stack if this is set to true
   const [spinnerIsVisible, setSpinnerIsVisible] = useState(true); //spinner that is shown when application loads
+  
   const [addNewDeckWindow, setAddNewDeckWindow] = useState(false);
   const [showRepeatBtn, setShowRepeatBtn] = useState(false); //repeatbtn that is shown in questionanswertrain file
-
   const [showAnswerBtn, setShowAnswerBtn] = useState(true); //button in questionAnswerTrainOverView with that name
 
 
@@ -26,6 +29,7 @@ export default function ContextProvider({ children }) {
 
 
   const [dataBase, setDataBase] = useState(null);
+
   const [styles, setStyles] = useState({
     backgroundColor: {
       light: ' #86a873',
@@ -80,6 +84,7 @@ export default function ContextProvider({ children }) {
         weeksInRow: 0,
         toReview: 0
       },
+
       hourlyBreakdown: '1 month',
       studyTime: 0,
       calendarReset: false,
@@ -103,7 +108,7 @@ export default function ContextProvider({ children }) {
             answer: `answer${i}`,
             paused: false
           })
-        }else{
+        } else {
           arr.push({
             question: `question${i}`,
             answer: `answer${i}`,
@@ -141,24 +146,24 @@ export default function ContextProvider({ children }) {
     <Context.Provider 
     
     value={{ 
-    arrowDown, setArrowDown,
-  addNewDeckWindow, setAddNewDeckWindow,
     active, setActive,
+    arrowDown, setArrowDown,
+    addNewDeckWindow, setAddNewDeckWindow,
     colors,
     changeDeckNameOpen, setChangeDeckNameOpen,
-      dataBase, setDataBase, 
-  decksAreVisible, setDecksAreVisible,
-  editButtonClicked, setEditButtonClicked, 
+    dataBase, setDataBase, 
+    decksAreVisible, setDecksAreVisible,
+    editButtonClicked, setEditButtonClicked, 
     styles, setStyles,
     showProgressDiagram, setShowProgressDiagram, 
+    scroller,
     scrollbarVisible, setScrollbarVisible, 
-  spinnerIsVisible, setSpinnerIsVisible,
-   scrollPosition, setScrollPosition, 
-  showAnswerBtn, setShowAnswerBtn,
-  scroller,
-  showRepeatBtn, setShowRepeatBtn,
+    scrollPosition, setScrollPosition, 
+    showAnswerBtn, setShowAnswerBtn,
+    showRepeatBtn, setShowRepeatBtn,
+    spinnerIsVisible, setSpinnerIsVisible,
+    pauseIsActive, setPauseIsActive,
     trigger, setTrigger, 
-  pauseIsActive, setPauseIsActive,
 
      }} >
 

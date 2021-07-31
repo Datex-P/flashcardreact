@@ -38,13 +38,13 @@ onSuccess = (res) => {
        <ParticleBackground 
        >
       
-      <div className='loginContainer'
+      <div className='login'
       >
 
-            <img src = {flashcard} alt = 'flashcard' style={{position: 'relative', left: '-239px', width:'193%', top:'-36px'}}/>
-            <img src = {flash} alt = 'flashcard' className= 'flashcardBackground' style={{ left: '-179px', top:'-46px'}}/>
-            <img src = {flash} alt = 'flashcard' className= 'flashcardBackground' style={{ left: '-177px',top: '-56px'}}/>
-            <img src = {flash} alt = 'flashcard' className= 'flashcardBackground' style={{ left: '-179px', top:'-67px'}}/>
+            <img src = {flashcard} alt = 'flashcard' className='login__flashcardBackground-top' />
+            <img src = {flash} alt = 'flashcard' className= 'login__flashcardBackground' style={{ left: '-179px', top:'-46px'}}/>
+            <img src = {flash} alt = 'flashcard' className= 'login__flashcardBackground' style={{ left: '-177px',top: '-56px'}}/>
+            <img src = {flash} alt = 'flashcard' className= 'login__flashcardBackground' style={{ left: '-179px', top:'-67px'}}/>
           
             <div className='login__login-password-container align-center flex-column'
             >
@@ -56,13 +56,14 @@ onSuccess = (res) => {
                           className='login__img-login-password'
                          
                   /> 
+
                   <input 
                   value={this.state.login} 
                   onChange={e=>this.setState({login:e.target.value})} 
                   className='login__input-username'
                   />
             </div>
-            <div className='d-flex login__login-password-row'
+            <div className='login__login-password-row d-flex '
             >
                   <img 
                       src={keysSolid} 

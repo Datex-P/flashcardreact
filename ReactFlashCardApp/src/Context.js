@@ -9,7 +9,7 @@ export default function ContextProvider({ children }) {
   const [trigger, setTrigger] = useState(null);
   const scroller = useRef();
   const [arrowDown, setArrowDown] = useState(true);
-
+  const [scrollPosition, setScrollPosition] = useState(0)
   const [changeDeckNameOpen, setChangeDeckNameOpen] = useState(false); //input field to change deckname is open
   const [editButtonClicked, setEditButtonClicked] = useState(true); //active when editButton next to DeckName is clicked
   const [pauseIsActive, setPauseIsActive] = useState(true);
@@ -17,7 +17,7 @@ export default function ContextProvider({ children }) {
   const [decksAreVisible, setDecksAreVisible] = useState(true); //decks are shown on the deck stack if this is set to true
   const [spinnerIsVisible, setSpinnerIsVisible] = useState(true); //spinner that is shown when application loads
   const [addNewDeckWindow, setAddNewDeckWindow] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
+
   const [showAnswerBtn, setShowAnswerBtn] = useState(true); //button in questionAnswerTrainOverView with that name
 
 
@@ -153,7 +153,7 @@ export default function ContextProvider({ children }) {
   decksAreVisible, setDecksAreVisible,
   spinnerIsVisible, setSpinnerIsVisible,
   addNewDeckWindow, setAddNewDeckWindow,
-  scrollPosition, setScrollPosition, 
+   scrollPosition, setScrollPosition, 
   showAnswerBtn, setShowAnswerBtn,
   scroller
 

@@ -16,7 +16,7 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.posRel {
+.posRelative {
   position: relative;
 }
 
@@ -765,9 +765,7 @@ input::-webkit-inner-spin-button {
 .login__login-password-row {
   margin-top: 29px;
 }
-
-                      
-                      
+                  
 .threeDotsBtn__trash-pause-img {
   margin-right: 3px;
 }
@@ -1183,7 +1181,11 @@ textarea.form-control:focus {
   border-bottom-right-radius: 10px !important;
   height: 651px !important;
   width: 440px !important;
-}
+  /*background: blue;*/
+   /*background-image: url('/Users/fab/Downloads/cool-background.png'); */
+  /*background-color: url('/Users/fab/Downloads/flashcardappreact/ReactFlashCardApp/src/icons/cool-background.png')*/
+  background-image: url('/Users/fab/Downloads/flashcardappreact/ReactFlashCardApp/src/icons/cool-background.png')
+  }
 
 .alert {
   margin-bottom: 0px !important;
@@ -1345,7 +1347,7 @@ textarea:enabled {
   overflow: hidden;
 }
 
-.loginContainer {
+.login {
   width: 440px;
   height: 720px;
   background-color: rgb(90, 170, 149);
@@ -1353,9 +1355,16 @@ textarea:enabled {
   margin: 40px auto;
 }
 
-.flashcardBackground {
+.login__flashcardBackground {
   position: relative;
   width: 161%;
+}
+
+.login__flashcardBackground-top {
+  position: relative; 
+  left: -239px; 
+  width: 193%; 
+  top: -36px;
 }
 
 .stats__study-breakdown {
@@ -1560,10 +1569,17 @@ input::-webkit-inner-spin-button {
   width: 136px !important;
   height: 30px;
   border-radius: 4px;
+  font-size: 13px;
 }
 
 .login__btn-google div {
   padding: 4px !important;
+  padding-left: 12px !important;
+}
+
+.login_btn-google span {
+  padding: 13px 10px 10px 10px !important;
+  margin-left: -5px; 
 }
 
 .login__login-password-container {

@@ -4,10 +4,10 @@ import ParticlesConfig from './particle-config'
 
 export default function ParticleBackground ({children}) {
   return (
-    <div style={{position:'relative'}}>
+    <div className='posRelative'
+    >
 
-        <Particles params = {ParticlesConfig}>
-        </Particles>
+        <Particles params = {ParticlesConfig}/>
         {children}
 
     </div>

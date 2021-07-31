@@ -1,4 +1,4 @@
-import React, { useEffect,  useContext,} from "react";
+import React, { useEffect, useContext} from "react";
 import { Context } from "../Context"; 
 import { Container, Row, Spinner } from "react-bootstrap";
 import Deck from "../Deck/deck/index";
@@ -10,14 +10,16 @@ export default function DeckContainer() {
   const {
     dataBase, setDataBase, styles, setShowProgressDiagram
     ,scrollbarVisible
-  ,trigger, setTrigger, changeDeckNameOpen, 
+  ,trigger, changeDeckNameOpen, 
   editButtonClicked, 
   decksAreVisible, setDecksAreVisible,
   spinnerIsVisible, setSpinnerIsVisible,
    setAddNewDeckWindow,
-setScrollPosition, arrowDown, setArrowDown,active, setActive, scroller
+ setScrollPosition,
+ arrowDown, setArrowDown,active, setActive, scroller
   } = useContext(Context);
 
+  // const [scrollPosition, setScrollPosition] = useState(0);
 
   let colorsArr = ["#ffcdb2", "#ffb4a2", "#e5989b", "#b5838d", "#6d6875"];
   
@@ -26,7 +28,7 @@ setScrollPosition, arrowDown, setArrowDown,active, setActive, scroller
     let position = e.target.scrollTop;
 
     setScrollPosition(position);
-    setTrigger(Symbol());
+
   }
 
   function handleActive(i) {
@@ -49,13 +51,14 @@ setScrollPosition, arrowDown, setArrowDown,active, setActive, scroller
       <Container
         className="align-items-center containerStyling"
         style={{
-          backgroundColor:
-            styles.backgroundColor[dataBase.userPreferences.backgroundColor],
+          // backgroundColor:
+          //   styles.backgroundColor[dataBase.userPreferences.backgroundColor],
+          backgroundColor:`url ${'/Users/fab/Downloads/cool-background.png'}` 
         }}
       >
        
 
-        <Row className="posRel">
+        <Row className="posRelative">
           {decksAreVisible ? (
             <div className="firstRowStyling">
               <div style={{ position: "absolute", left: "10px" }}>

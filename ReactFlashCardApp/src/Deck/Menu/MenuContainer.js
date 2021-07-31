@@ -11,10 +11,10 @@ import logoutIcon from "../../icons/logout.svg";
 
 
 export default function MenuContainer({
-  editButtonClicked, //set to false when editButton is not clicked gets activated when editButton is clicked
+  //editButtonClicked, //set to false when editButton is not clicked gets activated when editButton is clicked
 }) {
   const [show, setShow] = useState(false); //opens the Menu when set to true
-  const { dataBase, styles } = useContext(Context);
+  const { dataBase, styles, editButtonClicked } = useContext(Context);
   const handleClose = () => setShow(false); // closes the Menu when handleclos is triggered
 
   return (
@@ -27,7 +27,7 @@ export default function MenuContainer({
       }}
     >
       <Hamburger
-        editButtonClicked={editButtonClicked}
+        // editButtonClicked={editButtonClicked}
         show={show}
         setShow={setShow}
       />

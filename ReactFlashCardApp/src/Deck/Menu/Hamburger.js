@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { Context } from "../../Context";
 
-function Hamburger({ editButtonClicked, show, setShow }) {
+function Hamburger({ 
+  show, setShow }) {
 
-  const { showProgressDiagram, setShowProgressDiagram } = useContext(Context);
+  const { editButtonClicked, showProgressDiagram, setShowProgressDiagram } = useContext(Context);
 
   function triggerDiagramAndState() {
     setShow(!show);

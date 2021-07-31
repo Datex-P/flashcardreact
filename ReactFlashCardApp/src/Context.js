@@ -139,23 +139,24 @@ export default function ContextProvider({ children }) {
 
     <Context.Provider 
     
-    value={{ dataBase, setDataBase, 
+    value={{ 
+    arrowDown, setArrowDown,
+  addNewDeckWindow, setAddNewDeckWindow,
+    active, setActive,
+    colors,
+    changeDeckNameOpen, setChangeDeckNameOpen,
+      dataBase, setDataBase, 
+  decksAreVisible, setDecksAreVisible,
+  editButtonClicked, setEditButtonClicked, 
     styles, setStyles,
     showProgressDiagram, setShowProgressDiagram, 
-    colors
-    ,scrollbarVisible, setScrollbarVisible, 
-    arrowDown, setArrowDown,
-    active, setActive,
-    trigger, setTrigger, 
-    changeDeckNameOpen, setChangeDeckNameOpen,
-  editButtonClicked, setEditButtonClicked, 
-  pauseIsActive, setPauseIsActive,
-  decksAreVisible, setDecksAreVisible,
+    scrollbarVisible, setScrollbarVisible, 
   spinnerIsVisible, setSpinnerIsVisible,
-  addNewDeckWindow, setAddNewDeckWindow,
    scrollPosition, setScrollPosition, 
   showAnswerBtn, setShowAnswerBtn,
-  scroller
+  scroller,
+    trigger, setTrigger, 
+  pauseIsActive, setPauseIsActive,
 
      }} >
 

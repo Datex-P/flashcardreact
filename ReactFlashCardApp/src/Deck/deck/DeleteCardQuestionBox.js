@@ -10,7 +10,6 @@ export default function DeleteCardQuestionBox({ card,
   pauseOrDelete,deleteWindow, 
   trashEvent, 
                                                 setShowAnswerBtn=()=>{},
-                                                // setShowRepeatBtn=()=>{},
                                                 setEditBtnClicked=()=>{},
                                                 showDeleteWindow,
                                                 deleteCurrentCard=()=>{},
@@ -65,14 +64,13 @@ export default function DeleteCardQuestionBox({ card,
         >
             <Modal.Title>
                 <div 
-                  className='justify-center-align-center'           
-                  style={{height:'100%', width: '100%'}}
+                  className='deleteCardQuestionBox-modal-title justify-center-align-center '           
                 >
                   <div>
                       {
                         resetQuestionText? 
                           <img 
-                              src={resetimg} 
+                              src={resetQuestionText? resetimg: flashcards} 
                               className='justify-center-align-center flashCardsStyling' 
                               alt='reset'                         
                           />
@@ -112,8 +110,7 @@ export default function DeleteCardQuestionBox({ card,
         <Modal.Footer>
 
             <div 
-                className='justify-around-align-center' 
-                style={{width: '100%', height: '14px'}}
+                className='deleteCardQuestionBox-modal-footer justify-around-align-center' 
             >
 
                 <div 
@@ -168,7 +165,6 @@ export default function DeleteCardQuestionBox({ card,
           >
 
               <input 
-                  
                   className='deleteCardQuestionBox-input'
                   type='checkbox' 
                   onChange={handleCheckbox}

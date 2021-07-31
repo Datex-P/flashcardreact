@@ -5,38 +5,29 @@ import Deck from "../Deck/deck/index";
 import CreateNewDeck from "../Deck/deck/CreateNewDeck";
 import NavBar from "./NavBar";
 import ShowProgressD from "./ShowProgressDiagram";
+import Scrollbar from './Scrollbar'
+import StartFirstDeck from './StartFirstDeck'
 
 export default function DeckContainer() {
+  
   const {
-    dataBase, setDataBase,  setShowProgressDiagram
-    ,scrollbarVisible
-  , changeDeckNameOpen, 
-  editButtonClicked, 
-  decksAreVisible, setDecksAreVisible,
-  spinnerIsVisible, setSpinnerIsVisible,
-   setAddNewDeckWindow,
- setScrollPosition,
- arrowDown, setArrowDown,active, setActive, scroller
+    arrowDown, setArrowDown, //arrow that is visible when there are no decks created so far
+    active, 
+    dataBase, 
+    decksAreVisible, setDecksAreVisible,
+    editButtonClicked, 
+    scrollbarVisible, //scrollbar dissapears when settings or stats page are opened
+    setShowProgressDiagram, //diagram that is visible on the top right corner 
+    setAddNewDeckWindow,
+    spinnerIsVisible, setSpinnerIsVisible //loading sign that appears when database loads
+
   } = useContext(Context);
 
   // const [scrollPosition, setScrollPosition] = useState(0);
 
   let colorsArr = ["#ffcdb2", "#ffb4a2", "#e5989b", "#b5838d", "#6d6875"];
   
-  
-  function scrollHandler(e) {
-    let position = e.target.scrollTop;
 
-    setScrollPosition(position);
-
-  }
-
-  function handleActive(i) {
-    setActive(i);
-    let newDataBase = { ...dataBase };
-    newDataBase.active = i;
-    setDataBase(newDataBase);
-  }
 
   useEffect(() => {
     
@@ -45,9 +36,24 @@ export default function DeckContainer() {
     }, 2000);
   }, []);
 
+
+  function createDeckHandler () {
+    if (!editButtonClicked) {
+      //editButtonClicked is set to true by default
+    } else {
+   
+      setAddNewDeckWindow(true); //open the pop up to add a new deck
+      setDecksAreVisible(false); // all the decks in the back are not visible
+      setShowProgressDiagram(false);
+      setArrowDown(false); //create new deck and arrow down not visible
+    }
+  }
+
+  
+
   return !spinnerIsVisible && dataBase ? (
     <>
-      <NavBar editButtonClicked={editButtonClicked} />
+      <NavBar />
       <Container
         className="align-items-center containerStyling"
         style={{
@@ -117,40 +123,14 @@ export default function DeckContainer() {
        
               {scrollbarVisible ? (
                 //scrollbar gets hidden when there is only one deck
-                <div
-                  ref={scroller}
-                  className="scrollerStyling"
-                  onScroll={(event) => {
-                    if (!changeDeckNameOpen) {
-                      let step = (1000 - 220) / (dataBase.DeckNames.length - 1);
-                      let index = Math.floor(event.target.scrollTop / step);
-                      handleActive(index);
-                      console.log(index + "actual handle active index");
-                      scrollHandler(event);
-                    }
-                  }}
-                >
-                  <div
-                    style={{
-                      height: "1000px",
-                      position: "absolute",
-                      top: "0px",
-                      width: "100%",
-                    }}
-                  ></div>
-                </div>
+                <Scrollbar    />
+               
               ) : null}
             </div>
-          ) : arrowDown ? (
-            <div id="arrow">
-              <div id="createYourFirstDeckPrompt">
-                Start and create your first deck
-              </div>
-              <div className="posRelative"
-              style={{ marginTop: "150px"}}>
-                <div className="arrowDown"></div>
-              </div>
-            </div>
+          ) 
+          : arrowDown ? (
+            <StartFirstDeck/>
+           
           ) : null}
 
           <ShowProgressD/>
@@ -162,17 +142,9 @@ export default function DeckContainer() {
           <button
             className='createDeckButtonStyling'
             style={{ cursor: !editButtonClicked ? "default" : "pointer" }}
-            onClick={() => {
-              if (!editButtonClicked) {
-                //editButtonClicked is set to true by default
-              } else {
-             
-                setAddNewDeckWindow(true); //open the pop up to add a new deck
-                setDecksAreVisible(false); // all the decks in the back are not visible
-                setShowProgressDiagram(false);
-                setArrowDown(false); //create new deck and arrow down not visible
+            onClick={
+              createDeckHandler
               }
-            }}
           >
             Create Deck
           </button>

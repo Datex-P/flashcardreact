@@ -70,7 +70,7 @@ function Settings({ history }) {
               className='border border-dark justify-center-align-center settings_repetition-container'
           >
               <div 
-                  className='flexAroundCenter' 
+                  className='justify-aroundCenter' 
                   style={{width: '280px'}}
               >
                   {

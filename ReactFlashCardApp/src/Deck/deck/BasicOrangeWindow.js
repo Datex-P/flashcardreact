@@ -13,7 +13,6 @@ export default function BasicOrangeWindow({
   mainBox,
   setShowAnswerBtn = () => {},
   setEdit = () => {},
-  // setShowRepeatBtn = () => {},
   setEditBtnClicked = () => {},
   generateRandom,
   index,
@@ -36,7 +35,8 @@ export default function BasicOrangeWindow({
       <div
         className='innerModalContainer'
       >
-        <Modal.Header className="border-bottom-0">
+        <Modal.Header className="border-bottom-0"
+        >
           <Modal.Title
             style={{
               fontSize: "16px",

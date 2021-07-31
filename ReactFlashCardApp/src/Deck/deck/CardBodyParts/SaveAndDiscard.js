@@ -6,7 +6,7 @@ export default function SaveAndDiscard({ saveEvent, generateRandom, setCardModif
  
   return (
 
-    <div className='saveAndDiscardContainer flexAroundCenter flex-column'>
+    <div className='saveAndDiscardContainer justify-aroundCenter flex-column'>
 
       <div>Save changes?</div>
       <div 
@@ -16,7 +16,7 @@ export default function SaveAndDiscard({ saveEvent, generateRandom, setCardModif
       {
         ['Discard', 'Save'].map((el, index) =>
           <div
-            className={`saveAndDiscardButtonStyling flexAroundCenter ${el}Btn`}
+            className={`saveAndDiscardButtonStyling justify-aroundCenter ${el}Btn`}
           
             onClick={
                     el === 'Save'? 

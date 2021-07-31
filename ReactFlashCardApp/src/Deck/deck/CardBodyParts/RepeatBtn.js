@@ -15,7 +15,7 @@ export default function RepeatBtn({ label, btn, onClick }) {
       <Button 
           variant="secondary"
           onClick={onClick}
-          className='justify-center-align-center repeat-btn__button'
+          className='repeat-btn__button justify-center-align-center'
       >
 
           {btn}

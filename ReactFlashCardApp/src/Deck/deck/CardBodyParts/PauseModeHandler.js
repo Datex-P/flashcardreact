@@ -16,7 +16,7 @@ export default function PauseModeHandler({generateRandom, index, randomQuestion}
 
         <div className="justify-center">
           <div
-            className="flexAround"
+            className="justify-around"
             style={{ width: "300px" }}
           >
             <div

@@ -20,7 +20,7 @@ export default function Hexagons({ idx, editHex, setEditHex }) {
   return (
     
     <div 
-      className='justify-center-align-center flex-column  hexagons'
+      className='hexagons justify-center-align-center flex-column'
     >
 
       {
@@ -63,13 +63,10 @@ export default function Hexagons({ idx, editHex, setEditHex }) {
           (showDay || idx === dataBase.userPreferences.days)) || idx === dataBase.userPreferences.days) 
         &&
             
-        <div style={{
-            transform: 'rotate(-90deg)', width: '54px',
-            fontSize: '14px', paddingLeft: '14px', position: 'absolute', right: '-42px'
-          }}
+        <div className='hexagons__editHex'
         >
 
-            <div className='blackArrow'
+            <div className='hexagons__blackArrow'
             >
             </div>
             

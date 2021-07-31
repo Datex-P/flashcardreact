@@ -51,7 +51,7 @@ input[type="number"] {
 }
 
 .justify-center-align-center {
-  display: flex;
+  display: flex !important; /*important needed for repeatBtn.js */
   justify-content: center;
   align-items: center;
 }
@@ -224,6 +224,17 @@ input[type="checkbox"] {
   position: absolute;
   transition: 1s all;
   background-color: black;
+}
+
+.deleteCardQuestionBox-modal-title {
+  width: 100%;
+  height: 100%;
+}
+
+.deleteCardQuestionBox-modal-footer {
+
+width: 100%; 
+height: 14px;
 }
 
 .sec {
@@ -689,7 +700,16 @@ input::-webkit-inner-spin-button {
   left: 0px;
 }
 
-.blackArrow {
+.hexagons__editHex {
+  transform: rotate(-90deg);
+  width: 54px;
+  font-size: 14px; 
+  padding-left: 14px; 
+  position: absolute ;
+  right: -42px;
+}
+
+.hexagons__blackArrow {
   width: 2px;
   height: 5px;
   background-color: black;
@@ -1218,6 +1238,7 @@ textarea.form-control:focus {
 
 .addToDeckButton {
   width: 110px;
+  height: 32px;
   margin-top: 20px;
   padding: 5px;
   box-sizing: border-box;

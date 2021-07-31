@@ -51,7 +51,7 @@ export default function RepetitionIntervalFields(
         className='p-2 flex-column justify-center-align-center' 
     >
       <p 
-          className=' border border-dark justify-center' 
+          className='border border-dark justify-center' 
           style={{borderRadius: '5px', width: '72px'}}
       >
           <div style={{ marginRight: '4px' }}

@@ -109,15 +109,6 @@ export default function Deck({
   }
 
 
-  // function handleActive(i) {
-  //   setActive(i);
-  //   let newDataBase = { ...dataBase };
-  //   newDataBase.active = i;
-  //   setDataBase(newDataBase);
-  // }
-
-
-
   return (
     deck && (
 

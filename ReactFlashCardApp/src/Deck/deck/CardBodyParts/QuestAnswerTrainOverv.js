@@ -9,6 +9,7 @@ import DeleteCardQuestionBox from "../DeleteCardQuestionBox";
 import SaveAndDiscard from "./SaveAndDiscard";
 import RepeatBtn from "./RepeatBtn";
 import PauseModeHandler from './PauseModeHandler'
+import OpenDeck from './OpenDeck';
 
 
 export default function QuestAnswerTrainOverv({
@@ -28,7 +29,6 @@ export default function QuestAnswerTrainOverv({
   const [cardModified, setCardModified] = useState(false);
   const [pauseOrDeleteText, setPauseOrDeleteText] = useState(true);
   const [show, setShow] = useState(false);
-  // const [showRepeatBtn, setShowRepeatBtn] = useState(false);
 
   const [showDeleteWindow, setShowDeleteWindow] = useState(true);
   const [timer, setTimer] = useState(null);
@@ -38,7 +38,7 @@ export default function QuestAnswerTrainOverv({
 
   const {
     dataBase, setDataBase, 
-  editButtonClicked, 
+  // editButtonClicked, 
  setShowProgressDiagram,
  showAnswerBtn, setShowAnswerBtn,
  showRepeatBtn, setShowRepeatBtn
@@ -184,34 +184,13 @@ export default function QuestAnswerTrainOverv({
 
   return (
     <>
-      <Button
-        variant="secondary"
-        className="openDeck"
-        size="sm"
-        style={{
-          opacity: paused || data.length === 0 ? "0" : "1", //open deck button is not visible when length is zero
-          cursor:
-            paused || data.length === 0 || !editButtonClicked
-              ? "default"
-              : "pointer",
-          backgroundColor: !editButtonClicked ? "rgb(108, 117, 125)" : "grey",
-          position: "relative",
-          top: "25px",
-        }}
-        onClick={
-          paused || !editButtonClicked //when edit button is clicked or deck is paused, the question/answer view does not open, by default this button is true
-            ? null
-            : () => {
-                generateRandom();
-                let newDataBase = { ...dataBase };
-                newDataBase.openedToday = true;
-                setShowProgressDiagram(false); //progress diagram gets why not at this place??
-                setDataBase(newDataBase);
-              }
-        }
-      >
-        Open Deck
-      </Button>
+
+      <OpenDeck 
+          paused = {paused}
+          generateRandom = {generateRandom}
+          data = {data}
+      />
+      
 
       {deckLengthNotZero && !paused && (
         <BasicOrangeWindow
@@ -221,8 +200,6 @@ export default function QuestAnswerTrainOverv({
           mainBox={mainBox}
           index={index}
           id="questionAnswerOverview"
-          // showRepeatBtn={showRepeatBtn}
-          // setShowRepeatBtn={setShowRepeatBtn}
           setEditBtnClicked={setEditBtnClicked}
           createDeckButtonIsVisible={createDeckButtonIsVisible}
           setCreateDeckButtonIsVisible={setCreateDeckButtonIsVisible}
@@ -399,8 +376,6 @@ export default function QuestAnswerTrainOverv({
                   index={index}
                   editBtnClicked={editBtnClicked}
                   setEditBtnClicked={setEditBtnClicked}
-                  // setShowAnswerBtn={setShowAnswerBtn}
-                  // setShowRepeatBtn={setShowRepeatBtn}
                   trashEvent={deleteCurrentCard}
                   showDeleteWindow={showDeleteWindow}
                   deleteWindow={() => setShowDeleteWindow(false)}

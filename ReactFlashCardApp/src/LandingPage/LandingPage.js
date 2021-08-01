@@ -1,8 +1,9 @@
 import React, { useEffect, useContext} from "react";
 import { Context } from "../Context"; 
 import { Container, Row, Spinner } from "react-bootstrap";
-import Deck from "../Deck/deck/index";
-import CreateNewDeck from "../Deck/deck/CreateNewDeck";
+
+import Deck from "../Deck/deck/Index/index";
+import CreateNewDeck from "./CreateNewDeck";
 import MenuContainer from '../Deck/Menu/MenuContainer'
 
 import ShowProgressD from "./ShowProgressDiagram";

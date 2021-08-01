@@ -135,7 +135,7 @@ input[type="checkbox"] {
   transform-origin: 0px 215px;
 }
 
-.arrowDown {
+.createFirstDeck-arrowDown {
   margin-top: 180px;
   width: 100%;
   margin: 0 auto;
@@ -144,7 +144,7 @@ input[type="checkbox"] {
   top: 60px;
 }
 
-.arrowDown::after {
+.createFirstDeck-arrowDown::after {
   content: "";
   width: 15px;
   height: 15px;

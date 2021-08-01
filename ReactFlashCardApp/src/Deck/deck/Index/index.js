@@ -1,14 +1,15 @@
 import React, { useState, useContext, useRef, useEffect } from "react";
-import { Context } from "../../Context";
+import { Context } from "../../../Context";
 import { Card } from "react-bootstrap";
-import "../../styles.css";
-import NameLongOrShort from './NameLongOrShort'
+import "../../../styles.css";
 
-import ThreeDotsBtn from "./ThreeDotsBtn";
-import AddQuestionsToDeck from "./AddQuestionsToDeck/AddQuestionsToDeck";
-import QuestAnswerTrainOverv from "./CardBodyParts/QuestAnswerTrainOverv";
+import NameLongOrShort from './NameLongOrShort'
+import ThreeDotsBtn from "../ThreeDotsBtn/ThreeDotsBtn";
+import AddQuestionsToDeck from "../AddQuestionsToDeck/AddQuestionsToDeck";
+import QuestAnswerTrainOverv from "../CardBodyParts/QuestAnswerTrainOverv";
+
 import DeckOrCardName from "./DeckOrCardName";
-import DeleteCardQuestionBox from "./DeleteCardQuestionBox/DeleteCardQuestionBox";
+import DeleteCardQuestionBox from "../DeleteCardQuestionBox/DeleteCardQuestionBox";
 import Paused from './Paused'
 
 export default function Deck({

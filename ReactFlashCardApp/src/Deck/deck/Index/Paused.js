@@ -1,7 +1,7 @@
 import React, { useContext}  from 'react';
-import playimg from "../../icons/play.svg";
-import plusimg from "../../icons/plus.svg";
-import { Context } from "../../Context";
+import playimg from "../../../icons/play.svg";
+import plusimg from "../../../icons/plus.svg";
+import { Context } from "../../../Context";
 
 
 function Paused({data, index, paused, name, setShow, style}) {

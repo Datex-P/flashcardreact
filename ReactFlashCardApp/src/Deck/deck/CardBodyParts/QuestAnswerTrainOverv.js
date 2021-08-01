@@ -3,8 +3,8 @@ import { Context } from "../../../Context";
 import { Button, FormControl, Alert } from "react-bootstrap";
 import editimg from "../../../icons/edit.svg";
 
-import ThreeDotsBtn from "../ThreeDotsBtn";
-import BasicOrangeWindow from "../BasicOrangeWindow";
+import ThreeDotsBtn from "../ThreeDotsBtn/ThreeDotsBtn";
+import BasicOrangeWindow from "../BasicOrangeWindow/BasicOrangeWindow";
 import DeleteCardQuestionBox from "../DeleteCardQuestionBox/DeleteCardQuestionBox";
 import SaveAndDiscard from "./SaveAndDiscard";
 import RepeatBtn from "./RepeatBtn";

@@ -2,8 +2,8 @@ import React, {useState, useEffect,useContext} from "react";
 import { withRouter } from 'react-router-dom';
 import { Context } from "../../Context";
 
-import BasicOrangeWindow from '../deck/BasicOrangeWindow';
-import ThreeDotsBtn from "../deck/ThreeDotsBtn";
+import BasicOrangeWindow from '../deck/BasicOrangeWindow/BasicOrangeWindow';
+import ThreeDotsBtn from "../deck/ThreeDotsBtn/ThreeDotsBtn";
 import PieDiagramm from "./PieDiagramm";
 
 import TimeAndProgress from './TimeAndProgress';

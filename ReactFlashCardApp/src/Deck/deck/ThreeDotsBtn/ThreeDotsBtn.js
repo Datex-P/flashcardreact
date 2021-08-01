@@ -1,27 +1,27 @@
 import React, { useState, useRef, useContext,useEffect } from 'react'
 import {withRouter} from 'react-router-dom'
-import {Context} from '../../Context';
+import {Context} from '../../../Context';
 
-import useOutsideAlerter from '../../ClickedOutsideWindow/useOutsideAlerter'
+import useOutsideAlerter from './useOutsideAlerter'
 
-import trashimg from '../../icons/trash.svg'
-import pauseimg from '../../icons/pause.svg'
-import editimg from '../../icons/edit.svg'
-import resetimg from '../../icons/reset.svg'
-import saveimg from '../../icons/save.svg'
-import playimg from '../../icons/play.svg'
+import trashimg from '../../../icons/trash.svg'
+import pauseimg from '../../../icons/pause.svg'
+import editimg from '../../../icons/edit.svg'
+import resetimg from '../../../icons/reset.svg'
+import saveimg from '../../../icons/save.svg'
+import playimg from '../../../icons/play.svg'
 
 
 function ThreeDotsBtn({    
+                        edit=false,trash=false,pause=false,reset=false,
+                        className, 
+                        editBtnClicked, //is the editBtn in the main Question/Answer Overview
+                        data,
+                        index, input, threeDotsContainer,
                         text, 
                         showFromParent, 
                         style, 
-                        className, 
                         nameOfTopDeck, 
-                        index, input, threeDotsContainer,
-                        edit=false,trash=false,pause=false,reset=false,
-                        editBtnClicked, //is the editBtn in the main Question/Answer Overview
-                        data,
                         editEvent = () => { }, 
                         trashEvent = () => { },
                         resetEvent = () => { },
@@ -32,13 +32,13 @@ function ThreeDotsBtn({
 {
   const {
     dataBase, setDataBase,
-  editButtonClicked,
+    editButtonClicked,
   } = useContext(Context);
 
   const [blinkingSaveIcon, setBlinkingSaveIcon] = useState(false)
-   const [pauseIsActive, setPauseIsActive] = useState(true)
+  const [pauseIsActive, setPauseIsActive] = useState(true)
   const [threeDotsOpen, setThreeDotsOpen] = useState(showFromParent);
-  //const {dataBase, setDataBase} = useContext(Context);
+ 
 
 
   const handleClick = () => {

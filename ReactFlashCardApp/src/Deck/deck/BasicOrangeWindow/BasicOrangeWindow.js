@@ -1,8 +1,8 @@
 import { Modal } from "react-bootstrap";
-import redCross from "../../icons/redCross.svg";
+import redCross from "../../../icons/redCross.svg";
 import React, { useContext } from "react";
 import InputCheckbox from "./InputCheckbox";
-import { Context } from "../../Context";
+import { Context } from "../../../Context";
 
 export default function BasicOrangeWindow({
   children,

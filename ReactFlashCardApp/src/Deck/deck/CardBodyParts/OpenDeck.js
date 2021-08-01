@@ -33,6 +33,8 @@ function OpenDeck({data, paused, generateRandom}) {
         paused || data.length === 0 || !editButtonClicked
           ? "default"
           : "pointer",
+          position: 'absolute',
+          top: '180px'
     }}
     onClick={
       paused || !editButtonClicked //when edit button is clicked or deck is paused, the question/answer view does not open, by default this button is true

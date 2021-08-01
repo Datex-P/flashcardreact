@@ -7,7 +7,7 @@ import Hexagons from  './Hexagons'
 import RepetitionIntervalFields from './RepetitionIntervalFields'
 import ColorScheme from './ColorScheme'
 
-import BasicOrangeWindow from '../deck/BasicOrangeWindow'
+import BasicOrangeWindow from '../deck/BasicOrangeWindow/BasicOrangeWindow'
 import edit from '../../icons/edit.svg'
 import save from '../../icons/save.svg'
 

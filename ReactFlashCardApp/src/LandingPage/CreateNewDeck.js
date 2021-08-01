@@ -1,6 +1,6 @@
 import React, { useContext, useState, useRef, useEffect } from "react";
 import { Modal } from "react-bootstrap";
-import { Context } from "../../Context"; 
+import { Context } from "../Context"; 
 
 export default function CreateNewDeck({
   close

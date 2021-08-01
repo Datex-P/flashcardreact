@@ -1,10 +1,10 @@
 
 
-
 export default function DeckOrCardName({ 
-          name, bg, 
+          bg, 
           editButtonClicked, 
           input, 
+          name, 
           nameOfTopDeck, setNameOfTopDeck,
           setDeckNameLengthRight, 
           setThreeDotsMenuOpen,
@@ -26,8 +26,6 @@ export default function DeckOrCardName({
     }
       setNameOfTopDeck(e.target.value);
   }
-
- 
 
  
 

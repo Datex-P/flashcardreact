@@ -74,8 +74,6 @@ export default function ChartComp() {
   }
 };
 
-
-
   useEffect(() => {
   
     new Chart(ctx.current, config);

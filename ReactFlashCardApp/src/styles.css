@@ -25,6 +25,8 @@ input[type="number"] {
 }
 
 
+
+
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -106,7 +108,7 @@ input[type="number"] {
 
 
 
-#createYourFirstDeckPrompt {
+#createFirstDeck {
   top: 233px;
   position: absolute;
   font-weight: bold;
@@ -144,6 +146,12 @@ input[type="checkbox"] {
   top: 60px;
 }
 
+.index-card-title {
+  width: 151px; 
+  left: 3px; 
+  height: 0px;
+}
+
 .createFirstDeck-arrowDown::after {
   content: "";
   width: 15px;
@@ -167,6 +175,12 @@ input[type="checkbox"] {
 .nav-link:hover {
   padding: 0.5rem 0.4rem !important;
   color: black;
+}
+
+.pauseModeHandler {
+  position: absolute; 
+  left: 37px; 
+  top: -15px;
 }
 
 .divStyling {
@@ -239,6 +253,11 @@ height: 14px;
 
 .sec {
  top: 8px;
+}
+
+.showProgressDiagram__percentages {
+  font-size: 13px; 
+  margin-left: 5px;
 }
 
 .hamburger__menu-icon-container {
@@ -397,8 +416,30 @@ input::-webkit-inner-spin-button {
   border-radius: 5px !important;
   outline: none !important;
   border: none !important;
-  position: "relative";
-  top: "25px";
+  /* position: "relative";
+  top: "25px"; */
+  position: absolute;
+  top: 180px;
+}
+
+.cardAddedOrInInput{
+  height: 52px;
+}
+
+.settings__saveoredit {
+  position: absolute; 
+  top: 232px; 
+  right: 50px; 
+  cursor: pointer;
+}
+
+.noandyes-inner {
+  width: 75%;
+}
+
+.paused__deckempty {
+  height: 90px;
+   width: 122px;
 }
 
 .openDeck:hover {
@@ -529,7 +570,7 @@ input::-webkit-inner-spin-button {
   animation-iteration-count: 2;
 }
 
-.saveAndDiscardContainer {
+.saveAndDiscard {
   width: 166px;
   padding: 4px;
   height: 71px;
@@ -1068,7 +1109,7 @@ margin-bottom: 20px;
   cursor: pointer;
 }
 
-.cancelOkContainer {
+.createNewDeck__cancel-ok {
   width: 57%;
   top: -13px;
   position: relative;
@@ -1613,14 +1654,19 @@ input::-webkit-inner-spin-button {
   font-size: 13px;
 }
 
+.repetitionIntervalFields-p {
+  border-radius: 5px; 
+  width: 72px;
+}
+
 .login__btn-google div {
   padding: 4px !important;
   padding-left: 12px !important;
 }
 
-.login_btn-google span {
+.login__btn-google span {
   padding: 13px 10px 10px 10px !important;
-  margin-left: -5px; 
+  margin-left: 5px !important; 
 }
 
 .login__login-password-container {

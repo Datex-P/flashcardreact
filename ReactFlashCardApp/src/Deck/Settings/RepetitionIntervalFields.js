@@ -47,12 +47,9 @@ export default function RepetitionIntervalFields(
 
   return (
     
-    <div 
-        className='p-2 flex-column justify-center-align-center' 
+    <div className='p-2 flex-column justify-center-align-center' 
     >
-      <p 
-          className='border border-dark justify-center' 
-          style={{borderRadius: '5px', width: '72px'}}
+      <p  className='repetitionIntervalFields-p border border-dark justify-center' 
       >
           <div style={{ marginRight: '4px' }}
           >
@@ -64,12 +61,12 @@ export default function RepetitionIntervalFields(
           >
 
               <input 
-                   className={style.input}
+                  className={style.inputCustom}
                   type='number'
-                  style={{ backgroundColor: saveOrEdit? '#545863':'transparent', outline: 'none', width: '32px', 
-                  height: '21px', textAlign: 'center', cursor: saveOrEdit? 'pointer': 'default',
-                  color: saveOrEdit? 'white':'black',
-                  borderRadius:'5px'
+                  style={{ 
+                      backgroundColor: saveOrEdit? '#545863':'transparent',
+                      cursor: saveOrEdit? 'pointer': 'default',
+                      color: saveOrEdit? 'white':'black',
                         }} 
                   disabled={!editIsPossible}
                   value={inputNumb}

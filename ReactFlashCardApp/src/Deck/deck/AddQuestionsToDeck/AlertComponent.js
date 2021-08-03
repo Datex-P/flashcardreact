@@ -1,6 +1,7 @@
 
 import React from 'react';
-import {FormControl, Alert } from 'react-bootstrap'
+import {FormControl} from 'react-bootstrap'
+import CardAddedOrInput from './CardAddedOrInput'
 
 
 function AlertComponent({card, setCard, newCardAdded}) {
@@ -18,68 +19,36 @@ function AlertComponent({card, setCard, newCardAdded}) {
 
   return (
     <>
-    <div className='mb-2'
-    >
-      <p
-        className='questionAnswerStyling'
+      <div className='mb-2'
       >
-        Question
-              </p>
+        <p className='questionAnswerStyling'>
+          Question
+        </p>
 
-      <FormControl
-        as="textarea"
-        aria-label="With textarea"
-        value={card.question}
-        name='question'
-        onChange={changeHandler}
-        className='formControlIn'
-      />
+        <FormControl
+          as="textarea"
+          aria-label="With textarea"
+          value={card.question}
+          name='question'
+          onChange={changeHandler}
+          className='formControlIn'
+        />
 
-      {
-        newCardAdded ?
+        {
+          newCardAdded &&
 
-          <div
-            className='justify-center-align-center'
-            style={{ height: '52px' }}
-          >
+            <CardAddedOrInput card={card}  />
+  
+        }
 
-            <Alert
-              //when question or answer is empty, show a warning message
-              variant={card.question.trim().length !== 0 && card.answer.trim().length !== 0 ? "success" : "danger"}
-              style={{
-                width: card.question.trim().length !== 0 && card.answer.trim().length !== 0 ? '140px' : '100px',
-                height: '35px'
-              }}
-            >
-              {
-                card.question.trim().length !== 0 && card.answer.trim().length !== 0 ?
+      </div>
 
-                  <div style={{ width: '140px' }}>
-                    Card added to Deck.
-                            </div>
-                  :
-                  <div style={{ width: '120px', height: '35px' }}>
-                    Input needed.
-                            </div>
+      <div style={{ marginTop: newCardAdded ? '0px' : '60px' }}
+      >
 
-              }
-            </Alert>
-
-          </div>
-
-          :
-          null
-      }
-
-    </div>
-
-          <div style={{ marginTop: newCardAdded ? '0px' : '60px' }}
-          >
-
-            <p className='questionAnswerStyling'
-            >
+            <p className='questionAnswerStyling'>
               Answer
-                    </p>
+            </p>
 
             <FormControl
               as="textarea"
@@ -90,9 +59,8 @@ function AlertComponent({card, setCard, newCardAdded}) {
               className='formControlIn'
             />
 
-          </div>
-          </>
-
+      </div>
+    </>
   )
 }
 

@@ -15,19 +15,16 @@ export default function DeckContainer() {
   const {
     active, 
     arrowDown, setArrowDown, //arrow that is visible when there are no decks created so far
+    colors, //colors array for the decks
     dataBase, 
     decksAreVisible, setDecksAreVisible,
     editButtonClicked, 
     scrollbarVisible, //scrollbar dissapears when settings or stats page are opened
-    setShowProgressDiagram, //diagram that is visible on the top right corner 
+    showProgressDiagram, setShowProgressDiagram, //diagram that is visible on the top right corner
     setAddNewDeckWindow,
     spinnerIsVisible, setSpinnerIsVisible //loading sign that appears when database loads
 
   } = useContext(Context);
-
-
-  let colorsArr = ["#ffcdb2", "#ffb4a2", "#e5989b", "#b5838d", "#6d6875"];
-  
 
 
   useEffect(() => {
@@ -69,7 +66,7 @@ export default function DeckContainer() {
           {decksAreVisible ? (
             <div className="firstRowStyling">
               <div style={{ position: "absolute", left: "10px" }}>
-                {dataBase.DeckNames.reduce(
+                {Array.isArray(dataBase.DeckNames) && dataBase.DeckNames.reduce(
                   (accum, deck, index) => {
                     if (active === index) {
                       accum.arr.push(
@@ -77,11 +74,9 @@ export default function DeckContainer() {
                           key={index}
                           index={index}
                           deck={deck}
-                          name={deck.name}
                           transform={`rotate(0deg)`}
                           zIndex={2}
-                          background={colorsArr[active % colorsArr.length]}
-                          paused={deck.paused}
+                          background={colors[active % colors.length]}
                         />
                       );
                     } else {
@@ -92,12 +87,10 @@ export default function DeckContainer() {
                           key={index}
                           index={index}
                           setDeck
-                          paused={deck.paused}
                           deck={deck}
-                          name={deck.name}
                           transform={`rotate(${-accum.index * 2}deg)`}
                           zIndex={0}
-                          bg={colorsArr.map((i, k, ar) => {
+                          bg={colors.map((i, k, ar) => {
                             if (active === k) {
                               return ar[ar.length % (k || 1)];
                             } else {
@@ -105,13 +98,13 @@ export default function DeckContainer() {
                             }
                           })}
                           background={
-                            colorsArr.map((i, k, ar) => {
+                            colors.map((i, k, ar) => {
                               if (active === k) {
                                 return ar[ar.length % (k || 1)];
                               } else {
                                 return i;
                               }
-                            })[index % colorsArr.length]
+                            })[index % colors.length]
                           }
                         />
                       );
@@ -122,11 +115,10 @@ export default function DeckContainer() {
                 ).arr.reverse()}
               </div>
        
-              {scrollbarVisible ? (
+              {scrollbarVisible &&
                 //scrollbar gets hidden when there is only one deck
-                <Scrollbar    />
-               
-              ) : null}
+                <Scrollbar    />              
+            }
             </div>
           ) 
           : arrowDown ? (
@@ -134,8 +126,11 @@ export default function DeckContainer() {
            
           ) : null}
 
-          <ShowProgressD/>
 
+          {
+            showProgressDiagram &&
+          <ShowProgressD/>
+          }
          
         </Row>
 

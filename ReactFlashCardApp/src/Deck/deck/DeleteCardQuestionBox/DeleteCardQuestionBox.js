@@ -1,11 +1,11 @@
-import React, { useContext} from 'react'
-import {Context} from '../../../Context'
+import React from 'react'
 import { Modal } from 'react-bootstrap'
 import '../../../styles.css'
 import NoAndYes from './NoAndYes'
 import resetimg from '../../../icons/reset.svg'
 import questionMark from '../../../icons/questionMark.svg'
 import flashcards from '../../../icons/flashcards.svg'
+import ShowMessage from './ShowMessage'
 
 export default function DeleteCardQuestionBox({ card, 
   pauseOrDelete,deleteWindow, 
@@ -23,15 +23,6 @@ export default function DeleteCardQuestionBox({ card,
                                               }) 
   
 {
-
-  const { dataBase, setDataBase} = useContext(Context)
-
-
-  function handleCheckbox () {
-  
-    setDataBase({...dataBase,checkboxClicked: true})
-  }
- 
 
   return (
  
@@ -110,44 +101,24 @@ export default function DeleteCardQuestionBox({ card,
 
         <Modal.Footer>
  
-                     <NoAndYes
-                       trashEvent={trashEvent}
-                       deleteCurrentCard={deleteCurrentCard}
-                       deleteWindow={deleteWindow}
-                       setEditBtnClicked={setEditBtnClicked}
-                       setShowAnswerBtn={setShowAnswerBtn}
-                       pauseCardinQuestionAnswer={pauseCardinQuestionAnswer}
-                       index={index}
-                       randomQuestion={randomQuestion}
-                     />            
+            <NoAndYes
+                trashEvent={trashEvent}
+                deleteCurrentCard={deleteCurrentCard}
+                deleteWindow={deleteWindow}
+                setEditBtnClicked={setEditBtnClicked}
+                setShowAnswerBtn={setShowAnswerBtn}
+                pauseCardinQuestionAnswer={pauseCardinQuestionAnswer}
+                index={index}
+                randomQuestion={randomQuestion}
+            />            
         </Modal.Footer>
 
-      {!showMessageAgain?
-
-      <div 
-          className='deleteCardQuestionBox__showMessageAgain justify-center'
-      >
-
-          <div style={{width: '40px'}}
-          >
-
-              <input 
-                  className='deleteCardQuestionBox-input'
-                  type='checkbox' 
-                  onChange={handleCheckbox}
-              />
-    
-          </div>
-
-          <div className='deleteCardQuestionBox__dontShowMessageAgain'
-          >
-
-            Don't show message again
-          </div>
-      </div>
-      : 
-      null
-      }
+        {!showMessageAgain&&
+        
+        <ShowMessage />
+          
+          }
+     
 
       </Modal>
   );

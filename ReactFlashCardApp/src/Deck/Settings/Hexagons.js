@@ -19,8 +19,7 @@ export default function Hexagons({ idx, editHex, setEditHex }) {
 
   return (
     
-    <div 
-      className='hexagons justify-center-align-center flex-column'
+    <div className='hexagons justify-center-align-center flex-column'
     >
 
       {
@@ -66,8 +65,7 @@ export default function Hexagons({ idx, editHex, setEditHex }) {
         <div className='hexagons__editHex'
         >
 
-            <div className='hexagons__blackArrow'
-            >
+            <div className='hexagons__blackArrow'>
             </div>
             
             <span className='fontBold'

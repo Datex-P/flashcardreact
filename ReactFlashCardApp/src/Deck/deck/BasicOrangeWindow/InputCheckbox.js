@@ -57,12 +57,11 @@ export default function InputCheckbox({ index, setShowAnswerBtn, generateRandom 
       <label className="onoffswitch-label" htmlFor="myonoffswitch"
        onClick={() => {
          switchOnOrOff()
-       }
-       }
-      
+       }}
       >
         <span className="onoffswitch-inner"></span>
-        <span className="onoffswitch-switch justify-center-align-center">
+        <span className="onoffswitch-switch justify-center-align-center"
+        >
           {`${cardsPaused()}`}
         </span>
       </label>

@@ -1,18 +1,22 @@
 
 import React from 'react';
 
-export default function SaveAndDiscard({ saveEvent, generateRandom, setCardModified,discardEvent }) {
+export default function saveAndDiscard({ saveEvent, generateRandom, setCardModified,discardEvent }) {
 
  
   return (
 
-    <div className='saveAndDiscardContainer justify-aroundCenter flex-column'>
+    <div className='saveAndDiscard justify-aroundCenter flex-column'
+    >
 
-      <div>Save changes?</div>
+      <div
+      >
+        Save changes?
+      </div>
       <div 
           className='justify-between'
           style={{width: '140px'}}
-          >
+      >
       {
         ['Discard', 'Save'].map((el, index) =>
           <div
@@ -36,7 +40,7 @@ export default function SaveAndDiscard({ saveEvent, generateRandom, setCardModif
           </div>
         )
       }
-            </div>
+      </div>
     </div>
   )
 }

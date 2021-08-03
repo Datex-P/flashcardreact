@@ -12,11 +12,11 @@ export default function AddQuestionsToDeck({ index, name,
   const [card, setCard] = useState({ question: '', answer: '' })
   const [newCardAdded, setNewCardAdded] = useState(false);
 
-  const { dataBase, setDataBase, 
+  const { 
+    dataBase, setDataBase, 
     editButtonClicked, 
-  setShowProgressDiagram,
-  setScrollbarVisible
- 
+    setShowProgressDiagram,
+    setScrollbarVisible
   } = useContext(Context);
 
 
@@ -28,6 +28,7 @@ export default function AddQuestionsToDeck({ index, name,
     newDataBase.DeckNames[index].data.push(card)
     setDataBase(newDataBase)
     setNewCardAdded(true)
+
     if (card.question.trim().length !== 0 && card.answer.trim().length !== 0) {
       setTimeout(() => {
         setCard({ question: '', answer: '' })
@@ -35,6 +36,19 @@ export default function AddQuestionsToDeck({ index, name,
       }, 650)
     }
   }
+
+  function plusHandler () {
+
+      if(dataBase.DeckNames[index]?.paused || !editButtonClicked) {
+        return null
+      } else {
+        setShow(true)
+        setShowProgressDiagram(false)
+        setScrollbarVisible(false)
+      }
+    }
+
+
 
 
   useEffect(() => {
@@ -66,22 +80,12 @@ export default function AddQuestionsToDeck({ index, name,
 
     <div>
       <button
-        className={'addNewCardsButton justify-center-align-center outline-none'}
+        className='addNewCardsButton justify-center-align-center outline-none'
         style={{
           cursor: dataBase.DeckNames[index]?.paused || !editButtonClicked ? 'default' : 'pointer'
         }}
 
-        onClick={
-          dataBase.DeckNames[index]?.paused || !editButtonClicked ?
-
-            null
-            :
-            () => {
-              setShow(true)
-              setShowProgressDiagram(false)
-              setScrollbarVisible(false)
-            }
-        }
+        onClick={plusHandler}
       >
         +
       </button>
@@ -99,7 +103,7 @@ export default function AddQuestionsToDeck({ index, name,
       >
         <Modal.Header className='border-bottom-0'
         >
-          <Modal.Title style={{ fontSize: '16px' }}
+          <Modal.Title style={{fontSize: '16px'}}
           >
 
             Deck: {name}
@@ -133,7 +137,7 @@ export default function AddQuestionsToDeck({ index, name,
           >
 
             Add to Deck
-                </button>
+          </button>
 
         </Modal.Body>
 

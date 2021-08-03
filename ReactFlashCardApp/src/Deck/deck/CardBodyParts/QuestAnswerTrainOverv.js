@@ -38,11 +38,10 @@ export default function QuestAnswerTrainOverv({
 
   const {
     dataBase, setDataBase, 
-  // editButtonClicked, 
- setShowProgressDiagram,
- showAnswerBtn, setShowAnswerBtn,
- showRepeatBtn, setShowRepeatBtn
-  } = useContext(Context);
+    setShowProgressDiagram,
+    showAnswerBtn, setShowAnswerBtn,
+    showRepeatBtn, setShowRepeatBtn
+      } = useContext(Context);
 
 
   const [card, setCard] = useState({ answer: "", question: "" });
@@ -238,7 +237,6 @@ export default function QuestAnswerTrainOverv({
                   setPauseOrDeleteText(false);
                   setShowDeleteWindow(true);
                   setShowAnswerBtn(true);
-                  //                    }
                 }}
               />
             )
@@ -282,7 +280,7 @@ export default function QuestAnswerTrainOverv({
                 </Button>
               )}
 
-                {dataBase.DeckNames[index].pauseMode ? 
+              {dataBase.DeckNames[index].pauseMode &&
 
               <PauseModeHandler
 
@@ -291,7 +289,7 @@ export default function QuestAnswerTrainOverv({
                 randomQuestion={randomQuestion}
 
               />
-              : null} 
+              } 
 
               {showRepeatBtn && (
                 <div className="justify-center">
@@ -369,8 +367,8 @@ export default function QuestAnswerTrainOverv({
                 <DeleteCardQuestionBox
                   card="card"
                   pauseOrDelete={`${pauseOrDeleteText ? "Pause" : "Delete"}`}
-                   checked={checked}
-                   setChecked={setChecked}
+                  checked={checked}
+                  setChecked={setChecked}
                   randomQuestion={randomQuestion}
                   show={show}
                   index={index}

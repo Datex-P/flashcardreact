@@ -66,8 +66,7 @@ function Settings({ history }) {
       </div>
       <div className='d-flex justify-content-center'
       >
-          <div 
-              className='border border-dark justify-center-align-center settings_repetition-container'
+          <div className='border border-dark justify-center-align-center settings_repetition-container'
           >
               <div 
                   className='justify-aroundCenter' 
@@ -110,8 +109,7 @@ function Settings({ history }) {
           </div>
       </div>
 
-      <div 
-          className='settings__goal-settings'
+      <div className='settings__goal-settings'
       >
           Goal Settings
       </div>
@@ -121,8 +119,7 @@ function Settings({ history }) {
           Current Weekly Target
       </div>
 
-      <div 
-        className='justify-between-align-center border border-dark  settings__container-hexagon'
+      <div className='justify-between-align-center border border-dark  settings__container-hexagon'
       >
         {
 
@@ -137,7 +134,7 @@ function Settings({ history }) {
           )
         }
       </div>
-      <div style={{ position: 'absolute', top: '232px', right: '50px', cursor: 'pointer' }}
+      <div className='settings__saveoredit'
       >
         <img
           src={editHex ? edit : save}

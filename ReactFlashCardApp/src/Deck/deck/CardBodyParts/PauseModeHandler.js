@@ -5,16 +5,17 @@ import { Context } from "../../../Context";
 export default function PauseModeHandler({generateRandom, index, randomQuestion}) {
 
   const { dataBase, setDataBase} = useContext(Context)
+  
   return (
     <>
-        <div
-          style={{ position: "absolute", left: "37px", top: "-15px" }}
+        <div className='pauseModeHandler'
         >
           <img src={pauseimg} alt={"pause"} />
           <span style={{ marginLeft: "7px" }}>mode</span>
         </div>
 
-        <div className="justify-center">
+        <div className="justify-center"
+        >
           <div
             className="justify-around"
             style={{ width: "300px" }}

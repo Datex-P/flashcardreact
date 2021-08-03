@@ -16,12 +16,11 @@ export default function Deck({
    deck,
    index,
    bg,
-   paused,
    ...style
 }) {
-  if (deck) {
-    var { data, name } = deck;
-  }
+ 
+    const { data, name,paused } = deck;
+  
 
   const [show, setShow] = useState(false);
   const [nameOfTopDeck, setNameOfTopDeck] = useState(name);
@@ -111,8 +110,7 @@ export default function Deck({
         
 
           <Card.Title
-            className="justify-between-align-center position-relative"
-            style={{ width: "151px", left: "3px", height: "0px" }}
+            className="index-card-title justify-between-align-center position-relative"
           >
               <DeckOrCardName
                 bg={bg}

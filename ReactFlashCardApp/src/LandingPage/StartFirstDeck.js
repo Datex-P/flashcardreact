@@ -3,8 +3,10 @@ import React from 'react'
 function CreateFirstDeck() {
   
   return (
-    <div id="arrow">
-      <div id="createYourFirstDeckPrompt"
+    
+    <div id="arrow"
+    >
+      <div id="createFirstDeck"
       >
         Start and create your first deck
       </div>

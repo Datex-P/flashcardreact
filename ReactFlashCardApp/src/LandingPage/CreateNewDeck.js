@@ -54,7 +54,7 @@ export default function CreateNewDeck({
       });
 
       if (dataBase.DeckNames.length === 1 || dataBase.DeckNames.length === 0) {
-        setScrollbarVisible(false)
+        setScrollbarVisible(false)   //scrollbar on the side is not visible when zero or only one deck on the stack
       } else {
         setScrollbarVisible(true)
       }
@@ -63,31 +63,12 @@ export default function CreateNewDeck({
       setDataBase(newDataBase);
       close();
     }
-  
 
-
-  return (
-    <Modal
-      show={addNewDeckWindow}
-      backdrop="static"
-      keyboard={false}
-      id="createDeck"
-      centered
-    >
-      <Modal.Header>
-        <Modal.Title>Name for new deck</Modal.Title>
-
-      </Modal.Header>
-
-      <Modal.Body className="align-center flex-column">
-        <input
-          id="inputField"
-          ref={inputRef}
-          value={inputField}
-          onChange={(event) => {
-            setInputField(event.target.value)
+    function onChangeHandler (event) {
+      setInputField(event.target.value)
 
       setTimeout(()=>{
+            
             if (event.target.value.length  > 3 && event.target.value.length < 11) {
                
               Ok.current.disabled = false;
@@ -102,6 +83,34 @@ export default function CreateNewDeck({
 
           }, 800)
 
+    }
+  
+
+
+  return (
+    <Modal
+      show={addNewDeckWindow}
+      backdrop="static"
+      keyboard={false}
+      id="createDeck"
+      centered
+    >
+      <Modal.Header
+      >
+          <Modal.Title
+          >
+            Name for new deck
+          </Modal.Title>
+      </Modal.Header>
+
+      <Modal.Body className="align-center flex-column"
+      >
+        <input
+          id="inputField"
+          ref={inputRef}
+          value={inputField}
+          onChange={(event) => {
+            onChangeHandler(event)    
           }}
         />
          
@@ -120,7 +129,8 @@ export default function CreateNewDeck({
           </div>
         }
 
-        <select className="createNewDeck__select-options">
+        <select className="createNewDeck__select-options"
+        >
           <option>option 1</option>
           <option>option 2</option>
           <option>option 3</option>
@@ -129,7 +139,7 @@ export default function CreateNewDeck({
         </select>
       </Modal.Body>
 
-      <div className="justify-between cancelOkContainer"
+      <div className="createNewDeck__cancel-ok justify-between"
       >
         {["Cancel", "Ok"].map((el) => (
           <button

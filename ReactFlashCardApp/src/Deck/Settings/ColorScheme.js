@@ -21,8 +21,7 @@ export default function ColorScheme () {
         Colorscheme
     </div>
 
-      <div 
-          className='colorscheme-container justify-between-align-center border border-dark'
+      <div className='colorscheme-container justify-between-align-center border border-dark'
       >
         {
           ['light', 'dark', 'default'].map(comp =>

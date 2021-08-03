@@ -5,18 +5,20 @@ import InputCheckbox from "./InputCheckbox";
 import { Context } from "../../../Context";
 
 export default function BasicOrangeWindow({
-  children,
-  show,
-  setShow,
-  title,
-  menu,
-  mainBox,
-  setShowAnswerBtn = () => {},
-  setEdit = () => {},
-  setEditBtnClicked = () => {},
-  generateRandom,
-  index,
+              children,
+              show,
+              setShow,
+              title,
+              menu,
+              mainBox,
+              setShowAnswerBtn = () => {},
+              setEdit = () => {},
+              setEditBtnClicked = () => {},
+              generateRandom,
+              index
 }) {
+
+
   const {dataBase, setDataBase, setShowRepeatBtn} = useContext(Context);
 
   return (
@@ -71,16 +73,15 @@ export default function BasicOrangeWindow({
               }
             }}
           >
-            {mainBox ? (
+            {mainBox &&
               <InputCheckbox
                 index={index}
                 generateRandom={generateRandom}
                 setShowAnswerBtn={setShowAnswerBtn}
                 
               />
-            ) 
-            
-            : null}
+            }
+
           </div>
 
           {menu}
@@ -94,18 +95,22 @@ export default function BasicOrangeWindow({
               setEditBtnClicked(false);
               if (index) {
               let newDataBase = {...dataBase}
-
-
               newDataBase.DeckNames[index].pauseMode = false //needed to be set to false so that switch diagram closes in case its opened
               setDataBase(newDataBase)
               }
             }}
           >
-            <img className="nonDraggableIcon" src={redCross} alt="redCross" />
+              <img 
+                  className="nonDraggableIcon" 
+                  src={redCross} 
+                  alt="redCross" 
+              />
           </button>
         </Modal.Header>
 
-        <Modal.Body>{children}</Modal.Body>
+        <Modal.Body>
+            {children}
+        </Modal.Body>
       </div>
     </Modal>
   );

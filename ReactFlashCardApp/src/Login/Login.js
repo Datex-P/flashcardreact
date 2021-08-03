@@ -1,4 +1,4 @@
-import '../styles.css'
+
 import React from 'react';
 import FacebookLogin from 'react-facebook-login';
 import ParticleBackground from './ParticlesBackground.js'
@@ -7,6 +7,7 @@ import flash from "../icons/flash.svg";
 import usersSolid from "../icons/users.svg";
 import keysSolid from "../icons/keys.svg";
 import {GoogleLogin} from 'react-google-login';
+import '../styles.css'
 
 const clientId = '120219528416-sosfr3o924155s2girgnofqkrvfa4qsr.apps.googleusercontent.com'
 
@@ -69,7 +70,7 @@ onSuccess = (res) => {
                       src={keysSolid} 
                       alt='click to enter password' 
                       className='login__img-login-password'
-                      /> 
+                  /> 
                   <form>
 
                   <input 

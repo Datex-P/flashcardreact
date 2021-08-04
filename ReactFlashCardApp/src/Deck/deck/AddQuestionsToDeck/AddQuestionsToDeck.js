@@ -76,11 +76,9 @@ export default function AddQuestionsToDeck({ index, name,
 
   return (
 
-
-
     <div>
       <button
-        className='addNewCardsButton justify-center-align-center outline-none'
+        className='AddQuestionsToDeck-btn-plus justify-center-align-center outline-none'
         style={{
           cursor: dataBase.DeckNames[index]?.paused || !editButtonClicked ? 'default' : 'pointer'
         }}

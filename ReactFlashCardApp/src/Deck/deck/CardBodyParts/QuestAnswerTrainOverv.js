@@ -9,19 +9,17 @@ import DeleteCardQuestionBox from "../DeleteCardQuestionBox/DeleteCardQuestionBo
 import SaveAndDiscard from "./SaveAndDiscard";
 import RepeatBtn from "./RepeatBtn";
 import PauseModeHandler from './PauseModeHandler'
-import OpenDeck from './OpenDeck';
+import OpenDeckBtn from './OpenDeckBtn';
 
 
 export default function QuestAnswerTrainOverv({
-  name,
-  data,
-  index,
-  paused,
-  createDeckButtonIsVisible,
-
-  setCreateDeckButtonIsVisible = () => {},
-  //editButtonClicked, //activated when change deckname field is open
-}) {
+        createDeckButtonIsVisible,
+        data,
+        index,
+        name,
+        paused,
+        setCreateDeckButtonIsVisible = () => {}
+    }) {
 
   const [checked, setChecked] = useState(false);
   const [editBtnClicked, setEditBtnClicked] = useState(false);
@@ -184,10 +182,10 @@ export default function QuestAnswerTrainOverv({
   return (
     <>
 
-      <OpenDeck 
-          paused = {paused}
-          generateRandom = {generateRandom}
+      <OpenDeckBtn 
           data = {data}
+          generateRandom = {generateRandom}
+          paused = {paused}
       />
       
 
@@ -242,13 +240,13 @@ export default function QuestAnswerTrainOverv({
             )
           }
         >
-          {editBtnClicked ? (
+          {editBtnClicked && (
             <div className='editBtnClickedStyling align-center'
             >
               <img alt="edit" src={editimg} />
               <span style={{ marginLeft: "3px" }}>mode</span>
             </div>
-          ) : null}
+          )}
 
           {data[randomQuestion] && (
             <>
@@ -341,8 +339,7 @@ export default function QuestAnswerTrainOverv({
                 </div>
               )}
 
-              {editBtnClicked && (
-                <div className="d-flex justify-content-center">
+              {editBtnClicked && 
                   <SaveAndDiscard
                     generateRandom={generateRandom}
                     setCardModified={setCardModified}
@@ -360,10 +357,9 @@ export default function QuestAnswerTrainOverv({
                       editModeActive();
                     }}
                   />
-                </div>
-              )}
+              }
 
-              {trash && showDeleteWindow && (
+              {trash && showDeleteWindow && 
                 <DeleteCardQuestionBox
                   card="card"
                   pauseOrDelete={`${pauseOrDeleteText ? "Pause" : "Delete"}`}
@@ -380,7 +376,7 @@ export default function QuestAnswerTrainOverv({
                   pauseCardinQuestionAnswer
                   setPauseOrDeleteText={setPauseOrDeleteText}
                 />
-              )}
+              }
             </>
           )}
         </BasicOrangeWindow>

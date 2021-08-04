@@ -6,18 +6,16 @@ import { Context } from "../../../Context";
 
 export default function BasicOrangeWindow({
               children,
-              show,
-              setShow,
-              title,
-              menu,
+              index,
+              generateRandom,
+              show,setShow,
               mainBox,
+              menu,
               setShowAnswerBtn = () => {},
               setEdit = () => {},
               setEditBtnClicked = () => {},
-              generateRandom,
-              index
+              title
 }) {
-
 
   const {dataBase, setDataBase, setShowRepeatBtn} = useContext(Context);
 
@@ -34,8 +32,7 @@ export default function BasicOrangeWindow({
         backgroundColor: "rgba(0, 0, 0, 0.6)",
       }}
     >
-      <div
-        className='innerModalContainer'
+      <div className='innerModalContainer'
       >
         <Modal.Header className="border-bottom-0"
         >
@@ -63,13 +60,8 @@ export default function BasicOrangeWindow({
               }
             }}
             onMouseLeave={() => {
-              if (
-                dataBase.DeckNames[index].data.filter((x) => x.paused === true)
-                  .length > 0
-              ) {
-                document
-                  .querySelector(".onoffswitch-label")
-                  .classList.remove("pointer");
+              if (dataBase.DeckNames[index].data.filter((x) => x.paused === true).length > 0) {
+                  document.querySelector(".onoffswitch-label").classList.remove("pointer");
               }
             }}
           >

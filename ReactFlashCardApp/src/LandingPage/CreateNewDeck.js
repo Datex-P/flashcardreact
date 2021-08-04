@@ -10,7 +10,7 @@ export default function CreateNewDeck({
     addNewDeckWindow, 
     setActive, 
     setArrowDown, 
-    colors,
+    colors, //colors array for the decks
     dataBase, setDataBase, 
     setDecksAreVisible,
     setScrollbarVisible,
@@ -29,7 +29,6 @@ export default function CreateNewDeck({
       inputRef.current.focus();
       setShowProgressDiagram(false);
     } 
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [addNewDeckWindow]);
 
